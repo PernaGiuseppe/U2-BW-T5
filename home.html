@@ -60,42 +60,55 @@
         <div class="row g-0 p-0">
           <div class="col-2">
             <div class="bg-black w-100 h-100">
-              <i class="bi bi-three-dots text-white fs-4 mx-4"></i>
-              <div class="border-bottom border-1 border-secondary">
+              <i
+                class="bi bi-three-dots text-white fs-4 mx-2"
+                data-bs-toggle="collapse"
+                data-bs-target="#menuLaterale"
+                aria-expanded="false"
+                aria-controls="menuLaterale"
+              >
+              </i>
+              <!-- Clicca per mostrare/nascondere il menu laterale -->
+              <!-- Menu laterale collassabile -->
+              <div
+                id="menuLaterale"
+                class="collapse border-bottom border-1 border-secondary"
+              >
                 <ul class="list-unstyled">
                   <li>
                     <a
                       href="./home.html"
                       class="text-decoration-none text-white"
-                      ><i class="bi bi-house-door-fill mx-4"></i> Home</a
+                      ><i class="bi bi-house-door-fill mx-2"></i> Home</a
                     >
                   </li>
                   <li class="my-1">
                     <a
                       href="./home.html"
                       class="text-decoration-none text-secondary"
-                      ><i class="bi bi-search mx-4"></i> Search</a
+                      ><i class="bi bi-search mx-2"></i> Search</a
                     >
                   </li>
                   <li>
                     <a
                       href="./home.html"
                       class="text-decoration-none text-secondary"
-                      ><i class="bi bi-collection mx-4"></i> Library</a
+                      ><i class="bi bi-collection mx-2"></i> Library</a
                     >
                   </li>
                   <br />
                   <li class="text-secondary">
-                    <i class="bi bi-plus-square-fill mx-4"></i> Crea Playlist
+                    <i class="bi bi-plus-square-fill mx-2"></i> Crea Playlist
                   </li>
                   <li class="text-secondary my-1">
-                    <i class="bi bi-heart mx-4"></i>Brani che ti piacciono
+                    <i class="bi bi-heart mx-2"></i>Brani che ti piacciono
                   </li>
                   <li class="text-secondary">
-                    <i class="bi bi-bookmark mx-4"></i>I tuoi episodi
+                    <i class="bi bi-bookmark mx-2"></i>I tuoi episodi
                   </li>
                 </ul>
               </div>
+              <!-- Questo div contiene il menu laterale che viene mostrato/nascosto cliccando sui tre puntini -->
               <div style="overflow-y: scroll; height: 65vh">
                 <ul class="list-unstyled text-secondary py-2">
                   <li class="mx-4 my-1">PLACEHOLDER</li>
