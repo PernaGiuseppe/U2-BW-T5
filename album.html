@@ -71,19 +71,19 @@
                 class="bi bi-three-dots text-white fs-4 mx-2"
                 data-bs-toggle="collapse"
                 data-bs-target="#menuLaterale"
-                aria-expanded="false"
+                aria-expanded="true"
                 aria-controls="menuLaterale"
               >
               </i>
               <div
                 id="menuLaterale"
-                class="collapse border-bottom border-1 border-secondary"
+                class="border-bottom border-1 border-secondary"
               >
                 <ul class="list-unstyled ms-3">
                   <li>
                     <a
                       href="./home.html"
-                      class="text-decoration-none text-white"
+                      class="text-decoration-none text-secondary"
                       ><i class="bi bi-house-door-fill mx-2"></i> Home</a
                     >
                   </li>
@@ -161,12 +161,18 @@
               <div>
                 <div class="d-flex justify-content-between">
                   <div class="ms-2">
-                    <i
-                      class="bi bi-arrow-left-circle-fill fs-3 text-light-emphasis"
-                    ></i
-                    ><i
-                      class="bi bi-arrow-right-circle-fill fs-3 ms-2 text-light-emphasis"
-                    ></i>
+                    <button
+                      class="btn btn-link text-secondary fs-4 p-1 hovericos"
+                      id="download-icon"
+                    >
+                      <i class="bi bi-arrow-left-circle"></i>
+                    </button>
+                    <button
+                      class="btn btn-link text-secondary fs-4 p-1 hovericos"
+                      id="download-icon"
+                    >
+                      <i class="bi bi-arrow-right-circle"></i>
+                    </button>
                   </div>
                   <div class="me-3 mt-2 text-end">
                     <button
@@ -217,7 +223,12 @@
                             Gioventù brucata
                           </h1>
                           <div class="text-white-50">
-                            <i class="fas fa-user me-1"></i>
+                            <img
+                              class="rounded-circle me-1"
+                              width="28px"
+                              height="28px"
+                              src="https://cdn-images.dzcdn.net/images/artist/3651ba85da939e75e4eab6147e3a7875/100x100-000000-80-0-0.jpg"
+                            />
                             <strong class="text-white"
                               >Pinguini Tattici Nucleari</strong
                             >
@@ -244,13 +255,13 @@
                         <i class="bi bi-heart"></i>
                       </button>
                       <button
-                        class="btn btn-link text-white-50 fs-4 me-4 p-0"
+                        class="btn btn-link text-white-50 fs-4 me-4 p-0 hovericos"
                         id="download-icon"
                       >
                         <i class="bi bi-arrow-down-circle"></i>
                       </button>
                       <button
-                        class="btn btn-link text-white-50 fs-4 p-0"
+                        class="btn btn-link text-white-50 fs-4 p-0 hovericos"
                         id="dots-icon"
                       >
                         <i class="bi bi-three-dots"></i>
