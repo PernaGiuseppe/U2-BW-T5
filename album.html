@@ -55,6 +55,10 @@
           rgba(18, 18, 18, 1) 100%
         );
       }
+      .btn-epi-cyan:hover {
+        background-color: #0dcaf0 !important;
+        border-color: #0dcaf0 !important;
+      }
     </style>
   </head>
   <body>
@@ -203,7 +207,7 @@
                         >
                           <img
                             style="height: 220px"
-                            src="./assets/imgs/main/image-12.jpg"
+                            src="https://cdn-images.dzcdn.net/images/cover/815f471dcf48c1de0b4866bad75c4d21/250x250-000000-80-0-0.jpg"
                             alt="album-img"
                           />
                         </div>
@@ -233,17 +237,25 @@
                           style="padding-left: 3px; padding-top: 3px"
                         ></i>
                       </button>
-                      <button class="btn btn-link text-white-50 fs-4 me-4 p-0">
+                      <button
+                        class="btn btn-link text-white-50 fs-4 me-4 p-0"
+                        id="heartBtn"
+                      >
                         <i class="bi bi-heart"></i>
                       </button>
-                      <button class="btn btn-link text-white-50 fs-4 me-4 p-0">
+                      <button
+                        class="btn btn-link text-white-50 fs-4 me-4 p-0"
+                        id="download-icon"
+                      >
                         <i class="bi bi-arrow-down-circle"></i>
                       </button>
-                      <button class="btn btn-link text-white-50 fs-4 p-0">
+                      <button
+                        class="btn btn-link text-white-50 fs-4 p-0"
+                        id="dots-icon"
+                      >
                         <i class="bi bi-three-dots"></i>
                       </button>
                     </div>
-
                     <div class="row">
                       <div class="col-12">
                         <div class="bg-dark bg-opacity-25 rounded">
@@ -633,5 +645,6 @@
       integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
       crossorigin="anonymous"
     ></script>
+    <script src="./assets/scripts/album.js"></script>
   </body>
 </html>

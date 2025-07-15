@@ -22,5 +22,4 @@ $new-theme-colors:(
 
 $theme-colors: map-merge($theme-colors, $new-theme-colors);
 
-
-@import './bootstrap.scss'
+@import './bootstrap.scss';
