@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Mix 2</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+   <link rel="icon" type="image/x-icon" href="./assets/imgs/spotify_logo_icon_229290.ico"/>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"/>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+    .sidebar {
+      width: 250px;
+      background-color: #121212;
+      height: 100vh;
+      padding: 20px;
+    }
+    .main-content {
+      background: linear-gradient(
+          206deg,
+          rgba(255, 0, 208, 1) 0%,
+          rgba(72, 64, 122, 1) 50%,
+          rgba(20, 20, 20, 1) 100%
+        );
+      padding: 20px;
+      flex-grow: 1;
+    }
+    .playlist-header img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+    }
+    .playlist-info h1 {
+      font-size: 48px;
+      font-weight: bold;
+    }
+    .playlist-table {
+  background-color: transparent !important;
+  color: white; /* Assicurati che il testo resti leggibile */
+}
+    .table.playlist-table {
+    background-color: transparent;
+    }
+    .song-list thead {
+      border-bottom: 1px solid #444;
+    }
+    .song-list tbody tr:hover {
+      background-color: #282828;
+    }
+    .right-sidebar {
+      width: 300px;
+      background-color: #121212;
+      padding: 20px;
+    }
+    .player {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: #181818;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .img-thumb {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <div class="d-flex">
+    <!--Sidebar sinistra-->
+    <div class="sidebar">
+      <h6 class="text-white">Your Library</h6>
+      <div class="mb-2">
+        <button class="btn btn-sm btn-dark text-light">Playlists</button>
+        <button class="btn btn-sm btn-dark text-light">Albums</button>
+        <button class="btn btn-sm btn-dark text-light">Podcasts</button>
+      </div>
+      <div class="list-group">
+        <div class="list-group-item bg-transparent text-white border-0">Liked Songs</div>
+        <div class="list-group-item bg-transparent text-white border-0">Maledetta Nostalgia</div>
+        <div class="list-group-item bg-transparent text-white border-0">Maledetta Estate</div>
+        <div class="list-group-item bg-transparent text-white border-0">2000 vibes</div>
+        <div class="list-group-item bg-transparent text-white border-0">GOLD SCHOOL</div>
+        <div class="list-group-item bg-transparent text-white border-0">Kung Fu Training Music</div>
+        <div class="list-group-item bg-transparent text-white border-0">BakaVintage</div>
+        <div class="list-group-item bg-transparent text-white border-0">RU</div>
+        <div class="list-group-item bg-transparent text-white border-0">Old</div>
+        <div class="list-group-item bg-transparent text-white border-0">...</div>
+      </div>
+    </div>
+
+    <!--Contenuto centrale-->
+    <div class="main-content">
+      <div class="d-flex align-items-center playlist-header">
+        <img src="./assets/imgs/main/image-19.jpg" alt="Playlist Cover" class="me-3">
+        <div class="playlist-info">
+          <small>Public Playlist</small>
+          <h1>Street culto</h1>
+          <p>Lazza, Ketama126, Sfera Ebbasta and more<br>
+          <span class="text-success">Spotify</span> • 50 songs, about 2 hr 15 min</p>
+        </div>
+      </div>
+
+      <div class="my-4">
+        <button class="btn text-success btn-lg me-2 fs-2"><i class="bi bi-play-circle-fill"></i></button>
+        <button class="btn text-secondary me-md-2"><i class="bi bi-shuffle"></i></button>
+        <button class="btn text-secondary me-md-2"><i class="bi bi-plus-circle"></i></button>
+        <button class="btn text-secondary me-1"><i class="bi bi-arrow-down-circle"></i></button>
+        <button class="btn text-secondary me-1"><i class="bi bi-three-dots"></i></button>
+      </div>
+
+      <table class="table text-white playlist-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Album</th>
+            <th><i class="bi bi-clock"></i></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>-3 (PERDERE IL VOLO) (feat. Marracash)<br><small class="text-secondary">Lazza, Marracash</small></td><td>LOCURA</td><td>2:59</td></tr>
+          <tr><td>2</td><td>33<br><small class="text-secondary">Ketama126</small></td><td>33</td><td>3:40</td></tr>
+          <tr><td>3</td><td>MNGSNT<br><small class="text-secondary">Sfera Ebbasta, Shiva</small></td><td>SANTANA MONEY GANG</td><td>2:36</td></tr>
+          <tr><td>4</td><td>OUTFIT CHECK (feat. Diss Gacha)<br><small class="text-secondary">MamboLosco, Diss Gacha</small></td><td>OUTFIT CHECK</td><td>2:11</td></tr>
+          <tr><td>5</td><td>Rendez Vous Col Delirio II<br><small class="text-secondary">DJ Shocca, Club Dogo</small></td><td>60 Hz II</td><td>3:03</td></tr>
+          <tr><td>6</td><td>LIVIN<br><small class="text-secondary">Rondodasosa, Byron Messia</small></td><td>LIVIN</td><td>2:19</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Colonna destra -->
+    <div class="right-sidebar">
+      <div>
+        <h6>Canzone</h6>
+        <img src="./assets/imgs/main/image-12.jpg" class="img-fluid mb-2">
+        <button class="btn btn-dark btn-sm">Switch to video</button>
+      </div>
+      <div class="mt-4">
+        <h6>Related music videos</h6>
+        <img src="./assets/imgs/main/image-14.jpg" class="img-fluid mb-1">
+        <div>Ok<br><small class="text-secondary">...</small></div>
+        <!-- Aggiungi altri suggerimenti qui -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Player in basso -->
+  <div class="player">
+    <div class="d-flex align-items-center">
+      <img src="./assets/imgs/main/image-16.jpg" class="img-thumb me-2">
+      <div>
+        <div>Canzone</div>
+        <small class="text-secondary">Artista</small>
+      </div>
+    </div>
+    <div>
+      <span>▶</span>
+      <input type="range" min="0" max="100" value="10">
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
