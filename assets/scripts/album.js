@@ -2,6 +2,7 @@ document.getElementById('heartBtn').addEventListener('mouseenter', function () {
   const icon = this.querySelector('i')
   if (!icon.classList.contains('text-success')) {
     icon.classList.remove('text-white-50')
+    icon.classList.add('text-success')
   }
 })
 
@@ -31,6 +32,7 @@ document
     const icon = this.querySelector('i')
     if (!icon.classList.contains('text-light')) {
       icon.classList.remove('text-white-50')
+      icon.classList.add('text-light')
     }
   })
 
@@ -49,6 +51,7 @@ document
     const icon = this.querySelector('i')
     if (!icon.classList.contains('text-light')) {
       icon.classList.remove('text-white-50')
+      icon.classList.add('text-light')
     }
   })
 
