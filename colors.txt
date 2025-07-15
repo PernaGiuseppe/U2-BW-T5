@@ -1,4 +1,6 @@
 #D50075     epi-pink
+#C914B7
+#ff64f2ff     epi-pink
 #192155     epi-blue
 #6A53FF     epi-violet
 #FFFFFF     epi-white
