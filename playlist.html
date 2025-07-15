@@ -1,174 +1,533 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daily Mix 2</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-   <link rel="icon" type="image/x-icon" href="./assets/imgs/spotify_logo_icon_229290.ico"/>
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"/>
-  <style>
-    body {
-      background-color: #000;
-      color: #fff;
-      font-family: Arial, sans-serif;
-    }
-    .sidebar {
-      width: 250px;
-      background-color: #121212;
-      height: 100vh;
-      padding: 20px;
-    }
-    .main-content {
-      background: linear-gradient(
-          206deg,
-          rgba(255, 0, 208, 1) 0%,
-          rgba(72, 64, 122, 1) 50%,
-          rgba(20, 20, 20, 1) 100%
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify - Playlist</title>
+    <link
+      rel="stylesheet"
+      href="./assets/bootstrap-5.3.7/scss/custombootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./assets/imgs/spotify_logo_icon_229290.ico"
+    />
+    <style>
+      @font-face {
+        font-family: circularstd;
+        src: url(./assets/fonts/CircularStd-Medium.otf);
+      }
+
+      body {
+        font-family: circularstd;
+      }
+
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #f1f1f100;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #888;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+      .dropdown-menu-center {
+        left: 50% !important;
+        transform: translateX(-50%) translateY(34px) !important;
+      }
+      .hero-gradient {
+        background: #d3b64b;
+        background: linear-gradient(
+          180deg,
+          rgba(211, 182, 75, 1) 0%,
+          rgba(83, 71, 30, 1) 20%,
+          rgba(18, 18, 18, 1) 100%
         );
-      padding: 20px;
-      flex-grow: 1;
-    }
-    .playlist-header img {
-      width: 200px;
-      height: 200px;
-      object-fit: cover;
-    }
-    .playlist-info h1 {
-      font-size: 48px;
-      font-weight: bold;
-    }
-    .playlist-table {
-  background-color: transparent !important;
-  color: white; /* Assicurati che il testo resti leggibile */
-}
-    .table.playlist-table {
-    background-color: transparent;
-    }
-    .song-list thead {
-      border-bottom: 1px solid #444;
-    }
-    .song-list tbody tr:hover {
-      background-color: #282828;
-    }
-    .right-sidebar {
-      width: 300px;
-      background-color: #121212;
-      padding: 20px;
-    }
-    .player {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background-color: #181818;
-      padding: 10px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .img-thumb {
-      width: 50px;
-      height: 50px;
-      object-fit: cover;
-    }
-  </style>
-</head>
-<body>
-  <div class="d-flex">
-    <!--Sidebar sinistra-->
-    <div class="sidebar">
-      <h6 class="text-white">Your Library</h6>
-      <div class="mb-2">
-        <button class="btn btn-sm btn-dark text-light">Playlists</button>
-        <button class="btn btn-sm btn-dark text-light">Albums</button>
-        <button class="btn btn-sm btn-dark text-light">Podcasts</button>
-      </div>
-      <div class="list-group">
-        <div class="list-group-item bg-transparent text-white border-0">Liked Songs</div>
-        <div class="list-group-item bg-transparent text-white border-0">Maledetta Nostalgia</div>
-        <div class="list-group-item bg-transparent text-white border-0">Maledetta Estate</div>
-        <div class="list-group-item bg-transparent text-white border-0">2000 vibes</div>
-        <div class="list-group-item bg-transparent text-white border-0">GOLD SCHOOL</div>
-        <div class="list-group-item bg-transparent text-white border-0">Kung Fu Training Music</div>
-        <div class="list-group-item bg-transparent text-white border-0">BakaVintage</div>
-        <div class="list-group-item bg-transparent text-white border-0">RU</div>
-        <div class="list-group-item bg-transparent text-white border-0">Old</div>
-        <div class="list-group-item bg-transparent text-white border-0">...</div>
-      </div>
-    </div>
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <!--Sidebar sinistra-->
+      <div class="container-fluid p-0">
+        <div class="row g-0 p-0">
+          <div class="col-2">
+            <div class="bg-black w-100 h-100">
+         <h6 class="text-white mb-4 ms-3 ">Your Library</h6>
+         <div class="mb-2">
+        <button class="btn btn-sm btn-dark text-light mb-5 ms-3">Playlists</button>
+        <button class="btn btn-sm btn-dark text-light mb-5">
+            <a href="./album.html" class="text-decoration-none text-white">Albums</a></button>
+        <button class="btn btn-sm btn-dark text-light mb-5">Podcasts</button>
+         </div>
+              <div
+                id="menuLaterale"
+                class="collapse border-bottom border-1 border-secondary">
+              </div>
+              <div style="overflow-y: scroll; height: 65vh">
+                <div class="list-group">
+        <div class="list-group-item bg-transparent text-white border-0 justify-content-between">
+            <img
+            src="./assets/imgs/main/image-3.jpg"
+            style="height: 20%; width: 20%"
+            alt=""/> Liked Songs</div>
+        <div class="list-group-item bg-transparent text-white border-0">
+            <img
+            src="./assets/imgs/main/image-3.jpg"
+            style="height: 20%; width: 20%"
+            alt=""/> PLACEHOLDER</div>
+        <div class="list-group-item bg-transparent text-white border-0"> 
+            <img
+            src="./assets/imgs/main/image-3.jpg"
+            style="height: 20%; width: 20%"
+            alt=""/> PLACEHOLDER</div>
+        <div class="list-group-item bg-transparent text-white border-0"> 
+            <img
+            src="./assets/imgs/main/image-3.jpg"
+            style="height: 20%; width: 20%"
+            alt=""/> PLACEHOLDER</div>
+        <div class="list-group-item bg-transparent text-white border-0"> 
+            <img
+            src="./assets/imgs/main/image-3.jpg"
+            style="height: 20%; width: 20%"
+            alt=""/> PLACEHOLDER</div>
+        <div class="list-group-item bg-transparent text-white border-0"> 
+            <img
+            src="./assets/imgs/main/image-3.jpg"
+            style="height: 20%; width: 20%"
+            alt=""/> PLACEHOLDER</div>
+        <div class="list-group-item bg-transparent text-white border-0"> 
+            <img
+            src="./assets/imgs/main/image-3.jpg"
+            style="height: 20%; width: 20%"
+            alt=""/> PLACEHOLDER</div>
+        <div class="list-group-item bg-transparent text-white border-0"> 
+            <img
+            src="./assets/imgs/main/image-3.jpg"
+            style="height: 20%; width: 20%"
+            alt=""/> PLACEHOLDER</div>
+        <div class="list-group-item bg-transparent text-white border-0"> 
+            <img
+            src="./assets/imgs/main/image-3.jpg"
+            style="height: 20%; width: 20%"
+            alt=""/>PLACEHOLDER</div>
+       </div>
+              </div>
+            </div>
+          </div>
 
-    <!--Contenuto centrale-->
-    <div class="main-content">
-      <div class="d-flex align-items-center playlist-header">
-        <img src="./assets/imgs/main/image-19.jpg" alt="Playlist Cover" class="me-3">
-        <div class="playlist-info">
-          <small>Public Playlist</small>
-          <h1>Street culto</h1>
-          <p>Lazza, Ketama126, Sfera Ebbasta and more<br>
-          <span class="text-success">Spotify</span> • 50 songs, about 2 hr 15 min</p>
-        </div>
-      </div>
+          <!--Center-->
+          <div class="col-8">
+            <div class="hero-gradient h-100 ps-3 pt-2">
+              <div>
+                <div class="d-flex justify-content-between">
+                  <div class="ms-2">
+                  </div>
+                  <div class="me-3 mt-2 text-end">
+                    <button
+                      class="btn btn-outline-light rounded-pill ps-0 py-0 me-5"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#menuAccount"
+                      aria-expanded="false"
+                      aria-controls="menuAccount"
+                    >
+                      <img
+                        src="https://placehold.co/30x30"
+                        alt="Your profile picture"
+                        class="rounded-circle me-1"
+                      />
+                      <span>Antimo</span>
+                    </button>
+                    <div id="menuAccount" class="collapse mt-2 me-1 mb-3 mt-3">
+                      <a href="#" class="text-white text-decoration-none"
+                        >Account</a
+                      >
+                      <a href="#" class="text-white text-decoration-none mx-2"
+                        >Settings</a
+                      >
+                      <a href="#" class="text-white text-decoration-none"
+                        >Logout</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div
+                  style="overflow-y: scroll; height: 85vh; padding-right: 10px"
+                >
+                  <div class="container-fluid text-white p-4">
+                    <div class="row mb-4">
+                      <div class="col-12 d-flex align-items-end">
+                        <div
+                          class="album-cover rounded d-flex align-items-center justify-content-center me-4 shadow"
+                        >
+                          <img
+                            style="height: 220px"
+                            src="./assets/imgs/main/image-3.jpg"
+                            alt="album-img"
+                          />
+                        </div>
+                        <div>
+                          <small class="text-white-50">ALBUM</small>
+                          <h1 class="display-3 fw-bold mb-2">
+                            Titolo Canzone
+                          </h1>
+                          <div class="text-white-50">
+                            <i class="fas fa-user me-1"></i>
+                            <strong class="text-white"
+                              >Descrizione</strong
+                            >
+                            Varie informazioni
+                          </div>
+                        </div>
+                      </div>
+                    </div>
 
-      <div class="my-4">
-        <button class="btn text-success btn-lg me-2 fs-2"><i class="bi bi-play-circle-fill"></i></button>
-        <button class="btn text-secondary me-md-2"><i class="bi bi-shuffle"></i></button>
-        <button class="btn text-secondary me-md-2"><i class="bi bi-plus-circle"></i></button>
-        <button class="btn text-secondary me-1"><i class="bi bi-arrow-down-circle"></i></button>
-        <button class="btn text-secondary me-1"><i class="bi bi-three-dots"></i></button>
-      </div>
+                   <!--Bottoni vari-->
+                    <div class="d-flex align-items-center mb-4">
+                      <button
+                        type="button"
+                        class="btn btn-epi-cyan rounded-circle me-4 d-flex align-items-center justify-content-center"
+                      >
+                       <i
+                          class="bi bi-play-fill text-black"
+                          style="padding-left: 3px; padding-top: 3px"> 
+                      </i>
+        <button class="btn btn-link text-white-50 fs-4 me-4 p-0"><i class="bi bi-shuffle"></i></button>
+        <button class="btn btn-link text-white-50 fs-4 me-4 p-0"><i class="bi bi-plus-circle"></i></button>
+        <button class="btn btn-link text-white-50 fs-4 me-4 p-0"><i class="bi bi-arrow-down-circle"></i></button>
+        <button class="btn btn-link text-white-50 fs-4 me-4 p-0"><i class="bi bi-three-dots"></i></button>
+                    </div>
 
-      <table class="table text-white playlist-table">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Title</th>
-            <th>Album</th>
-            <th><i class="bi bi-clock"></i></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>1</td><td>-3 (PERDERE IL VOLO) (feat. Marracash)<br><small class="text-secondary">Lazza, Marracash</small></td><td>LOCURA</td><td>2:59</td></tr>
-          <tr><td>2</td><td>33<br><small class="text-secondary">Ketama126</small></td><td>33</td><td>3:40</td></tr>
-          <tr><td>3</td><td>MNGSNT<br><small class="text-secondary">Sfera Ebbasta, Shiva</small></td><td>SANTANA MONEY GANG</td><td>2:36</td></tr>
-          <tr><td>4</td><td>OUTFIT CHECK (feat. Diss Gacha)<br><small class="text-secondary">MamboLosco, Diss Gacha</small></td><td>OUTFIT CHECK</td><td>2:11</td></tr>
-          <tr><td>5</td><td>Rendez Vous Col Delirio II<br><small class="text-secondary">DJ Shocca, Club Dogo</small></td><td>60 Hz II</td><td>3:03</td></tr>
-          <tr><td>6</td><td>LIVIN<br><small class="text-secondary">Rondodasosa, Byron Messia</small></td><td>LIVIN</td><td>2:19</td></tr>
-        </tbody>
-      </table>
-    </div>
+                    <!--Tabella-->
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="bg-dark bg-opacity-25 rounded">
+                          <div
+                            class="row align-items-center p-3 border-bottom border-secondary border-opacity-25 text-white-50"
+                          >
+                            <div class="col-1 text-center">#</div>
+                            <div class="col-6">TITOLO</div>
+                            <div class="col-3 text-end">ALBUM</div>
+                            <div class="col-2 text-end">
+                              <i class="bi bi-clock"></i>
+                            </div>
+                          </div>
 
-    <!-- Colonna destra -->
-    <div class="right-sidebar">
-      <div>
-        <h6>Canzone</h6>
-        <img src="./assets/imgs/main/image-12.jpg" class="img-fluid mb-2">
-        <button class="btn btn-dark btn-sm">Switch to video</button>
+                          <div
+                            class="row align-items-center p-3 border-bottom border-secondary border-opacity-10 track-item"
+                          >
+                            <div class="col-1 text-center text-white-50">1</div>
+                            <div class="col-6">
+                              <div class="fw-normal">Canzone</div>
+                              <small class="text-white-50"
+                                >Artista</small
+                              >
+                            </div>
+                            <div class="col-3 text-end text-white-50">
+                              nome
+                            </div>
+                            <div class="col-2 text-end text-white-50">tempo</div>
+                          </div>
+
+                          <div
+                            class="row align-items-center p-3 border-bottom border-secondary border-opacity-10 track-item"
+                          >
+                            <div class="col-1 text-center text-white-50">2</div>
+                            <div class="col-6">
+                              <div class="fw-normal">Canzone</div>
+                              <small class="text-white-50"
+                                >Artista</small
+                              >
+                            </div>
+                            <div class="col-3 text-end text-white-50">
+                             nome
+                            </div>
+                            <div class="col-2 text-end text-white-50">tempo</div>
+                          </div>
+
+                          <div
+                            class="row align-items-center p-3 border-bottom border-secondary border-opacity-10 track-item"
+                          >
+                            <div class="col-1 text-center text-white-50">3</div>
+                            <div class="col-6">
+                              <div class="fw-normal">Canzone</div>
+                              <small class="text-white-50"
+                                >Artista</small
+                              >
+                            </div>
+                            <div class="col-3 text-end text-white-50">
+                              nome
+                            </div>
+                            <div class="col-2 text-end text-white-50">tempo</div>
+                          </div>
+
+                          <div
+                            class="row align-items-center p-3 border-bottom border-secondary border-opacity-10 track-item"
+                          >
+                            <div class="col-1 text-center text-white-50">4</div>
+                            <div class="col-6">
+                              <div class="fw-normal">
+                                Canzone
+                              </div>
+                              <small class="text-white-50"
+                                >Artista</small
+                              >
+                            </div>
+                            <div class="col-3 text-end text-white-50">
+                              nome
+                            </div>
+                            <div class="col-2 text-end text-white-50">tempo</div>
+                          </div>
+
+                          <div
+                            class="row align-items-center p-3 border-bottom border-secondary border-opacity-10 track-item"
+                          >
+                            <div class="col-1 text-center text-white-50">5</div>
+                            <div class="col-6">
+                              <div class="fw-normal">
+                                Canzone
+                              </div>
+                              <small class="text-white-50"
+                                >Artista</small
+                              >
+                            </div>
+                            <div class="col-3 text-end text-white-50">
+                              nome
+                            </div>
+                            <div class="col-2 text-end text-white-50">tempo</div>
+                          </div>
+
+                          <div
+                            class="row align-items-center p-3 border-bottom border-secondary border-opacity-10 track-item"
+                          >
+                            <div class="col-1 text-center text-white-50">6</div>
+                            <div class="col-6">
+                              <div class="fw-normal">Canzone</div>
+                              <small class="text-white-50"
+                                >Artista</small
+                              >
+                            </div>
+                            <div class="col-3 text-end text-white-50">
+                              nome
+                            </div>
+                            <div class="col-2 text-end text-white-50">tempo</div>
+                          </div>
+
+                          <div
+                            class="row align-items-center p-3 border-bottom border-secondary border-opacity-10 track-item"
+                          >
+                            <div class="col-1 text-center text-white-50">7</div>
+                            <div class="col-6">
+                              <div class="fw-normal">
+                                Canzone
+                              </div>
+                              <small class="text-white-50"
+                                >Artista</small
+                              >
+                            </div>
+                            <div class="col-3 text-end text-white-50">
+                              nome
+                            </div>
+                            <div class="col-2 text-end text-white-50">tempo</div>
+                          </div>
+
+                          <div
+                            class="row align-items-center p-3 border-bottom border-secondary border-opacity-10 track-item"
+                          >
+                            <div class="col-1 text-center text-white-50">8</div>
+                            <div class="col-6">
+                              <div class="fw-normal">Canzone</div>
+                              <small class="text-white-50"
+                                >Artista</small
+                              >
+                            </div>
+                            <div class="col-3 text-end text-white-50">
+                             nome
+                            </div>
+                            <div class="col-2 text-end text-white-50">tempo</div>
+                          </div>
+                          <div
+                            class="row align-items-center p-3 border-bottom border-secondary border-opacity-10 track-item"
+                          >
+                            <div class="col-1 text-center text-white-50">9</div>
+                            <div class="col-6">
+                              <div class="fw-normal">Canzone</div>
+                              <small class="text-white-50"
+                                >Artista</small
+                              >
+                            </div>
+                            <div class="col-3 text-end text-white-50">
+                              nome
+                            </div>
+                            <div class="col-2 text-end text-white-50">tempo</div>
+                          </div>
+                          <div
+                            class="row align-items-center p-3 border-bottom border-secondary border-opacity-10 track-item"
+                          >
+                            <div class="col-1 text-center text-white-50">
+                              10
+                            </div>
+                            <div class="col-6">
+                              <div class="fw-normal">Gcanzone</div>
+                              <small class="text-white-50"
+                                >Artista</small
+                              >
+                            </div>
+                            <div class="col-3 text-end text-white-50">
+                              nome
+                            </div>
+                            <div class="col-2 text-end text-white-50">tempo</div>
+                          </div>
+                          <div
+                            class="row align-items-center p-3 border-bottom border-secondary border-opacity-10 track-item"> 
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Sidebar destra-->
+        
+          <div class="col-2">
+            <div class="bg-black h-100 p-3 text-white">
+              <div class="mb-3">
+                <h5 class="text-light">Canzone nome</h5>
+                <img src="./assets/imgs/main/image-12.jpg" class="img-fluid mb-2">
+        <button class="btn btn-dark btn-sm text-white">Switch to video</button>
       </div>
       <div class="mt-4">
         <h6>Related music videos</h6>
         <img src="./assets/imgs/main/image-14.jpg" class="img-fluid mb-1">
         <div>Ok<br><small class="text-secondary">...</small></div>
-        <!-- Aggiungi altri suggerimenti qui -->
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-
-  <!-- Player in basso -->
-  <div class="player">
-    <div class="d-flex align-items-center">
-      <img src="./assets/imgs/main/image-16.jpg" class="img-thumb me-2">
-      <div>
-        <div>Canzone</div>
-        <small class="text-secondary">Artista</small>
+    </main>
+    <!--Barra sottostante-->
+    <footer>
+      <div
+        class="player d-flex justify-content-between align-items-center p-2"
+        style="
+          background: #181818;
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          z-index: 100;
+          height: 10vh;
+        "
+      >
+        <div class="d-flex align-items-center" style="min-width: 250px">
+          <img
+            src="./assets/imgs/main/image-1.jpg"
+            class="album-cover me-2"
+            alt="Copertina brano"
+            style="height: 60px"
+          />
+          <div>
+            <div class="text-secondary" style="font-size: 0.95rem">
+              Fat Funny Friend
+            </div>
+            <small class="text-secondary">Maddie Zahm</small>
+          </div>
+          <button class="btn btn-link text-secondary ms-2">
+            <i class="bi bi-heart"></i>
+          </button>
+        </div>
+        <div
+          class="d-flex flex-column align-items-center"
+          style="min-width: 400px; max-width: 600px; flex: 1"
+        >
+          <div class="d-flex align-items-center mb-1">
+            <button class="btn btn-link text-secondary px-2">
+              <i class="bi bi-shuffle"></i>
+            </button>
+            <button class="btn btn-link text-secondary px-2">
+              <i class="bi bi-skip-start-fill"></i>
+            </button>
+            <button
+              class="btn btn-light rounded-circle mx-2"
+              style="width: 36px; height: 36px"
+            >
+              <i class="bi bi-play-fill"></i>
+            </button>
+            <button class="btn btn-link text-secondary px-2">
+              <i class="bi bi-skip-end-fill"></i>
+            </button>
+            <button class="btn btn-link text-secondary px-2">
+              <i class="bi bi-repeat"></i>
+            </button>
+          </div>
+          <div class="d-flex align-items-center w-100">
+            <span
+              class="text-secondary"
+              style="font-size: 0.8rem; min-width: 40px"
+              >0:58</span
+            >
+            <input
+              type="range"
+              class="form-range mx-2"
+              min="0"
+              max="200"
+              value="58"
+              style="width: 100%"
+            />
+            <span
+              class="text-secondary"
+              style="font-size: 0.8rem; min-width: 40px"
+              >3:20</span
+            >
+          </div>
+        </div>
+        <div
+          class="d-flex align-items-center justify-content-end"
+          style="min-width: 250px"
+        >
+          <button class="btn btn-link text-secondary">
+            <i class="bi bi-mic"></i>
+          </button>
+          <button class="btn btn-link text-secondary">
+            <i class="bi bi-list"></i>
+          </button>
+          <button class="btn btn-link text-secondary">
+            <i class="bi bi-speaker"></i>
+          </button>
+          <button class="btn btn-link text-secondary">
+            <i class="bi bi-volume-up"></i>
+          </button>
+          <input
+            type="range"
+            class="form-range ms-2"
+            min="0"
+            max="100"
+            value="50"
+            style="width: 100px"
+          />
+        </div>
       </div>
-    </div>
-    <div>
-      <span>▶</span>
-      <input type="range" min="0" max="100" value="10">
-    </div>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
+  
+
