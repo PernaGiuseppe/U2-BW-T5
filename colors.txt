@@ -5,3 +5,17 @@
 #212529     epi-dark
 #00ffea     epi-cyan
 
+
+
+data-bs-toggle="collapse"
+                data-bs-target="#menuLaterale"
+                aria-expanded="false"
+                aria-controls="menuLaterale"
+
+
+<div
+                id="menuLaterale"
+                class="collapse border-bottom border-1 border-secondary"
+              >
+
+              </div>
