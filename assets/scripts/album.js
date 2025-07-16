@@ -1,3 +1,12 @@
+// Bottone per tornare indietro alla home
+
+document.getElementById('back-icon').addEventListener('click', function (e) {
+  e.preventDefault()
+  window.location.href = 'home.html'
+})
+
+// Questo codice rende tutti gli elementi "a,i" all'interno del menu li dell'ul, bianchi all'hover del mouse
+
 document.addEventListener('DOMContentLoaded', function () {
   const menuItems = document.querySelectorAll('#menuLaterale li')
 
@@ -40,34 +49,40 @@ document.addEventListener('DOMContentLoaded', function () {
   })
 })
 
-document.getElementById('heartBtn').addEventListener('mouseenter', function () {
-  const icon = this.querySelector('i')
-  if (!icon.classList.contains('text-success')) {
-    icon.classList.remove('text-white-50')
-    icon.classList.add('text-success')
-  }
+// Tramite questo codice la classe "green-cyan", all'hover e al click gli items diventano epi-cyan
+
+document.querySelectorAll('.cayn-items').forEach((element) => {
+  element.addEventListener('mouseenter', function () {
+    const icon = this.querySelector('i')
+    if (!icon.classList.contains('text-epi-cyan')) {
+      icon.classList.remove('text-white-50')
+      icon.classList.add('text-epi-cyan')
+    }
+  })
+
+  element.addEventListener('mouseleave', function () {
+    const icon = this.querySelector('i')
+    if (!this.hasAttribute('data-active')) {
+      icon.classList.remove('text-epi-cyan')
+      icon.classList.add('text-white-50')
+    }
+  })
+
+  element.addEventListener('click', function () {
+    const icon = this.querySelector('i')
+    if (this.hasAttribute('data-active')) {
+      this.removeAttribute('data-active')
+      icon.classList.remove('text-epi-cyan')
+      icon.classList.add('text-white-50')
+    } else {
+      this.setAttribute('data-active', 'true')
+      icon.classList.remove('text-white-50')
+      icon.classList.add('text-epi-cyan')
+    }
+  })
 })
 
-document.getElementById('heartBtn').addEventListener('mouseleave', function () {
-  const icon = this.querySelector('i')
-  if (!this.hasAttribute('data-active')) {
-    icon.classList.remove('text-success')
-    icon.classList.add('text-white-50')
-  }
-})
-
-document.getElementById('heartBtn').addEventListener('click', function () {
-  const icon = this.querySelector('i')
-  if (this.hasAttribute('data-active')) {
-    this.removeAttribute('data-active')
-    icon.classList.remove('text-success')
-    icon.classList.add('text-white-50')
-  } else {
-    this.setAttribute('data-active', 'true')
-    icon.classList.remove('text-white-50')
-    icon.classList.add('text-success')
-  }
-})
+// Tramite questo codice la classe "hovericos", all'hover gli items diventano bianchi
 
 document.querySelectorAll('.hovericos').forEach((element) => {
   element.addEventListener('mouseenter', function () {
