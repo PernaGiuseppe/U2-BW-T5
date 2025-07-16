@@ -113,10 +113,19 @@ async function initPlayer() {
     });
     // Quando la traccia finisce (evento ended)
     audio.addEventListener("ended", function () {
-      playBtn.innerHTML = '<i class="bi bi-play-fill"></i>';
-      isPlaying = false;
-      resetProgressBar();
-      hasReset = true;
+      // Se la modalità repeat è attiva, riparte la traccia da capo
+      if (isRepeat) {
+        audio.currentTime = 0; // Riporta l'audio all'inizio
+        audio.play(); // Fa ripartire la riproduzione
+        isPlaying = true;
+        playBtn.innerHTML = '<i class="bi bi-pause-fill"></i>';
+        hasReset = false;
+      } else {
+        playBtn.innerHTML = '<i class="bi bi-play-fill"></i>';
+        isPlaying = false;
+        resetProgressBar();
+        hasReset = true;
+      }
     });
     // Quando parte la riproduzione, resetta il flag
     audio.addEventListener("play", function () {
