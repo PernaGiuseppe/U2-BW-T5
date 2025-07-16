@@ -49,9 +49,9 @@ document.addEventListener('DOMContentLoaded', function () {
   })
 })
 
-// Tramite questo codice la classe "green-cyan", all'hover e al click gli items diventano epi-cyan
+// Tramite questo codice la classe "cyan-items", all'hover e al click gli items diventano epi-cyan
 
-document.querySelectorAll('.cayn-items').forEach((element) => {
+document.querySelectorAll('.cyan-items').forEach((element) => {
   element.addEventListener('mouseenter', function () {
     const icon = this.querySelector('i')
     if (!icon.classList.contains('text-epi-cyan')) {
