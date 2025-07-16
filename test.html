@@ -38,6 +38,76 @@
       .playlist-card:hover {
         background: #383838;
       }
+      /* Centra l'icona all'interno del bottone circolare play/pausa */
+      .btn.rounded-circle > i {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+      }
+      /* Personalizza i pallini (thumb) degli slider con il colore epi-cyan */
+      .player input[type="range"]::-webkit-slider-thumb {
+        background: #00e1e7; /* epi-cyan */
+        border: 2px solid #00e1e7;
+        box-shadow: 0 0 4px #00e1e7;
+      }
+      .player input[type="range"]::-moz-range-thumb {
+        background: #00e1e7;
+        border: 2px solid #00e1e7;
+        box-shadow: 0 0 4px #00e1e7;
+      }
+      .player input[type="range"]::-ms-thumb {
+        background: #00e1e7;
+        border: 2px solid #00e1e7;
+        box-shadow: 0 0 4px #00e1e7;
+      }
+      .player input[type="range"] {
+        accent-color: #00e1e7; /* Per browser moderni */
+      }
+      /* Gradient personalizzato per la traccia degli slider (player e volume) */
+      .player input[type="range"]::-webkit-slider-runnable-track {
+        height: 6px;
+        border-radius: 4px;
+        background: linear-gradient(
+          90deg,
+          #192155 0%,
+          #6a53ff 50%,
+          #d50075 100%
+        );
+      }
+      .player input[type="range"]::-moz-range-track {
+        height: 6px;
+        border-radius: 4px;
+        background: linear-gradient(
+          90deg,
+          #192155 0%,
+          #6a53ff 50%,
+          #d50075 100%
+        );
+      }
+      .player input[type="range"]::-ms-fill-lower {
+        background: linear-gradient(
+          90deg,
+          #192155 0%,
+          #6a53ff 50%,
+          #d50075 100%
+        );
+        border-radius: 4px;
+      }
+      .player input[type="range"]::-ms-fill-upper {
+        background: linear-gradient(
+          90deg,
+          #192155 0%,
+          #6a53ff 50%,
+          #d50075 100%
+        );
+        border-radius: 4px;
+      }
+      .player input[type="range"] {
+        background: transparent; /* fallback per browser che non supportano i gradient custom */
+      }
     </style>
   </head>
   <body>
@@ -82,10 +152,13 @@
             <i class="bi bi-skip-start-fill"></i>
           </button>
           <button
-            class="btn btn-light rounded-circle mx-2"
-            style="width: 36px; height: 36px"
+            class="btn btn-light rounded-circle mx-2 d-flex align-items-center justify-content-center"
+            style="width: 36px; height: 36px; padding: 0"
           >
-            <i class="bi bi-play-fill"></i>
+            <i
+              class="bi bi-play-fill"
+              style="font-size: 1.5rem; margin: 0 auto"
+            ></i>
           </button>
           <button class="btn btn-link text-secondary px-2">
             <i class="bi bi-skip-end-fill"></i>
@@ -148,5 +221,6 @@
     />
     <!-- Script Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/scripts/mediabar.js"></script>
   </body>
 </html>
