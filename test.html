@@ -26,7 +26,7 @@
         left: 0;
         width: 100%;
       }
-      .album-cover {
+      .album-covers {
         width: 60px;
         height: 60px;
         object-fit: cover;
@@ -48,26 +48,26 @@
         margin: 0;
       }
       /* Personalizza i pallini (thumb) degli slider con il colore epi-cyan */
-      .player input[type="range"]::-webkit-slider-thumb {
+      .player input[type='range']::-webkit-slider-thumb {
         background: #00e1e7; /* epi-cyan */
         border: 2px solid #00e1e7;
         box-shadow: 0 0 4px #00e1e7;
       }
-      .player input[type="range"]::-moz-range-thumb {
+      .player input[type='range']::-moz-range-thumb {
         background: #00e1e7;
         border: 2px solid #00e1e7;
         box-shadow: 0 0 4px #00e1e7;
       }
-      .player input[type="range"]::-ms-thumb {
+      .player input[type='range']::-ms-thumb {
         background: #00e1e7;
         border: 2px solid #00e1e7;
         box-shadow: 0 0 4px #00e1e7;
       }
-      .player input[type="range"] {
+      .player input[type='range'] {
         accent-color: #00e1e7; /* Per browser moderni */
       }
       /* Gradient personalizzato per la traccia degli slider (player e volume) */
-      .player input[type="range"]::-webkit-slider-runnable-track {
+      .player input[type='range']::-webkit-slider-runnable-track {
         height: 6px;
         border-radius: 4px;
         background: linear-gradient(
@@ -77,7 +77,7 @@
           #d50075 100%
         );
       }
-      .player input[type="range"]::-moz-range-track {
+      .player input[type='range']::-moz-range-track {
         height: 6px;
         border-radius: 4px;
         background: linear-gradient(
@@ -87,7 +87,7 @@
           #d50075 100%
         );
       }
-      .player input[type="range"]::-ms-fill-lower {
+      .player input[type='range']::-ms-fill-lower {
         background: linear-gradient(
           90deg,
           #192155 0%,
@@ -96,7 +96,7 @@
         );
         border-radius: 4px;
       }
-      .player input[type="range"]::-ms-fill-upper {
+      .player input[type='range']::-ms-fill-upper {
         background: linear-gradient(
           90deg,
           #192155 0%,
@@ -105,7 +105,7 @@
         );
         border-radius: 4px;
       }
-      .player input[type="range"] {
+      .player input[type='range'] {
         background: transparent; /* fallback per browser che non supportano i gradient custom */
       }
     </style>
@@ -126,7 +126,7 @@
       <div class="d-flex align-items-center" style="min-width: 250px">
         <img
           src="./assets/imgs/main/image-1.jpg"
-          class="album-cover me-2"
+          class="album-covers me-2"
           alt="Copertina brano"
           style="height: 60px"
         />
