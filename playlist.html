@@ -23,7 +23,7 @@
           rgba(20, 20, 20, 1) 100%
         );
       }
-      @media (max-width: 768px) {
+      @media (max-width: 1200px) {
         /*Nasconde le colonne laterali su mobile*/
         .col-2 {
           display: none !important;
@@ -60,11 +60,17 @@
           text-decoration: none;
         }
       }
+
+      @media (max-width: 1200px) {
+        .player {
+          margin-bottom: 60px;
+        }
+      }
     </style>
   </head>
 
   <!--Navbar mobile in fondo-->
-  <div class="mobile-bottom-nav d-md-none px-6">
+  <div class="mobile-bottom-nav d-xl-none px-6">
     <a href="./home.html"
       ><i class="bi bi-house-door"></i> <br />
       <h6 style="font-size: 0.6em">Home</h6></a
@@ -79,7 +85,7 @@
     >
   </div>
 
-  <body>
+  <body class="bg-black">
     <main>
       <!--Sidebar sinistra-->
       <div class="container-fluid p-0">
@@ -108,7 +114,7 @@
                 id="menuLaterale"
                 class="collapse border-bottom border-1 border-secondary"
               ></div>
-              <div style="overflow-y: scroll; height: 65vh">
+              <div style="overflow-y: scroll; height: 75vh">
                 <div class="list-group">
                   <div
                     class="list-group-item bg-transparent text-white border-0 d-flex align-items-center gap-3"
@@ -279,9 +285,10 @@
                       aria-controls="menuAccount"
                     >
                       <img
-                        src="https://placehold.co/30x30"
+                        src="./immagini.playlist/Screenshot 2025-07-17 alle 14.53 senza sfondo.34.png"
                         alt="Your profile picture"
                         class="rounded-circle me-1"
+                        style="height: 30px; width: 30px"
                       />
                       <span>Antimo</span>
                     </button>
@@ -387,29 +394,31 @@
 
           <!--Sidebar destra-->
           <div class="col-2">
-            <div class="bg-black h-100 p-3 text-white">
-              <div class="mb-3">
-                <h5 class="text-light">Canzone nome</h5>
-                <img
-                  src="./assets/imgs/main/image-12.jpg"
-                  class="img-fluid mb-2"
-                />
-                <button class="btn btn-dark btn-sm text-white">
-                  Switch to video
-                </button>
-              </div>
-              <div class="mt-4">
-                <h6>Related music videos</h6>
-                <img
-                  src="./assets/imgs/search/image-7.jpg"
-                  class="img-fluid mb-1"
-                />
-                <div class="mt-4">
-                  <h6>About the Artist</h6>
+            <div style="overflow-y: scroll; height: 100vh">
+              <div class="bg-black p-3 text-white">
+                <div class="mb-3">
+                  <h5 class="text-light">Canzone nome</h5>
                   <img
-                    src="./assets/imgs/main/image-2.jpg"
+                    src="./assets/imgs/main/image-12.jpg"
+                    class="img-fluid mb-2"
+                  />
+                  <button class="btn btn-dark btn-sm text-white">
+                    Switch to video
+                  </button>
+                </div>
+                <div class="mt-4">
+                  <h6>Related music videos</h6>
+                  <img
+                    src="./assets/imgs/search/image-7.jpg"
                     class="img-fluid mb-1"
                   />
+                  <div class="mt-4">
+                    <h6>About the Artist</h6>
+                    <img
+                      src="./assets/imgs/main/image-2.jpg"
+                      class="img-fluid mb-1"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -432,26 +441,26 @@
           height: 10vh;
         "
       >
-        <div class="d-flex align-items-center" style="min-width: 250px">
+        <div class="d-flex align-items-center" style="min-width: min-content">
           <img
             src="./assets/imgs/main/image-1.jpg"
             class="album-covers me-2"
             alt="Copertina brano"
             style="height: 60px"
           />
-          <div>
+          <div class="d-none d-md-block">
             <div class="text-secondary" style="font-size: 0.95rem">
               Fat Funny Friend
             </div>
             <small class="text-secondary">Maddie Zahm</small>
           </div>
-          <button class="btn btn-link text-secondary ms-2">
+          <button class="btn btn-link text-secondary ms-2 d-none d-xl-block">
             <i class="bi bi-heart"></i>
           </button>
         </div>
         <div
           class="d-flex flex-column align-items-center"
-          style="min-width: 400px; max-width: 600px; flex: 1"
+          style="min-width: 200px; max-width: 600px; flex: 1"
         >
           <div class="d-flex align-items-center mb-1">
             <button class="btn btn-link text-secondary px-2">
@@ -499,15 +508,17 @@
         </div>
         <div
           class="d-flex align-items-center justify-content-end"
-          style="min-width: 250px"
+          style="min-width: min-content"
         >
-          <button class="btn btn-link text-secondary">
+          <button class="btn btn-link text-secondary d-none d-xl-block">
             <i class="bi bi-mic"></i>
           </button>
-          <button class="btn btn-link text-secondary">
+          <button class="btn btn-link text-secondary d-none d-xl-block">
             <i class="bi bi-list"></i>
           </button>
-          <button class="btn btn-link text-secondary cyan-items">
+          <button
+            class="btn btn-link text-white-50 cyan-items d-none d-xl-block"
+          >
             <i class="bi bi-speaker"></i>
           </button>
           <button class="btn btn-link text-secondary">
@@ -515,11 +526,11 @@
           </button>
           <input
             type="range"
-            class="form-range ms-2"
+            class="form-range ms-2 d-none d-xl-block"
             min="0"
             max="100"
             value="50"
-            style="width: 100px"
+            style="min-width: 70px; max-width: 100px"
           />
         </div>
       </div>

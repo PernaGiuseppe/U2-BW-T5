@@ -23,13 +23,65 @@
           rgba(20, 20, 20, 1) 100%
         );
       }
+      .listItem:hover {
+        color: white;
+        cursor: pointer;
+      }
+      .listA {
+        color: #6c757d;
+        text-decoration: none;
+      }
+      .listA:hover {
+        color: #ffffff;
+        cursor: pointer;
+      }
+      .mobile-bottom-nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        background-color: #000;
+        border-top: 1px solid #333;
+        z-index: 999;
+      }
+      .mobile-bottom-nav a {
+        color: #fff;
+        text-align: center;
+        font-size: 1.3rem;
+        flex-grow: 1;
+        padding: 8px 0;
+        text-decoration: none;
+      }
+      @media (max-width: 1200px) {
+        .player {
+          margin-bottom: 60px;
+        }
+      }
     </style>
   </head>
+  <div class="mobile-bottom-nav d-xl-none px-6">
+    <a href="./home.html"
+      ><i class="bi bi-house-door"></i> <br />
+      <h6 style="font-size: 0.6em">Home</h6></a
+    >
+    <a href="#"
+      ><i class="bi bi-search"></i> <br />
+      <h6 style="font-size: 0.6em">Search</h6></a
+    >
+    <a href="./album.html?id=185484062"
+      ><i class="bi bi-collection mx-2"></i> <br />
+      <h6 style="font-size: 0.6em">Albums</h6></a
+    >
+  </div>
   <body>
     <main>
       <div class="container-fluid p-0">
         <div class="row g-0 p-0">
-          <div class="col-2">
+          <div class="col-2 d-none d-xl-block">
             <div class="bg-black w-100 h-100">
               <i
                 class="bi bi-three-dots text-white fs-4 mx-2"
@@ -96,91 +148,75 @@
               <div style="overflow-y: scroll; height: 65vh">
                 <ul class="list-unstyled text-secondary py-2">
                   <li class="mx-4 my-1">
-                    <a
-                      href="./playlist.html?id=1"
-                      class="text-secondary text-decoration-none"
+                    <a href="./playlist.html?id=1" class="listA"
                       >Playlist Rock</a
                     >
                   </li>
                   <li class="mx-4 my-1">
-                    <a
-                      href="./playlist.html?id=2"
-                      class="text-secondary text-decoration-none"
-                    >
+                    <a href="./playlist.html?id=2" class="listA">
                       Playlist Chill</a
                     >
                   </li>
                   <li class="mx-4 my-1">
-                    <a
-                      href="./playlist.html?id=3"
-                      class="text-secondary text-decoration-none"
-                    >
+                    <a href="./playlist.html?id=3" class="listA">
                       Playlist Pop</a
                     >
                   </li>
                   <li class="mx-4 my-1">
-                    <a
-                      href="./playlist.html?id=4"
-                      class="text-secondary text-decoration-none"
-                    >
+                    <a href="./playlist.html?id=4" class="listA">
                       Playlist Classic</a
                     >
                   </li>
                   <li class="mx-4 my-1">
-                    <a
-                      href="./playlist.html?id=5"
-                      class="text-secondary text-decoration-none"
-                    >
+                    <a href="./playlist.html?id=5" class="listA">
                       Playlist Tecno</a
                     >
                   </li>
                   <li class="mx-4 my-1">
-                    <a
-                      href="./playlist.html?id=6"
-                      class="text-secondary text-decoration-none"
+                    <a href="./playlist.html?id=6" class="listA"
                       >Playlist reggeton</a
                     >
                   </li>
-                  <li class="mx-4 my-1">Chill Vibes</li>
-                  <li class="mx-4 my-1">Morning Coffee ☕</li>
-                  <li class="mx-4 my-1">Lo-Fi Beats</li>
-                  <li class="mx-4 my-1">Soft Piano 🌙</li>
-                  <li class="mx-4 my-1">Summer Breeze</li>
-                  <li class="mx-4 my-1">Roadtrip Classics 🚗</li>
-                  <li class="mx-4 my-1">Focus & Study</li>
-                  <li class="mx-4 my-1">Rainy Day Jazz 🌧️</li>
-                  <li class="mx-4 my-1">Night Drive</li>
-                  <li class="mx-4 my-1">Feel Good Hits 😎</li>
-                  <li class="mx-4 my-1">Deep Relaxation</li>
-                  <li class="mx-4 my-1">Weekend Party 🎉</li>
-                  <li class="mx-4 my-1">Retro Vibes</li>
-                  <li class="mx-4 my-1">Ocean Waves 🌊</li>
-                  <li class="mx-4 my-1">Golden Hour</li>
-                  <li class="mx-4 my-1">Workout Energy 💪</li>
-                  <li class="mx-4 my-1">Acoustic Sessions</li>
-                  <li class="mx-4 my-1">Midnight Chill 🌌</li>
-                  <li class="mx-4 my-1">City Lights</li>
-                  <li class="mx-4 my-1">Indie Essentials 🎸</li>
-                  <li class="mx-4 my-1">Peaceful Mornings</li>
-                  <li class="mx-4 my-1">Sunset Lounge 🌅</li>
-                  <li class="mx-4 my-1">Happy Mood</li>
-                  <li class="mx-4 my-1">Latin Heat 🔥</li>
-                  <li class="mx-4 my-1">Vintage Soul</li>
-                  <li class="mx-4 my-1">Dancefloor Hits 💃</li>
-                  <li class="mx-4 my-1">Evening Acoustic</li>
-                  <li class="mx-4 my-1">Dreamy Nights ✨</li>
-                  <li class="mx-4 my-1">Classic Rock</li>
-                  <li class="mx-4 my-1">Quiet Moments 🕊️</li>
-                  <li class="mx-4 my-1">Happy Roadtrip</li>
-                  <li class="mx-4 my-1">Sleep & Relax 😴</li>
-                  <li class="mx-4 my-1">Tropical House</li>
-                  <li class="mx-4 my-1">Cozy Fireplace 🪵</li>
-                  <li class="mx-4 my-1">Epic Soundtracks</li>
+                  <li class="mx-4 my-1 listItem">Chill Vibes</li>
+                  <li class="mx-4 my-1 listItem">Morning Coffee ☕</li>
+                  <li class="mx-4 my-1 listItem">Lo-Fi Beats</li>
+                  <li class="mx-4 my-1 listItem">Soft Piano 🌙</li>
+                  <li class="mx-4 my-1 listItem">Summer Breeze</li>
+                  <li class="mx-4 my-1 listItem">Roadtrip Classics 🚗</li>
+                  <li class="mx-4 my-1 listItem">Focus & Study</li>
+                  <li class="mx-4 my-1 listItem">Rainy Day Jazz 🌧️</li>
+                  <li class="mx-4 my-1 listItem">Night Drive</li>
+                  <li class="mx-4 my-1 listItem">Feel Good Hits 😎</li>
+                  <li class="mx-4 my-1 listItem">Deep Relaxation</li>
+                  <li class="mx-4 my-1 listItem">Weekend Party 🎉</li>
+                  <li class="mx-4 my-1 listItem">Retro Vibes</li>
+                  <li class="mx-4 my-1 listItem">Ocean Waves 🌊</li>
+                  <li class="mx-4 my-1 listItem">Golden Hour</li>
+                  <li class="mx-4 my-1 listItem">Workout Energy 💪</li>
+                  <li class="mx-4 my-1 listItem">Acoustic Sessions</li>
+                  <li class="mx-4 my-1 listItem">Midnight Chill 🌌</li>
+                  <li class="mx-4 my-1 listItem">City Lights</li>
+                  <li class="mx-4 my-1 listItem">Indie Essentials 🎸</li>
+                  <li class="mx-4 my-1 listItem">Peaceful Mornings</li>
+                  <li class="mx-4 my-1 listItem">Sunset Lounge 🌅</li>
+                  <li class="mx-4 my-1 listItem">Happy Mood</li>
+                  <li class="mx-4 my-1 listItem">Latin Heat 🔥</li>
+                  <li class="mx-4 my-1 listItem">Vintage Soul</li>
+                  <li class="mx-4 my-1 listItem">Dancefloor Hits 💃</li>
+                  <li class="mx-4 my-1 listItem">Evening Acoustic</li>
+                  <li class="mx-4 my-1 listItem">Dreamy Nights ✨</li>
+                  <li class="mx-4 my-1 listItem">Classic Rock</li>
+                  <li class="mx-4 my-1 listItem">Quiet Moments 🕊️</li>
+                  <li class="mx-4 my-1 listItem">Happy Roadtrip</li>
+                  <li class="mx-4 my-1 listItem">Sleep & Relax 😴</li>
+                  <li class="mx-4 my-1 listItem">Tropical House</li>
+                  <li class="mx-4 my-1 listItem">Cozy Fireplace 🪵</li>
+                  <li class="mx-4 my-1 listItem">Epic Soundtracks</li>
                 </ul>
               </div>
             </div>
           </div>
-          <div class="col-8" id="mainSection">
+          <div class="col-12 col-xl-8" id="mainSection">
             <div class="hero-gradient h-100 ps-3 pt-2">
               <div>
                 <div class="d-flex justify-content-between">
@@ -206,9 +242,10 @@
                       aria-controls="menuAccount"
                     >
                       <img
-                        src="https://placehold.co/30x30"
+                        src="./immagini.playlist/Screenshot 2025-07-17 alle 14.53 senza sfondo.34.png"
                         alt="Your profile picture"
                         class="rounded-circle me-1"
+                        style="height: 30px; width: 30px"
                       />
                       <span>Antimo</span>
                     </button>
@@ -226,7 +263,12 @@
                   </div>
                   <i
                     class="bi bi-person-lines-fill d-none text-secondary fs-3"
-                    style="position: fixed; top: 12px; right: 15px"
+                    style="
+                      position: fixed;
+                      top: 10px;
+                      right: 15px;
+                      cursor: pointer;
+                    "
                     id="openFriends"
                   ></i>
                 </div>
@@ -317,13 +359,20 @@
               </div>
             </div>
           </div>
-          <div class="col-2" id="rightSection">
+          <div class="col-2 d-none d-xl-block" id="rightSection">
             <div class="bg-black h-100 p-3">
               <div class="d-flex justify-content-between">
                 <h5 class="text-light">Attività Amici</h5>
                 <div>
-                  <i class="bi bi-person-plus text-secondary me-2"></i
-                  ><i class="bi bi-x-lg text-secondary" id="closeFriends"></i>
+                  <i
+                    class="bi bi-person-plus text-secondary me-2"
+                    style="cursor: pointer"
+                  ></i
+                  ><i
+                    class="bi bi-x-lg text-secondary"
+                    id="closeFriends"
+                    style="cursor: pointer"
+                  ></i>
                 </div>
               </div>
               <div>
@@ -393,26 +442,26 @@
           height: 10vh;
         "
       >
-        <div class="d-flex align-items-center" style="min-width: 250px">
+        <div class="d-flex align-items-center" style="min-width: min-content">
           <img
             src="./assets/imgs/main/image-1.jpg"
             class="album-covers me-2"
             alt="Copertina brano"
             style="height: 60px"
           />
-          <div>
+          <div class="d-none d-md-block">
             <div class="text-secondary" style="font-size: 0.95rem">
               Fat Funny Friend
             </div>
             <small class="text-secondary">Maddie Zahm</small>
           </div>
-          <button class="btn btn-link text-secondary ms-2">
+          <button class="btn btn-link text-secondary ms-2 d-none d-xl-block">
             <i class="bi bi-heart"></i>
           </button>
         </div>
         <div
           class="d-flex flex-column align-items-center"
-          style="min-width: 400px; max-width: 600px; flex: 1"
+          style="min-width: 200px; max-width: 600px; flex: 1"
         >
           <div class="d-flex align-items-center mb-1">
             <button class="btn btn-link text-secondary px-2">
@@ -460,15 +509,17 @@
         </div>
         <div
           class="d-flex align-items-center justify-content-end"
-          style="min-width: 250px"
+          style="min-width: min-content"
         >
-          <button class="btn btn-link text-secondary">
+          <button class="btn btn-link text-secondary d-none d-xl-block">
             <i class="bi bi-mic"></i>
           </button>
-          <button class="btn btn-link text-secondary">
+          <button class="btn btn-link text-secondary d-none d-xl-block">
             <i class="bi bi-list"></i>
           </button>
-          <button class="btn btn-link text-secondary cyan-items">
+          <button
+            class="btn btn-link text-white-50 cyan-items d-none d-xl-block"
+          >
             <i class="bi bi-speaker"></i>
           </button>
           <button class="btn btn-link text-secondary">
@@ -476,11 +527,11 @@
           </button>
           <input
             type="range"
-            class="form-range ms-2"
+            class="form-range ms-2 d-none d-xl-block"
             min="0"
             max="100"
             value="50"
-            style="width: 100px"
+            style="min-width: 70px; max-width: 100px"
           />
         </div>
       </div>

@@ -38,7 +38,9 @@ const generateAlbumsRow1 = function (albums) {
         albumsArea1.insertAdjacentHTML(
           "beforeend",
           `
-        <a href="album.html?id=${singleAlbum.id}">        
+        <a href="album.html?id=${
+          singleAlbum.id
+        }" class="text-decoration-none">        
         <div class="col">
             <div class="card ${
               colors[i % colors.length]
@@ -82,7 +84,9 @@ const generateAlbumsRow2 = function (albums) {
         albumsArea2.insertAdjacentHTML(
           "beforeend",
           `
-        <a href="album.html?id=${singleAlbum.id}">  
+        <a href="album.html?id=${
+          singleAlbum.id
+        }" class="text-decoration-none">  
         <div class="col">
             <div class="card ${
               colors[i % colors.length]
