@@ -19,7 +19,7 @@ hideHero.addEventListener("click", () => {
 });
 
 const generateAlbumsRow1 = function (albums) {
-  const albumsArea = document.getElementById("albums1");
+  const albumsArea1 = document.getElementById("albums1");
   const albumPromises = albums.map((albumId) =>
     fetch(endpointAlbum + albumId).then((response) => {
       if (!response.ok) {
@@ -35,8 +35,11 @@ const generateAlbumsRow1 = function (albums) {
       results.forEach((singleAlbum, i) => {
         const isLast = i === results.length - 1;
         const hiddenClass = isLast ? "d-none" : "";
-        albumsArea.innerHTML += `
-          <div class="col">
+        albumsArea1.insertAdjacentHTML(
+          "beforeend",
+          `
+        <a href="album.html?id=${singleAlbum.id}">        
+        <div class="col">
             <div class="card ${
               colors[i % colors.length]
             } text-light border border-epi-blue shadow ${hiddenClass}">
@@ -49,7 +52,9 @@ const generateAlbumsRow1 = function (albums) {
               </div>
             </div>
           </div>
-        `;
+          </a>
+        `
+        );
       });
     })
     .catch((error) => {
@@ -74,8 +79,11 @@ const generateAlbumsRow2 = function (albums) {
       results.forEach((singleAlbum, i) => {
         const isLast = i === results.length - 1;
         const hiddenClass = isLast ? "d-none" : "";
-        albumsArea2.innerHTML += `
-          <div class="col">
+        albumsArea2.insertAdjacentHTML(
+          "beforeend",
+          `
+        <a href="album.html?id=${singleAlbum.id}">  
+        <div class="col">
             <div class="card ${
               colors[i % colors.length]
             } text-light border border-epi-blue shadow ${hiddenClass}">
@@ -88,7 +96,9 @@ const generateAlbumsRow2 = function (albums) {
               </div>
             </div>
           </div>
-        `;
+          </a>
+        `
+        );
       });
     })
     .catch((error) => {
