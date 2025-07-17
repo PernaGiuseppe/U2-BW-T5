@@ -70,7 +70,7 @@ async function initPlayer() {
     // Se il player era già in ascolto, resetta la barra
     resetProgressBar()
     // Gestione play/pausa
-    const playBtn = document.querySelector('.player .btn-light')
+    const playBtn = document.querySelector('.player .btn-epi-cyan')
     playBtn.innerHTML = '<i class="bi bi-play-fill"></i>'
     playBtn.onclick = function () {
       if (!isPlaying) {

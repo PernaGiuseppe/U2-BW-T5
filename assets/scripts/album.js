@@ -8,7 +8,12 @@ document.getElementById('back-icon').addEventListener('click', function (e) {
 // Questo codice rende tutti gli elementi "a,i" all'interno del menu li dell'ul, bianchi all'hover del mouse
 
 document.addEventListener('DOMContentLoaded', function () {
-  const menuItems = document.querySelectorAll('#menuLaterale li')
+  const menuItems = document.querySelectorAll(
+    '#menuLaterale li:not([data-exclude])'
+  )
+  // La riga 12 esclude li che deve rimanere "text-light" che indica in che pagina siamo attualmente
+  // per es: in home ho aggiunto "data-exclude" all'li di Home e su Album all'li di Albums
+  // in caso contrario sarebbero stati "colpiti" tutti gli li, e quindi la classe light sarebbe stata rimossa
 
   menuItems.forEach((li) => {
     li.addEventListener('mouseenter', function () {
@@ -100,4 +105,28 @@ document.querySelectorAll('.hovericos').forEach((element) => {
       icon.classList.add('text-white-50')
     }
   })
+})
+
+// Questa funzione rende tutte le classi heart dentro i button, cyan all'hover e cambia l'icona rendendola tutta dello stesso colore cyan
+const heartBtns = document.querySelectorAll('button .bi-heart')
+heartBtns.forEach((heartBtn) => {
+  let isHeart = false
+  heartBtn.parentElement.onmouseenter = function () {
+    if (!isHeart) heartBtn.style.color = '#00e1e7'
+  }
+  heartBtn.parentElement.onmouseleave = function () {
+    if (!isHeart) heartBtn.style.color = ''
+  }
+  heartBtn.parentElement.onclick = function () {
+    isHeart = !isHeart
+    if (isHeart) {
+      heartBtn.style.color = '#00e1e7'
+      heartBtn.classList.remove('bi-heart')
+      heartBtn.classList.add('bi-heart-fill')
+    } else {
+      heartBtn.style.color = ''
+      heartBtn.classList.remove('bi-heart-fill')
+      heartBtn.classList.add('bi-heart')
+    }
+  }
 })

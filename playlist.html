@@ -12,13 +12,8 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     />
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="./assets/imgs/spotify_logo_icon_229290.ico"
-    />
+    <link rel="icon" type="image/x-icon" href="./assets/imgs/EpiSpotify.ico" />
     <style>
-
       .hero-gradient {
         background: #d3b64b;
         background: linear-gradient(
@@ -29,51 +24,51 @@
         );
       }
       @media (max-width: 768px) {
-    /*Nasconde le colonne laterali su mobile*/
-    .col-2 {
-      display: none !important;
-    }
-    /*Rendi la colonna centrale a tutta larghezza*/
-    .col-8 {
-      flex: 0 0 100%;
-      max-width: 100%;
-    }
-    /*Spazio sotto per la navbar mobile*/
-    main {
-      padding-bottom: 60px;
-    }
-    /*Navbar mobile fissa in basso*/
-    .mobile-bottom-nav {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 60px;
-      background-color: #000;
-      border-top: 1px solid #333;
-      z-index: 999;
-    }
-    .mobile-bottom-nav a {
-      color: #fff;
-      text-align: center;
-      font-size: 1.3rem;
-      flex-grow: 1;
-      padding: 8px 0;
-      text-decoration: none;
-    }
-  }
+        /*Nasconde le colonne laterali su mobile*/
+        .col-2 {
+          display: none !important;
+        }
+        /*Rendi la colonna centrale a tutta larghezza*/
+        .col-8 {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+        /*Spazio sotto per la navbar mobile*/
+        main {
+          padding-bottom: 60px;
+        }
+        /*Navbar mobile fissa in basso*/
+        .mobile-bottom-nav {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 60px;
+          background-color: #000;
+          border-top: 1px solid #333;
+          z-index: 999;
+        }
+        .mobile-bottom-nav a {
+          color: #fff;
+          text-align: center;
+          font-size: 1.3rem;
+          flex-grow: 1;
+          padding: 8px 0;
+          text-decoration: none;
+        }
+      }
     </style>
   </head>
   <!--Navbar mobile in fondo-->
-<div class="mobile-bottom-nav d-md-none">
-  <a href="./home.html"><i class="bi bi-house-door"></i></a>
-  <a href="#"><i class="bi bi-search"></i></a>
-  <a href="./album.html"><i class="bi bi-music-note-list"></i></a>
-  <a href="./home.html"><i class="bi bi-person"></i></a>
-</div>
+  <div class="mobile-bottom-nav d-md-none">
+    <a href="./home.html"><i class="bi bi-house-door"></i></a>
+    <a href="#"><i class="bi bi-search"></i></a>
+    <a href="./album.html"><i class="bi bi-music-note-list"></i></a>
+    <a href="./home.html"><i class="bi bi-person"></i></a>
+  </div>
   <body>
     <main>
       <!--Sidebar sinistra-->
@@ -81,113 +76,166 @@
         <div class="row g-0 p-0">
           <div class="col-2">
             <div class="bg-black w-100 h-100">
-         <h6 class="text-white mb-4 ms-3 pt-3">Your Library</h6>
-         <div class="mb-2">
-        <button class="btn btn-sm btn-dark text-light mb-5 ms-3">
-           <a href="./home.html" class="text-decoration-none text-white">Home</a></button>
-        <button class="btn btn-sm btn-dark text-light mb-5">
-            <a href="./album.html" class="text-decoration-none text-white">Albums</a></button>
-        <button class="btn btn-sm btn-dark text-light mb-5">Playlist</button>
-         </div>
+              <h6 class="text-white mb-4 ms-3 pt-3">Your Library</h6>
+              <div class="mb-2">
+                <button class="btn btn-sm btn-dark text-light mb-5 ms-3">
+                  <a href="./home.html" class="text-decoration-none text-white"
+                    >Home</a
+                  >
+                </button>
+                <button class="btn btn-sm btn-dark text-light mb-5">
+                  <a href="./album.html" class="text-decoration-none text-white"
+                    >Albums</a
+                  >
+                </button>
+                <button class="btn btn-sm btn-dark text-light mb-5">
+                  Playlist
+                </button>
+              </div>
               <div
                 id="menuLaterale"
-                class="collapse border-bottom border-1 border-secondary">
-              </div>
+                class="collapse border-bottom border-1 border-secondary"
+              ></div>
               <div style="overflow-y: scroll; height: 65vh">
                 <div class="list-group">
-                <div class="list-group-item bg-transparent text-white border-0 d-flex align-items-center gap-3">
-               <img
-                src="./assets/imgs/favorite.webp"
-                style="height: 22%; width: 22%; object-fit: cover;"
-                alt=""/>
-                <div>
-                <h6 class="mb-0">Liked Songs</h6>
-               <span class="text-white-50 small">Playlist • 95 songs</span>
-              </div>           
-            </div>
-           <div class="list-group-item bg-transparent text-white border-0 d-flex align-items-center gap-3">
-            <img
-            src="./assets/imgs/search/image-18.jpg"
-            style="height: 22%; width: 22%; object-fit: cover;"
-            alt=""/>
-            <div>
-            <h6 class="mb-0">Sleep Time</h6>
-            <span class="text-white-50 small">Playlist • 178 songs</span>
-            </div>           
-            </div>
-           <div class="list-group-item bg-transparent text-white border-0 d-flex align-items-center gap-3">
-            <img
-            src="./assets/imgs/search/image-8.jpg"
-            style="height: 22%; width: 22%; object-fit: cover;"
-            alt=""/>
-             <div>
-            <h6 class="mb-0">Beast Mode</h6>
-            <span class="text-white-50 small">Playlist • 62 songs</span>
-            </div>           
-            </div>
-           <div class="list-group-item bg-transparent text-white border-0 d-flex align-items-center gap-3">
-            <img
-            src="./assets/imgs/search/image-17.jpg"
-            style="height: 22%; width: 22%; object-fit: cover;"
-            alt=""/> 
-             <div>
-            <h6 class="mb-0">Stress Relief</h6>
-            <span class="text-white-50 small">Playlist • 99 songs</span>
-            </div>           
-            </div>
-           <div class="list-group-item bg-transparent text-white border-0 d-flex align-items-center gap-3">
-            <img
-            src="./assets/imgs/search/image-13.jpeg"
-            style="height: 22%; width: 22%; object-fit: cover;"
-            alt=""/>
-             <div>
-            <h6 class="mb-0">Your Summer Rewind</h6>
-            <span class="text-white-50 small">Playlist • 74 songs</span>
-            </div>           
-            </div>
-           <div class="list-group-item bg-transparent text-white border-0 d-flex align-items-center gap-3">
-            <img
-            src="./assets/imgs/search/image-14.jpg"
-            style="height: 22%; width: 22%; object-fit: cover;"
-            alt=""/>
-            <div>
-            <h6 class="mb-0">Top Songs Global</h6>
-            <span class="text-white-50 small">Playlist • 50 songs</span>
-            </div>           
-            </div>
-           <div class="list-group-item bg-transparent text-white border-0 d-flex align-items-center gap-3">
-            <img
-            src="./assets/imgs/search/image-30.jpg"
-            style="height: 22%; width: 22%; object-fit: cover;"
-            alt=""/> 
-            <div>
-            <h6 class="mb-0">League og Legends</h6>
-            <span class="text-white-50 small">Playlist • 210 songs</span>
-            </div>           
-            </div>
+                  <div
+                    class="list-group-item bg-transparent text-white border-0 d-flex align-items-center gap-3"
+                  >
+                    <img
+                      src="./assets/imgs/favorite.webp"
+                      style="height: 22%; width: 22%; object-fit: cover"
+                      alt=""
+                    />
+                    <div>
+                      <h6 class="mb-0">Liked Songs</h6>
+                      <span class="text-white-50 small"
+                        >Playlist • 95 songs</span
+                      >
+                    </div>
+                  </div>
+                  <div
+                    class="list-group-item bg-transparent text-white border-0 d-flex align-items-center gap-3"
+                  >
+                    <img
+                      src="./assets/imgs/search/image-18.jpg"
+                      style="height: 22%; width: 22%; object-fit: cover"
+                      alt=""
+                    />
+                    <div>
+                      <h6 class="mb-0">Sleep Time</h6>
+                      <span class="text-white-50 small"
+                        >Playlist • 178 songs</span
+                      >
+                    </div>
+                  </div>
+                  <div
+                    class="list-group-item bg-transparent text-white border-0 d-flex align-items-center gap-3"
+                  >
+                    <img
+                      src="./assets/imgs/search/image-8.jpg"
+                      style="height: 22%; width: 22%; object-fit: cover"
+                      alt=""
+                    />
+                    <div>
+                      <h6 class="mb-0">Beast Mode</h6>
+                      <span class="text-white-50 small"
+                        >Playlist • 62 songs</span
+                      >
+                    </div>
+                  </div>
+                  <div
+                    class="list-group-item bg-transparent text-white border-0 d-flex align-items-center gap-3"
+                  >
+                    <img
+                      src="./assets/imgs/search/image-17.jpg"
+                      style="height: 22%; width: 22%; object-fit: cover"
+                      alt=""
+                    />
+                    <div>
+                      <h6 class="mb-0">Stress Relief</h6>
+                      <span class="text-white-50 small"
+                        >Playlist • 99 songs</span
+                      >
+                    </div>
+                  </div>
+                  <div
+                    class="list-group-item bg-transparent text-white border-0 d-flex align-items-center gap-3"
+                  >
+                    <img
+                      src="./assets/imgs/search/image-13.jpeg"
+                      style="height: 22%; width: 22%; object-fit: cover"
+                      alt=""
+                    />
+                    <div>
+                      <h6 class="mb-0">Your Summer Rewind</h6>
+                      <span class="text-white-50 small"
+                        >Playlist • 74 songs</span
+                      >
+                    </div>
+                  </div>
+                  <div
+                    class="list-group-item bg-transparent text-white border-0 d-flex align-items-center gap-3"
+                  >
+                    <img
+                      src="./assets/imgs/search/image-14.jpg"
+                      style="height: 22%; width: 22%; object-fit: cover"
+                      alt=""
+                    />
+                    <div>
+                      <h6 class="mb-0">Top Songs Global</h6>
+                      <span class="text-white-50 small"
+                        >Playlist • 50 songs</span
+                      >
+                    </div>
+                  </div>
+                  <div
+                    class="list-group-item bg-transparent text-white border-0 d-flex align-items-center gap-3"
+                  >
+                    <img
+                      src="./assets/imgs/search/image-30.jpg"
+                      style="height: 22%; width: 22%; object-fit: cover"
+                      alt=""
+                    />
+                    <div>
+                      <h6 class="mb-0">League og Legends</h6>
+                      <span class="text-white-50 small"
+                        >Playlist • 210 songs</span
+                      >
+                    </div>
+                  </div>
 
-           <div class="list-group-item bg-transparent text-white border-0 d-flex align-items-center gap-3">
-            <img
-            src="./assets/imgs/search/image-42.png"
-            style="height: 22%; width: 22%; object-fit: cover;"
-            alt=""/> 
-            <div>
-            <h6 class="mb-0">Pop Mix</h6>
-            <span class="text-white-50 small">Playlist • 83 songs</span>
-            </div>           
-            </div>
+                  <div
+                    class="list-group-item bg-transparent text-white border-0 d-flex align-items-center gap-3"
+                  >
+                    <img
+                      src="./assets/imgs/search/image-42.png"
+                      style="height: 22%; width: 22%; object-fit: cover"
+                      alt=""
+                    />
+                    <div>
+                      <h6 class="mb-0">Pop Mix</h6>
+                      <span class="text-white-50 small"
+                        >Playlist • 83 songs</span
+                      >
+                    </div>
+                  </div>
 
-           <div class="list-group-item bg-transparent text-white border-0 d-flex align-items-center gap-3">
-            <img
-            src="./assets/imgs/search/image-48.jpeg"
-            style="height: 22%; width: 22%; object-fit: cover;"
-            alt=""/> 
-            <div>
-            <h6 class="mb-0">Top Christian</h6>
-            <span class="text-white-50 small">Playlist • 666 songs</span>
-            </div>           
-            </div>
-       </div>
+                  <div
+                    class="list-group-item bg-transparent text-white border-0 d-flex align-items-center gap-3"
+                  >
+                    <img
+                      src="./assets/imgs/search/image-48.jpeg"
+                      style="height: 22%; width: 22%; object-fit: cover"
+                      alt=""
+                    />
+                    <div>
+                      <h6 class="mb-0">Top Christian</h6>
+                      <span class="text-white-50 small"
+                        >Playlist • 666 songs</span
+                      >
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -198,6 +246,17 @@
               <div>
                 <div class="d-flex justify-content-between">
                   <div class="ms-2">
+                    <button
+                      class="btn btn-link text-white-50 fs-4 p-1 hovericos"
+                      id="back-icon"
+                    >
+                      <i class="bi bi-arrow-left-circle"></i>
+                    </button>
+                    <button
+                      class="btn btn-link text-white-50 fs-4 p-1 hovericos"
+                    >
+                      <i class="bi bi-arrow-right-circle"></i>
+                    </button>
                   </div>
                   <div class="me-3 mt-2 text-end">
                     <button
@@ -227,61 +286,76 @@
                     </div>
                   </div>
                 </div>
-                <div class="playlist"
+                <div
+                  class="playlist"
                   style="overflow-y: scroll; height: 85vh; padding-right: 10px"
                 >
                   <div class="container-fluid text-white p-4">
                     <div class="row mb-4">
                       <div class="col-12 d-flex align-items-end">
                         <div
-                          class=" album-cover rounded d-flex align-items-center justify-content-center me-4 shadow"
+                          class="album-cover rounded d-flex align-items-center justify-content-center me-4 shadow"
                         >
-                          <img id="image"
-                            style="height: 220px; width: 220px;"
+                          <img
+                            id="image"
+                            style="height: 220px; width: 220px"
                             src="./immagini.playlist/maxresdefault.jpg"
                             alt="album-img"
                           />
                         </div>
                         <div>
                           <small class="text-white-50">ALBUM</small>
-                          <h1 id="titl" class="display-3 fw-bold mb-2">
-                          
-                          </h1>
+                          <h1 id="titl" class="display-3 fw-bold mb-2"></h1>
                           <div class="text-white-50">
                             <i class="fas fa-user me-1"></i>
-                            <strong id="description" class="text-white"
-                            >    </strong
-                            >
-                           <span id="songs">
-
-                           </span> 
+                            <strong id="description" class="text-white">
+                            </strong>
+                            <span id="songs"> </span>
                           </div>
                         </div>
                       </div>
                     </div>
 
-                   <!--Bottoni vari-->
                     <div class="d-flex align-items-center mb-4">
                       <button
                         type="button"
                         class="btn btn-epi-cyan rounded-circle me-4 d-flex align-items-center justify-content-center"
                       >
-                       <i
+                        <i
                           class="bi bi-play-fill text-black"
-                          style="padding-left: 3px; padding-top: 3px"> 
-                      </i>
-        <button class="btn btn-link text-white-50 fs-4 me-4 p-0"><i class="bi bi-shuffle"></i></button>
-        <button class="btn btn-link text-white-50 fs-4 me-4 p-0"><i class="bi bi-plus-circle"></i></button>
-        <button class="btn btn-link text-white-50 fs-4 me-4 p-0"><i class="bi bi-arrow-down-circle"></i></button>
-        <button class="btn btn-link text-white-50 fs-4 me-4 p-0"><i class="bi bi-three-dots"></i></button>
+                          style="padding: 4px 0 4px 4px"
+                        ></i>
+                      </button>
+                      <button class="btn btn-link text-white-50 fs-4 me-4 p-0">
+                        <i class="bi bi-heart"></i>
+                      </button>
+                      <button
+                        class="btn btn-link text-white-50 fs-4 me-4 p-0 cyan-items"
+                      >
+                        <i class="bi bi-shuffle"></i>
+                      </button>
+                      <button
+                        class="btn btn-link text-white-50 fs-4 me-4 p-0 hovericos"
+                        id="download-icon"
+                      >
+                        <i class="bi bi-arrow-down-circle"></i>
+                      </button>
+                      <button
+                        class="btn btn-link text-white-50 fs-4 p-0 hovericos"
+                        id="dots-icon"
+                      >
+                        <i class="bi bi-three-dots"></i>
+                      </button>
                     </div>
 
                     <!--Tabella-->
                     <div class="row">
                       <div class="col-12">
                         <div class="bg-dark bg-opacity-25 rounded">
-                            <!--Intestazione tabella-->
-                          <div class="row align-items-center p-3 border-bottom border-secondary border-opacity-25 text-white-50">
+                          <!--Intestazione tabella-->
+                          <div
+                            class="row align-items-center p-3 border-bottom border-secondary border-opacity-25 text-white-50"
+                          >
                             <div class="col-1 text-center">#</div>
                             <div class="col-6">TITOLO</div>
                             <div class="col-3 text-end">ALBUM</div>
@@ -289,7 +363,7 @@
                               <i class="bi bi-clock"></i>
                             </div>
                           </div>
-                           <div id="tracks-container"></div>
+                          <div id="tracks-container"></div>
                         </div>
                       </div>
                     </div>
@@ -304,16 +378,27 @@
             <div class="bg-black h-100 p-3 text-white">
               <div class="mb-3">
                 <h5 class="text-light">Canzone nome</h5>
-                <img src="./assets/imgs/main/image-12.jpg" class="img-fluid mb-2">
-        <button class="btn btn-dark btn-sm text-white">Switch to video</button>
-      </div>
-      <div class="mt-4">
-        <h6>Related music videos</h6>
-        <img src="./assets/imgs/search/image-7.jpg" class="img-fluid mb-1">
-        <div class="mt-4">
-            <h6>About the Artist</h6>
-            <img src="./assets/imgs/main/image-2.jpg" class="img-fluid mb-1">
-        </div>
+                <img
+                  src="./assets/imgs/main/image-12.jpg"
+                  class="img-fluid mb-2"
+                />
+                <button class="btn btn-dark btn-sm text-white">
+                  Switch to video
+                </button>
+              </div>
+              <div class="mt-4">
+                <h6>Related music videos</h6>
+                <img
+                  src="./assets/imgs/search/image-7.jpg"
+                  class="img-fluid mb-1"
+                />
+                <div class="mt-4">
+                  <h6>About the Artist</h6>
+                  <img
+                    src="./assets/imgs/main/image-2.jpg"
+                    class="img-fluid mb-1"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -323,118 +408,117 @@
 
     <!--Barra sottostante-->
     <footer>
-    <div
-      class="player d-flex justify-content-between align-items-center p-2"
-      style="
-        background: #181818;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        z-index: 100;
-        height: 10vh;
-      "
-    >
-      <div class="d-flex align-items-center" style="min-width: 250px">
-        <img
-          src="./assets/imgs/main/image-1.jpg"
-          class="album-covers me-2"
-          alt="Copertina brano"
-          style="height: 60px"
-        />
-        <div>
-          <div class="text-secondary" style="font-size: 0.95rem">
-            Fat Funny Friend
-          </div>
-          <small class="text-secondary">Maddie Zahm</small>
-        </div>
-        <button class="btn btn-link text-secondary ms-2">
-          <i class="bi bi-heart"></i>
-        </button>
-      </div>
       <div
-        class="d-flex flex-column align-items-center"
-        style="min-width: 400px; max-width: 600px; flex: 1"
+        class="player d-flex justify-content-between align-items-center p-2"
+        style="
+          background: #181818;
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          z-index: 100;
+          height: 10vh;
+        "
       >
-        <div class="d-flex align-items-center mb-1">
-          <button class="btn btn-link text-secondary px-2">
-            <i class="bi bi-shuffle"></i>
-          </button>
-          <button class="btn btn-link text-secondary px-2">
-            <i class="bi bi-skip-start-fill"></i>
-          </button>
-          <button
-            class="btn btn-light rounded-circle mx-2 d-flex align-items-center justify-content-center"
-            style="width: 36px; height: 36px; padding: 0"
-          >
-            <i
-              class="bi bi-play-fill"
-              style="font-size: 1.5rem; margin: 0 auto"
-            ></i>
-          </button>
-          <button class="btn btn-link text-secondary px-2">
-            <i class="bi bi-skip-end-fill"></i>
-          </button>
-          <button class="btn btn-link text-secondary px-2">
-            <i class="bi bi-repeat"></i>
+        <div class="d-flex align-items-center" style="min-width: 250px">
+          <img
+            src="./assets/imgs/main/image-1.jpg"
+            class="album-covers me-2"
+            alt="Copertina brano"
+            style="height: 60px"
+          />
+          <div>
+            <div class="text-secondary" style="font-size: 0.95rem">
+              Fat Funny Friend
+            </div>
+            <small class="text-secondary">Maddie Zahm</small>
+          </div>
+          <button class="btn btn-link text-secondary ms-2">
+            <i class="bi bi-heart"></i>
           </button>
         </div>
-        <div class="d-flex align-items-center w-100">
-          <span
-            class="text-secondary"
-            style="font-size: 0.8rem; min-width: 40px"
-            >0:58</span
-          >
+        <div
+          class="d-flex flex-column align-items-center"
+          style="min-width: 400px; max-width: 600px; flex: 1"
+        >
+          <div class="d-flex align-items-center mb-1">
+            <button class="btn btn-link text-secondary px-2">
+              <i class="bi bi-shuffle"></i>
+            </button>
+            <button class="btn btn-link text-secondary px-2">
+              <i class="bi bi-skip-start-fill"></i>
+            </button>
+            <button
+              class="btn btn-epi-cyan rounded-circle mx-2 d-flex align-items-center justify-content-center"
+              style="width: 36px; height: 36px; padding: 0"
+            >
+              <i
+                class="bi bi-play-fill"
+                style="font-size: 1.5rem; margin: 0 auto"
+              ></i>
+            </button>
+            <button class="btn btn-link text-secondary px-2">
+              <i class="bi bi-skip-end-fill"></i>
+            </button>
+            <button class="btn btn-link text-secondary px-2">
+              <i class="bi bi-repeat"></i>
+            </button>
+          </div>
+          <div class="d-flex align-items-center w-100">
+            <span
+              class="text-secondary"
+              style="font-size: 0.8rem; min-width: 40px"
+              >0:58</span
+            >
+            <input
+              type="range"
+              class="form-range mx-2"
+              min="0"
+              max="200"
+              value="58"
+              style="width: 100%"
+            />
+            <span
+              class="text-secondary"
+              style="font-size: 0.8rem; min-width: 40px"
+              >3:20</span
+            >
+          </div>
+        </div>
+        <div
+          class="d-flex align-items-center justify-content-end"
+          style="min-width: 250px"
+        >
+          <button class="btn btn-link text-secondary">
+            <i class="bi bi-mic"></i>
+          </button>
+          <button class="btn btn-link text-secondary">
+            <i class="bi bi-list"></i>
+          </button>
+          <button class="btn btn-link text-secondary cyan-items">
+            <i class="bi bi-speaker"></i>
+          </button>
+          <button class="btn btn-link text-secondary">
+            <i class="bi bi-volume-up"></i>
+          </button>
           <input
             type="range"
-            class="form-range mx-2"
+            class="form-range ms-2"
             min="0"
-            max="200"
-            value="58"
-            style="width: 100%"
+            max="100"
+            value="50"
+            style="width: 100px"
           />
-          <span
-            class="text-secondary"
-            style="font-size: 0.8rem; min-width: 40px"
-            >3:20</span
-          >
         </div>
       </div>
-      <div
-        class="d-flex align-items-center justify-content-end"
-        style="min-width: 250px"
-      >
-        <button class="btn btn-link text-secondary">
-          <i class="bi bi-mic"></i>
-        </button>
-        <button class="btn btn-link text-secondary">
-          <i class="bi bi-list"></i>
-        </button>
-        <button class="btn btn-link text-secondary cyan-items">
-          <i class="bi bi-speaker"></i>
-        </button>
-        <button class="btn btn-link text-secondary">
-          <i class="bi bi-volume-up"></i>
-        </button>
-        <input
-          type="range"
-          class="form-range ms-2"
-          min="0"
-          max="100"
-          value="50"
-          style="width: 100px"
-        />
-      </div>
-    </div>
     </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
       crossorigin="anonymous"
-    ></script> 
+    ></script>
+    <script src="./assets/scripts/album.js"></script>
     <script src="./assets/scripts/playlist.js"></script>
     <script src="./assets/scripts/mediabar.js"></script>
   </body>
 </html>
-  
-
