@@ -123,9 +123,9 @@ closeFriends.addEventListener("click", function () {
   const cards2 = document.querySelectorAll("#albums2 .card");
   const lastCard2 = cards2[cards2.length - 1];
   console.log("Close friends activity");
-  mainSection.classList.remove("col-8");
-  mainSection.classList.add("col-10");
-  rightSection.classList.add("d-none");
+  mainSection.classList.remove("col-xl-8");
+  mainSection.classList.add("col-xl-10");
+  rightSection.classList.add("d-xl-none");
   openFriends.classList.remove("d-none");
   albumsArea1.classList.replace("row-cols-5", "row-cols-6");
   albumsArea2.classList.replace("row-cols-5", "row-cols-6");
@@ -139,9 +139,9 @@ openFriends.addEventListener("click", function () {
   const cards2 = document.querySelectorAll("#albums2 .card");
   const lastCard2 = cards2[cards2.length - 1];
   console.log("Open friends activity");
-  mainSection.classList.remove("col-10");
-  mainSection.classList.add("col-8");
-  rightSection.classList.remove("d-none");
+  mainSection.classList.remove("col-xl-10");
+  mainSection.classList.add("col-xl-8");
+  rightSection.classList.remove("d-xl-none");
   openFriends.classList.add("d-none");
   albumsArea1.classList.replace("row-cols-6", "row-cols-5");
   albumsArea2.classList.replace("row-cols-6", "row-cols-5");
