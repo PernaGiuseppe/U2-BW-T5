@@ -147,3 +147,12 @@ openFriends.addEventListener("click", function () {
 
 generateAlbumsRow1(albums1);
 generateAlbumsRow2(albums2);
+
+// Event listener per il bottone Play dell'hero: apre la pagina dell'album Mercury degli Imagine Dragons
+const heroPlayBtn = document.getElementById("heroPlayBtn");
+if (heroPlayBtn) {
+  heroPlayBtn.addEventListener("click", function () {
+    // Reindirizza alla pagina album.html con l'id corretto di Mercury (Acts 1 & 2) degli Imagine Dragons
+    window.location.href = "album.html?id=331818647";
+  });
+}

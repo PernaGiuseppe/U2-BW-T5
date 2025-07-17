@@ -8,6 +8,8 @@ let audio = null; // Oggetto Audio
 let isPlaying = false; // Stato riproduzione
 let isShuffle = false; // Stato shuffle (inutile con una sola traccia, ma pronto per futuro)
 let isRepeat = false; // Stato repeat
+// Variabile globale per sincronizzare lo shuffle album
+window.isAlbumShuffle = false;
 
 // Funzione per formattare i secondi in mm:ss
 function formatTime(seconds) {
@@ -120,6 +122,26 @@ async function initPlayer() {
         isPlaying = true;
         playBtn.innerHTML = '<i class="bi bi-pause-fill"></i>';
         hasReset = false;
+      } else if (
+        window.albumTracks &&
+        window.albumTracks.length > 0 &&
+        typeof window.currentAlbumIndex === "number"
+      ) {
+        // Se shuffle attivo, scegli random, altrimenti avanza
+        if (window.isAlbumShuffle || isShuffle) {
+          let nextIndex;
+          do {
+            nextIndex = Math.floor(Math.random() * window.albumTracks.length);
+          } while (
+            nextIndex === window.currentAlbumIndex &&
+            window.albumTracks.length > 1
+          );
+          window.currentAlbumIndex = nextIndex;
+        } else {
+          window.currentAlbumIndex =
+            (window.currentAlbumIndex + 1) % window.albumTracks.length;
+        }
+        window.playTrackById(window.albumTracks[window.currentAlbumIndex].id);
       } else {
         playBtn.innerHTML = '<i class="bi bi-play-fill"></i>';
         isPlaying = false;
@@ -173,9 +195,34 @@ async function initPlayer() {
     const nextBtn = document.querySelector(".player .bi-skip-end-fill");
     if (nextBtn) {
       nextBtn.parentElement.onclick = function () {
-        audio.currentTime = 0; // Con una sola traccia, riparte dall'inizio
-        if (!isPlaying) {
-          playBtn.click(); // Fa partire la riproduzione se era in pausa
+        // Se c'è una lista album, vai avanti
+        if (
+          window.albumTracks &&
+          window.albumTracks.length > 0 &&
+          typeof window.currentAlbumIndex === "number"
+        ) {
+          if (window.isAlbumShuffle || isShuffle) {
+            // Shuffle: scegli una traccia random diversa da quella attuale
+            let nextIndex;
+            do {
+              nextIndex = Math.floor(Math.random() * window.albumTracks.length);
+            } while (
+              nextIndex === window.currentAlbumIndex &&
+              window.albumTracks.length > 1
+            );
+            window.currentAlbumIndex = nextIndex;
+          } else {
+            // Avanza normalmente
+            window.currentAlbumIndex =
+              (window.currentAlbumIndex + 1) % window.albumTracks.length;
+          }
+          window.playTrackById(window.albumTracks[window.currentAlbumIndex].id);
+        } else {
+          // Comportamento default: riparte dall'inizio
+          audio.currentTime = 0;
+          if (!isPlaying) {
+            playBtn.click();
+          }
         }
       };
     }
@@ -183,9 +230,33 @@ async function initPlayer() {
     const prevBtn = document.querySelector(".player .bi-skip-start-fill");
     if (prevBtn) {
       prevBtn.parentElement.onclick = function () {
-        audio.currentTime = 0; // Torna all'inizio della traccia
-        if (!isPlaying) {
-          playBtn.click();
+        if (
+          window.albumTracks &&
+          window.albumTracks.length > 0 &&
+          typeof window.currentAlbumIndex === "number"
+        ) {
+          if (window.isAlbumShuffle || isShuffle) {
+            // Shuffle: scegli una traccia random diversa da quella attuale
+            let prevIndex;
+            do {
+              prevIndex = Math.floor(Math.random() * window.albumTracks.length);
+            } while (
+              prevIndex === window.currentAlbumIndex &&
+              window.albumTracks.length > 1
+            );
+            window.currentAlbumIndex = prevIndex;
+          } else {
+            // Torna indietro normalmente
+            window.currentAlbumIndex =
+              (window.currentAlbumIndex - 1 + window.albumTracks.length) %
+              window.albumTracks.length;
+          }
+          window.playTrackById(window.albumTracks[window.currentAlbumIndex].id);
+        } else {
+          audio.currentTime = 0;
+          if (!isPlaying) {
+            playBtn.click();
+          }
         }
       };
     }
@@ -201,10 +272,22 @@ async function initPlayer() {
       };
       shuffleBtn.parentElement.onclick = function () {
         isShuffle = !isShuffle;
+        window.isAlbumShuffle = isShuffle; // Sincronizza stato globale
         if (isShuffle) {
           shuffleBtn.style.color = "#00e1e7";
         } else {
           shuffleBtn.style.color = "";
+        }
+        // Sincronizzo anche il colore del tasto shuffle nella playlist
+        const playlistShuffleBtn = document.querySelector(
+          ".container-fluid .bi-shuffle"
+        );
+        if (playlistShuffleBtn) {
+          if (isShuffle) {
+            playlistShuffleBtn.style.color = "#00e1e7";
+          } else {
+            playlistShuffleBtn.style.color = "";
+          }
         }
       };
     }
@@ -408,6 +491,11 @@ document.addEventListener("DOMContentLoaded", initPlayer);
 // Espongo una funzione globale per cambiare traccia dalla search
 // Questa funzione aggiorna l'ID e reinizializza il player
 window.playTrackById = function (trackId) {
+  // Se sto usando albumTracks, aggiorno anche l'indice corrente
+  if (window.albumTracks && window.albumTracks.length > 0) {
+    const idx = window.albumTracks.findIndex((t) => t.id == trackId);
+    if (idx !== -1) window.currentAlbumIndex = idx;
+  }
   TRACK_ID = trackId; // Aggiorna l'ID della traccia
   if (audio && typeof audio.pause === "function") audio.pause(); // Ferma eventuale audio in corso
   initPlayer(); // Reinizializza il player con la nuova traccia
