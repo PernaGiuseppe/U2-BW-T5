@@ -1,3 +1,5 @@
+// Questo codice rende tutti gli elementi "a,i" all'interno del menu li dell'ul, bianchi all'hover del mouse
+
 document.addEventListener('DOMContentLoaded', function () {
   const menuItems = document.querySelectorAll(
     '#menuLaterale li:not([data-exclude])'
