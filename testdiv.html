@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body class="bg-dark">
+    <div class="row">
+      <div class="col-12">
+        <div class="bg-dark bg-opacity-25 rounded" id="albumSongs">
+          <div
+            class="row align-items-center p-3 border-bottom border-secondary border-opacity-25 text-white-50"
+          >
+            <div class="col-1 text-center">#</div>
+            <div class="col-4">TITOLO</div>
+            <div class="col-3">ARTISTA</div>
+            <div class="col-2 text-end">RIPRODUZIONI</div>
+            <div class="col-2 text-end">
+              <i class="bi bi-clock"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="row align-items-center p-3 border-bottom border-secondary border-opacity-10 track-item"
+      data-track-index="${i}"
+    >
+      <div class="col-1 text-center text-white-50">${i + 1}</div>
+      <div class="col-4 d-flex align-items-center gap-2">
+        <button
+          class="btn btn-link p-0 play-track-btn"
+          data-track-index="${i}"
+          title="Riproduci"
+        >
+          <i
+            class="bi bi-play-circle text-epi-cyan"
+            style="font-size: 1.3em"
+          ></i>
+        </button>
+        <div class="fw-normal text-white">${album.tracks.data[i].title}</div>
+      </div>
+      <div class="col-3 text-white-50">
+        ${ album.tracks.data[i].artist.name }
+      </div>
+      <div class="col-2 text-end text-white-50">
+        ${album.tracks.data[i].rank}
+      </div>
+      <div class="col-2 text-end text-white-50">${duration}</div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
