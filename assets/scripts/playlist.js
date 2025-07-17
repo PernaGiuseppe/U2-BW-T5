@@ -427,13 +427,13 @@ if (playlist) {
 } else {
   document.body.innerHTML = 'Playlist non ancora rubata.'
 }
-
 //  Trova la playlist giusta
 const selectedPlaylist = playlists.find((pl) => pl.id === playlistId)
 
 const container = document.getElementById('tracks-container')
 
-//  Inserisci i brani
+
+ // Inserisci i brani
 if (selectedPlaylist) {
   selectedPlaylist.tracks.forEach((track, index) => {
     const row = document.createElement('div')
@@ -447,7 +447,7 @@ if (selectedPlaylist) {
         </div>
         <div class="col-3 text-end text-white-50">${track.album}</div>
         <div class="col-2 text-end text-white-50">${track.duration}</div>
-      `
+       `
     container.appendChild(row)
   })
 } else {
