@@ -1,132 +1,85 @@
 // Bottone per tornare indietro alla home
 
-document.getElementById('back-icon').addEventListener('click', function (e) {
-  e.preventDefault()
-  window.location.href = 'home.html'
-})
+document.getElementById("back-icon").addEventListener("click", function (e) {
+  e.preventDefault();
+  window.location.href = "home.html";
+});
 
 // Questo codice rende tutti gli elementi "a,i" all'interno del menu li dell'ul, bianchi all'hover del mouse
 
-document.addEventListener('DOMContentLoaded', function () {
-  const menuItems = document.querySelectorAll(
-    '#menuLaterale li:not([data-exclude])'
-  )
-  // La riga 12 esclude li che deve rimanere "text-light" che indica in che pagina siamo attualmente
-  // per es: in home ho aggiunto "data-exclude" all'li di Home e su Album all'li di Albums
-  // in caso contrario sarebbero stati "colpiti" tutti gli li, e quindi la classe light sarebbe stata rimossa
-
-  menuItems.forEach((li) => {
-    li.addEventListener('mouseenter', function () {
-      this.classList.remove('text-secondary')
-      this.classList.add('text-light')
-
-      const links = this.querySelectorAll('a')
-      const icons = this.querySelectorAll('i')
-
-      links.forEach((link) => {
-        link.classList.remove('text-secondary')
-        link.classList.add('text-light')
-      })
-
-      icons.forEach((icon) => {
-        icon.classList.remove('text-secondary')
-        icon.classList.add('text-light')
-      })
-    })
-
-    li.addEventListener('mouseleave', function () {
-      this.classList.remove('text-light')
-      this.classList.add('text-secondary')
-
-      const links = this.querySelectorAll('a')
-      const icons = this.querySelectorAll('i')
-
-      links.forEach((link) => {
-        link.classList.remove('text-light')
-        link.classList.add('text-secondary')
-      })
-
-      icons.forEach((icon) => {
-        icon.classList.remove('text-light')
-        icon.classList.add('text-secondary')
-      })
-    })
-  })
-})
-
 // Tramite questo codice la classe "cyan-items", all'hover e al click gli items diventano epi-cyan
 
-document.querySelectorAll('.cyan-items').forEach((element) => {
-  element.addEventListener('mouseenter', function () {
-    const icon = this.querySelector('i')
-    if (!icon.classList.contains('text-epi-cyan')) {
-      icon.classList.remove('text-white-50')
-      icon.classList.add('text-epi-cyan')
+document.querySelectorAll(".cyan-items").forEach((element) => {
+  element.addEventListener("mouseenter", function () {
+    const icon = this.querySelector("i");
+    if (!icon.classList.contains("text-epi-cyan")) {
+      icon.classList.remove("text-white-50");
+      icon.classList.add("text-epi-cyan");
     }
-  })
+  });
 
-  element.addEventListener('mouseleave', function () {
-    const icon = this.querySelector('i')
-    if (!this.hasAttribute('data-active')) {
-      icon.classList.remove('text-epi-cyan')
-      icon.classList.add('text-white-50')
+  element.addEventListener("mouseleave", function () {
+    const icon = this.querySelector("i");
+    if (!this.hasAttribute("data-active")) {
+      icon.classList.remove("text-epi-cyan");
+      icon.classList.add("text-white-50");
     }
-  })
+  });
 
-  element.addEventListener('click', function () {
-    const icon = this.querySelector('i')
-    if (this.hasAttribute('data-active')) {
-      this.removeAttribute('data-active')
-      icon.classList.remove('text-epi-cyan')
-      icon.classList.add('text-white-50')
+  element.addEventListener("click", function () {
+    const icon = this.querySelector("i");
+    if (this.hasAttribute("data-active")) {
+      this.removeAttribute("data-active");
+      icon.classList.remove("text-epi-cyan");
+      icon.classList.add("text-white-50");
     } else {
-      this.setAttribute('data-active', 'true')
-      icon.classList.remove('text-white-50')
-      icon.classList.add('text-epi-cyan')
+      this.setAttribute("data-active", "true");
+      icon.classList.remove("text-white-50");
+      icon.classList.add("text-epi-cyan");
     }
-  })
-})
+  });
+});
 
 // Tramite questo codice la classe "hovericos", all'hover gli items diventano bianchi
 
-document.querySelectorAll('.hovericos').forEach((element) => {
-  element.addEventListener('mouseenter', function () {
-    const icon = this.querySelector('i')
-    if (icon && !icon.classList.contains('text-light')) {
-      icon.classList.remove('text-white-50')
-      icon.classList.add('text-light')
+document.querySelectorAll(".hovericos").forEach((element) => {
+  element.addEventListener("mouseenter", function () {
+    const icon = this.querySelector("i");
+    if (icon && !icon.classList.contains("text-light")) {
+      icon.classList.remove("text-white-50");
+      icon.classList.add("text-light");
     }
-  })
+  });
 
-  element.addEventListener('mouseleave', function () {
-    const icon = this.querySelector('i')
-    if (icon && !this.hasAttribute('data-active')) {
-      icon.classList.remove('text-light')
-      icon.classList.add('text-white-50')
+  element.addEventListener("mouseleave", function () {
+    const icon = this.querySelector("i");
+    if (icon && !this.hasAttribute("data-active")) {
+      icon.classList.remove("text-light");
+      icon.classList.add("text-white-50");
     }
-  })
-})
+  });
+});
 
 // Questa funzione rende tutte le classi heart dentro i button, cyan all'hover e cambia l'icona rendendola tutta dello stesso colore cyan
-const heartBtns = document.querySelectorAll('button .bi-heart')
+const heartBtns = document.querySelectorAll("button .bi-heart");
 heartBtns.forEach((heartBtn) => {
-  let isHeart = false
+  let isHeart = false;
   heartBtn.parentElement.onmouseenter = function () {
-    if (!isHeart) heartBtn.style.color = '#00e1e7'
-  }
+    if (!isHeart) heartBtn.style.color = "#00e1e7";
+  };
   heartBtn.parentElement.onmouseleave = function () {
-    if (!isHeart) heartBtn.style.color = ''
-  }
+    if (!isHeart) heartBtn.style.color = "";
+  };
   heartBtn.parentElement.onclick = function () {
-    isHeart = !isHeart
+    isHeart = !isHeart;
     if (isHeart) {
-      heartBtn.style.color = '#00e1e7'
-      heartBtn.classList.remove('bi-heart')
-      heartBtn.classList.add('bi-heart-fill')
+      heartBtn.style.color = "#00e1e7";
+      heartBtn.classList.remove("bi-heart");
+      heartBtn.classList.add("bi-heart-fill");
     } else {
-      heartBtn.style.color = ''
-      heartBtn.classList.remove('bi-heart-fill')
-      heartBtn.classList.add('bi-heart')
+      heartBtn.style.color = "";
+      heartBtn.classList.remove("bi-heart-fill");
+      heartBtn.classList.add("bi-heart");
     }
-  }
-})
+  };
+});
