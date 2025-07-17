@@ -510,7 +510,11 @@ if (selectedPlaylist) {
             <i class="bi bi-play-circle text-epi-cyan" style="font-size:1.3em;"></i>
           </button>
           <div class="fw-normal text-white">${track.title}</div>
-          <small class="text-white-50 ms-2">${track.artist}</small>
+          <small class="text-white-50 ms-2"><a href="artist.html?artist=${
+            track.artist
+          }&id=230" class="fw-normal text-white-50 text-decoration-none">${
+      track.artist
+    }</a></small>
         </div>
         <div class="col-3 text-end text-white-50">${track.album}</div>
         <div class="col-2 text-end text-white-50">${track.duration}</div>
