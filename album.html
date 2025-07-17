@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Spotify - Album</title>
+    <title>Epify - Album</title>
     <link
       rel="stylesheet"
       href="./assets/bootstrap-5.3.7/scss/custombootstrap.css"
@@ -12,40 +12,8 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     />
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="./assets/imgs/spotify_logo_icon_229290.ico"
-    />
+    <link rel="icon" type="image/x-icon" href="./assets/imgs/EpiSpotify.ico" />
     <style>
-      @font-face {
-        font-family: circularstd;
-        src: url(./assets/fonts/CircularStd-Medium.otf);
-      }
-
-      body {
-        font-family: circularstd;
-      }
-
-      ::-webkit-scrollbar {
-        width: 10px;
-      }
-
-      ::-webkit-scrollbar-track {
-        background: #f1f1f100;
-      }
-
-      ::-webkit-scrollbar-thumb {
-        background: #888;
-      }
-
-      ::-webkit-scrollbar-thumb:hover {
-        background: #555;
-      }
-      .dropdown-menu-center {
-        left: 50% !important;
-        transform: translateX(-50%) translateY(34px) !important;
-      }
       .hero-gradient {
         background: #d3b64b;
         background: linear-gradient(
@@ -54,10 +22,6 @@
           rgba(83, 71, 30, 1) 20%,
           rgba(18, 18, 18, 1) 100%
         );
-      }
-      .btn-epi-cyan:hover {
-        background-color: #0dcaf0 !important;
-        border-color: #0dcaf0 !important;
       }
     </style>
   </head>
@@ -94,22 +58,38 @@
                       ><i class="bi bi-search mx-2"></i> Search</a
                     >
                   </li>
-                  <li>
+                  <li data-exclude>
                     <a
-                      href="./home.html"
-                      class="text-decoration-none text-secondary"
-                      ><i class="bi bi-collection mx-2"></i> Library</a
+                      href="./album.html"
+                      class="text-decoration-none text-light"
                     >
+                      <i class="bi bi-collection mx-2"></i> Albums
+                    </a>
                   </li>
                   <br />
                   <li class="text-secondary">
-                    <i class="bi bi-plus-square-fill mx-2"></i> Crea Playlist
+                    <a
+                      href="./home.html"
+                      class="text-decoration-none text-secondary"
+                    >
+                      <i class="bi bi-plus-square-fill mx-2"></i> Crea Playlist
+                    </a>
                   </li>
                   <li class="text-secondary my-1">
-                    <i class="bi bi-heart mx-2"></i>Brani che ti piacciono
+                    <a
+                      href="./home.html"
+                      class="text-decoration-none text-secondary"
+                    >
+                      <i class="bi bi-heart mx-2"></i>Brani che ti piacciono
+                    </a>
                   </li>
                   <li class="text-secondary">
-                    <i class="bi bi-bookmark mx-2"></i>I tuoi episodi
+                    <a
+                      href="./home.html"
+                      class="text-decoration-none text-secondary"
+                    >
+                      <i class="bi bi-bookmark mx-2"></i>I tuoi episodi
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -162,14 +142,13 @@
                 <div class="d-flex justify-content-between">
                   <div class="ms-2">
                     <button
-                      class="btn btn-link text-secondary fs-4 p-1 hovericos"
-                      id="download-icon"
+                      class="btn btn-link text-white-50 fs-4 p-1 hovericos"
+                      id="back-icon"
                     >
                       <i class="bi bi-arrow-left-circle"></i>
                     </button>
                     <button
-                      class="btn btn-link text-secondary fs-4 p-1 hovericos"
-                      id="download-icon"
+                      class="btn btn-link text-white-50 fs-4 p-1 hovericos"
                     >
                       <i class="bi bi-arrow-right-circle"></i>
                     </button>
@@ -245,14 +224,16 @@
                       >
                         <i
                           class="bi bi-play-fill text-black"
-                          style="padding-left: 3px; padding-top: 3px"
+                          style="padding: 4px 0 4px 4px"
                         ></i>
                       </button>
-                      <button
-                        class="btn btn-link text-white-50 fs-4 me-4 p-0"
-                        id="heartBtn"
-                      >
+                      <button class="btn btn-link text-white-50 fs-4 me-4 p-0">
                         <i class="bi bi-heart"></i>
+                      </button>
+                      <button
+                        class="btn btn-link text-white-50 fs-4 me-4 p-0 cyan-items"
+                      >
+                        <i class="bi bi-shuffle"></i>
                       </button>
                       <button
                         class="btn btn-link text-white-50 fs-4 me-4 p-0 hovericos"
@@ -565,7 +546,7 @@
         <div class="d-flex align-items-center" style="min-width: 250px">
           <img
             src="./assets/imgs/main/image-1.jpg"
-            class="album-cover me-2"
+            class="album-covers me-2"
             alt="Copertina brano"
             style="height: 60px"
           />
@@ -591,10 +572,13 @@
               <i class="bi bi-skip-start-fill"></i>
             </button>
             <button
-              class="btn btn-light rounded-circle mx-2"
-              style="width: 36px; height: 36px"
+              class="btn btn-epi-cyan rounded-circle mx-2 d-flex align-items-center justify-content-center"
+              style="width: 36px; height: 36px; padding: 0"
             >
-              <i class="bi bi-play-fill"></i>
+              <i
+                class="bi bi-play-fill"
+                style="font-size: 1.5rem; margin: 0 auto"
+              ></i>
             </button>
             <button class="btn btn-link text-secondary px-2">
               <i class="bi bi-skip-end-fill"></i>
@@ -634,7 +618,7 @@
           <button class="btn btn-link text-secondary">
             <i class="bi bi-list"></i>
           </button>
-          <button class="btn btn-link text-secondary">
+          <button class="btn btn-link text-secondary cyan-items">
             <i class="bi bi-speaker"></i>
           </button>
           <button class="btn btn-link text-secondary">
@@ -657,5 +641,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="./assets/scripts/album.js"></script>
+    <script src="./assets/scripts/mediabar.js"></script>
   </body>
 </html>
