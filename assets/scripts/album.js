@@ -1,111 +1,38 @@
 // Bottone per tornare indietro alla home
 
-document.getElementById('back-icon').addEventListener('click', function (e) {
-  e.preventDefault()
-  window.location.href = 'home.html'
-})
+document.getElementById("back-icon").addEventListener("click", function (e) {
+  e.preventDefault();
+  window.location.href = "home.html";
+});
 
-// Questo codice rende tutti gli elementi "a,i" all'interno del menu li dell'ul, bianchi all'hover del mouse
+const endpointAlbum =
+  "https://striveschool-api.herokuapp.com/api/deezer/album/";
 
-// Tramite questo codice la classe "cyan-items", all'hover e al click gli items diventano epi-cyan ***************
-
-document.querySelectorAll('.cyan-items').forEach((element) => {
-  element.addEventListener('mouseenter', function () {
-    const icon = this.querySelector('i')
-    if (!icon.classList.contains('text-epi-cyan')) {
-      icon.classList.remove('text-white-50')
-      icon.classList.add('text-epi-cyan')
-    }
-  })
-
-  element.addEventListener('mouseleave', function () {
-    const icon = this.querySelector('i')
-    if (!this.hasAttribute('data-active')) {
-      icon.classList.remove('text-epi-cyan')
-      icon.classList.add('text-white-50')
-    }
-  })
-
-  element.addEventListener('click', function () {
-    const icon = this.querySelector('i')
-    if (this.hasAttribute('data-active')) {
-      this.removeAttribute('data-active')
-      icon.classList.remove('text-epi-cyan')
-      icon.classList.add('text-white-50')
-    } else {
-      this.setAttribute('data-active', 'true')
-      icon.classList.remove('text-white-50')
-      icon.classList.add('text-epi-cyan')
-    }
-  })
-})
-
-// Tramite questo codice la classe "hovericos", all'hover gli items diventano bianchi
-
-document.querySelectorAll('.hovericos').forEach((element) => {
-  element.addEventListener('mouseenter', function () {
-    const icon = this.querySelector('i')
-    if (icon && !icon.classList.contains('text-light')) {
-      icon.classList.remove('text-white-50')
-      icon.classList.add('text-light')
-    }
-  })
-
-  element.addEventListener('mouseleave', function () {
-    const icon = this.querySelector('i')
-    if (icon && !this.hasAttribute('data-active')) {
-      icon.classList.remove('text-light')
-      icon.classList.add('text-white-50')
-    }
-  })
-})
-
-// Questa funzione rende tutte le classi heart dentro i button, cyan all'hover e cambia l'icona rendendola tutta dello stesso colore cyan
-const heartBtns = document.querySelectorAll('button .bi-heart')
-heartBtns.forEach((heartBtn) => {
-  let isHeart = false
-  heartBtn.parentElement.onmouseenter = function () {
-    if (!isHeart) heartBtn.style.color = '#00e1e7'
-  }
-  heartBtn.parentElement.onmouseleave = function () {
-    if (!isHeart) heartBtn.style.color = ''
-  }
-  heartBtn.parentElement.onclick = function () {
-    isHeart = !isHeart
-    if (isHeart) {
-      heartBtn.style.color = '#00e1e7'
-      heartBtn.classList.remove('bi-heart')
-      heartBtn.classList.add('bi-heart-fill')
-    } else {
-      heartBtn.style.color = ''
-      heartBtn.classList.remove('bi-heart-fill')
-      heartBtn.classList.add('bi-heart')
-    }
-  }
-})
-
-const endpointAlbum = 'https://striveschool-api.herokuapp.com/api/deezer/album/'
-
-const id = new URLSearchParams(location.search).get('id')
+const id = new URLSearchParams(location.search).get("id");
 
 function formatTime(seconds) {
-  const min = Math.floor(seconds / 60)
-  const sec = Math.floor(seconds % 60)
-  return `${min}:${sec < 10 ? '0' : ''}${sec}`
+  const min = Math.floor(seconds / 60);
+  const sec = Math.floor(seconds % 60);
+  return `${min}:${sec < 10 ? "0" : ""}${sec}`;
 }
 
 const generateAlbum = function () {
   fetch(endpointAlbum + id)
     .then((response) => {
       if (response.ok) {
-        return response.json()
+        return response.json();
       } else {
-        throw new Error(`HTTP error ${response.status}: ${response.statusText}`)
+        throw new Error(
+          `HTTP error ${response.status}: ${response.statusText}`
+        );
       }
     })
     .then((album) => {
-      const titleArea = document.getElementById('titleArea')
-      const albumDuration = formatTime(album.duration)
+      // Salvo la lista delle tracce e l'indice corrente come variabili globali
+      window.albumTracks = album.tracks.data;
+      window.currentAlbumIndex = 0;
+      const titleArea = document.getElementById("titleArea");
+      const albumDuration = formatTime(album.duration);
 
       titleArea.innerHTML = `
       <div
@@ -133,38 +60,77 @@ const generateAlbum = function () {
                               >${album.artist.name}</strong
                             >
                             • ${album.release_date} • ${album.tracks.data.length} brani, durata: ${albumDuration}.
-                          </div></div>`
-      const songsArea = document.getElementById('albumSongs')
+                          </div></div>`;
+      const songsArea = document.getElementById("albumSongs");
       for (let i = 0; i < album.tracks.data.length; i++) {
-        let duration = formatTime(album.tracks.data[i].duration)
+        let duration = formatTime(album.tracks.data[i].duration);
+        // Genero la riga della traccia con il pulsante play accanto al titolo, come in playlist.js
         songsArea.insertAdjacentHTML(
-          'beforeend',
+          "beforeend",
           `
       <div
-                            class="row align-items-center p-3 border-bottom border-secondary border-opacity-10 track-item"
-                          >
-                            <div class="col-1 text-center text-white-50">${
-                              i + 1
-                            }</div>
-                            <div class="col-6">
-                              <div class="fw-normal">${
-                                album.tracks.data[i].title
-                              }</div>
-                              <small class="text-white-50"
-                                >${album.tracks.data[i].artist.name}</small
-                              >
-                            </div>
-                            <div class="col-3 text-end text-white-50">
-                              ${album.tracks.data[i].rank}
-                            </div>
-                            <div class="col-2 text-end text-white-50">${duration}</div>
-                          </div>
-                          `
-        )
+        class="row align-items-center p-3 border-bottom border-secondary border-opacity-10 track-item"
+        data-track-index="${i}"
+      >
+        <div class="col-1 text-center text-white-50">${i + 1}</div>
+        <div class="col-6 d-flex align-items-center gap-2">
+          <button class="btn btn-link p-0 play-track-btn" data-track-index="${i}" title="Riproduci">
+            <i class="bi bi-play-circle text-epi-cyan" style="font-size:1.3em;"></i>
+          </button>
+          <div class="fw-normal text-white">${album.tracks.data[i].title}</div>
+          <small class="text-white-50 ms-2">${
+            album.tracks.data[i].artist.name
+          }</small>
+        </div>
+        <div class="col-3 text-end text-white-50">
+          ${album.tracks.data[i].rank}
+        </div>
+        <div class="col-2 text-end text-white-50">${duration}</div>
+      </div>
+      `
+        );
+      }
+      // Aggiungo event listener ai pulsanti play accanto ad ogni canzone
+      setTimeout(() => {
+        const playBtns = document.querySelectorAll(".play-track-btn");
+        playBtns.forEach((btn) => {
+          btn.onclick = function (e) {
+            e.preventDefault(); // Previene la propagazione del click sulla riga
+            const idx = parseInt(btn.getAttribute("data-track-index"));
+            if (!isNaN(idx) && window.albumTracks && window.albumTracks[idx]) {
+              window.currentAlbumIndex = idx;
+              window.playTrackById(window.albumTracks[idx].id);
+            }
+          };
+        });
+      }, 100);
+      // Aggiungo event listener a ogni traccia per farla partire nella mediabar al click sulla riga (escluso il click sul play)
+      const trackItems = document.querySelectorAll(".track-item");
+      trackItems.forEach((item) => {
+        item.addEventListener("click", function (e) {
+          // Se il click è sul bottone play, non faccio nulla (già gestito sopra)
+          if (e.target.closest(".play-track-btn")) return;
+          const idx = parseInt(item.getAttribute("data-track-index"));
+          window.currentAlbumIndex = idx;
+          if (window.albumTracks && window.albumTracks[idx]) {
+            window.playTrackById(window.albumTracks[idx].id);
+          }
+        });
+      });
+      // Aggiungo event listener al bottone play principale dell'album
+      const playMainBtn = document.querySelector(".btn-epi-cyan");
+      if (playMainBtn) {
+        playMainBtn.onclick = function () {
+          // Imposta l'indice corrente a 0 e avvia la prima traccia
+          window.currentAlbumIndex = 0;
+          if (window.albumTracks && window.albumTracks.length > 0) {
+            window.playTrackById(window.albumTracks[0].id);
+          }
+        };
       }
     })
     .catch((err) => {
-      alert(err)
-    })
-}
-generateAlbum()
+      alert(err);
+    });
+};
+generateAlbum();

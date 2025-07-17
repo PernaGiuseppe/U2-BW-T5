@@ -38,7 +38,9 @@ const generateAlbumsRow1 = function (albums) {
         albumsArea1.insertAdjacentHTML(
           "beforeend",
           `
-        <a href="album.html?id=${singleAlbum.id}">        
+        <a href="album.html?id=${
+          singleAlbum.id
+        }" class="text-decoration-none">        
         <div class="col">
             <div class="card ${
               colors[i % colors.length]
@@ -82,7 +84,9 @@ const generateAlbumsRow2 = function (albums) {
         albumsArea2.insertAdjacentHTML(
           "beforeend",
           `
-        <a href="album.html?id=${singleAlbum.id}">  
+        <a href="album.html?id=${
+          singleAlbum.id
+        }" class="text-decoration-none">  
         <div class="col">
             <div class="card ${
               colors[i % colors.length]
@@ -147,3 +151,12 @@ openFriends.addEventListener("click", function () {
 
 generateAlbumsRow1(albums1);
 generateAlbumsRow2(albums2);
+
+// Event listener per il bottone Play dell'hero: apre la pagina dell'album Mercury degli Imagine Dragons
+const heroPlayBtn = document.getElementById("heroPlayBtn");
+if (heroPlayBtn) {
+  heroPlayBtn.addEventListener("click", function () {
+    // Reindirizza alla pagina album.html con l'id corretto di Mercury (Acts 1 & 2) degli Imagine Dragons
+    window.location.href = "album.html?id=331818647";
+  });
+}
