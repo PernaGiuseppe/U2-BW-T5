@@ -32,6 +32,18 @@
           display: none !important;
         } */
       }
+      .listItem:hover {
+        color: white;
+        cursor: pointer;
+      }
+      .listA {
+        color: #6c757d;
+        text-decoration: none;
+      }
+      .listA:hover {
+        color: #ffffff;
+        cursor: pointer;
+      }
       /*Navbar mobile fissa in basso*/
       .mobile-bottom-nav {
         display: flex;
@@ -54,11 +66,16 @@
         padding: 8px 0;
         text-decoration: none;
       }
+      @media (max-width: 1200px) {
+        .player {
+          margin-bottom: 60px;
+        }
+      }
     </style>
   </head>
   <body>
     <!--Navbar mobile in fondo-->
-    <div class="mobile-bottom-nav d-md-none px-6">
+    <div class="mobile-bottom-nav d-xl-none px-6">
       <a href="./home.html"
         ><i class="bi bi-house-door"></i> <br />
         <h6 style="font-size: 0.6em">Home</h6></a
@@ -127,457 +144,430 @@
               <div style="overflow-y: scroll; height: 65vh">
                 <ul class="list-unstyled text-secondary py-2">
                   <li class="mx-4 my-1">
-                    <a
-                      href="./playlist.html?id=1"
-                      class="text-secondary text-decoration-none"
+                    <a href="./playlist.html?id=1" class="listA"
                       >Playlist Rock</a
                     >
                   </li>
                   <li class="mx-4 my-1">
-                    <a
-                      href="./playlist.html?id=2"
-                      class="text-secondary text-decoration-none"
-                    >
+                    <a href="./playlist.html?id=2" class="listA">
                       Playlist Chill</a
                     >
                   </li>
                   <li class="mx-4 my-1">
-                    <a
-                      href="./playlist.html?id=3"
-                      class="text-secondary text-decoration-none"
-                    >
+                    <a href="./playlist.html?id=3" class="listA">
                       Playlist Pop</a
                     >
                   </li>
                   <li class="mx-4 my-1">
-                    <a
-                      href="./playlist.html?id=4"
-                      class="text-secondary text-decoration-none"
-                    >
+                    <a href="./playlist.html?id=4" class="listA">
                       Playlist Classic</a
                     >
                   </li>
                   <li class="mx-4 my-1">
-                    <a
-                      href="./playlist.html?id=5"
-                      class="text-secondary text-decoration-none"
-                    >
+                    <a href="./playlist.html?id=5" class="listA">
                       Playlist Tecno</a
                     >
                   </li>
                   <li class="mx-4 my-1">
-                    <a
-                      href="./playlist.html?id=6"
-                      class="text-secondary text-decoration-none"
+                    <a href="./playlist.html?id=6" class="listA"
                       >Playlist reggeton</a
                     >
                   </li>
-                  <li class="mx-4 my-1">Chill Vibes</li>
-                  <li class="mx-4 my-1">Morning Coffee ☕</li>
-                  <li class="mx-4 my-1">Lo-Fi Beats</li>
-                  <li class="mx-4 my-1">Soft Piano 🌙</li>
-                  <li class="mx-4 my-1">Summer Breeze</li>
-                  <li class="mx-4 my-1">Roadtrip Classics 🚗</li>
-                  <li class="mx-4 my-1">Focus & Study</li>
-                  <li class="mx-4 my-1">Rainy Day Jazz 🌧️</li>
-                  <li class="mx-4 my-1">Night Drive</li>
-                  <li class="mx-4 my-1">Feel Good Hits 😎</li>
-                  <li class="mx-4 my-1">Deep Relaxation</li>
-                  <li class="mx-4 my-1">Weekend Party 🎉</li>
-                  <li class="mx-4 my-1">Retro Vibes</li>
-                  <li class="mx-4 my-1">Ocean Waves 🌊</li>
-                  <li class="mx-4 my-1">Golden Hour</li>
-                  <li class="mx-4 my-1">Workout Energy 💪</li>
-                  <li class="mx-4 my-1">Acoustic Sessions</li>
-                  <li class="mx-4 my-1">Midnight Chill 🌌</li>
-                  <li class="mx-4 my-1">City Lights</li>
-                  <li class="mx-4 my-1">Indie Essentials 🎸</li>
-                  <li class="mx-4 my-1">Peaceful Mornings</li>
-                  <li class="mx-4 my-1">Sunset Lounge 🌅</li>
-                  <li class="mx-4 my-1">Happy Mood</li>
-                  <li class="mx-4 my-1">Latin Heat 🔥</li>
-                  <li class="mx-4 my-1">Vintage Soul</li>
-                  <li class="mx-4 my-1">Dancefloor Hits 💃</li>
-                  <li class="mx-4 my-1">Evening Acoustic</li>
-                  <li class="mx-4 my-1">Dreamy Nights ✨</li>
-                  <li class="mx-4 my-1">Classic Rock</li>
-                  <li class="mx-4 my-1">Quiet Moments 🕊️</li>
-                  <li class="mx-4 my-1">Happy Roadtrip</li>
-                  <li class="mx-4 my-1">Sleep & Relax 😴</li>
-                  <li class="mx-4 my-1">Tropical House</li>
-                  <li class="mx-4 my-1">Cozy Fireplace 🪵</li>
-                  <li class="mx-4 my-1">Epic Soundtracks</li>
+                  <li class="mx-4 my-1 listItem">Chill Vibes</li>
+                  <li class="mx-4 my-1 listItem">Morning Coffee ☕</li>
+                  <li class="mx-4 my-1 listItem">Lo-Fi Beats</li>
+                  <li class="mx-4 my-1 listItem">Soft Piano 🌙</li>
+                  <li class="mx-4 my-1 listItem">Summer Breeze</li>
+                  <li class="mx-4 my-1 listItem">Roadtrip Classics 🚗</li>
+                  <li class="mx-4 my-1 listItem">Focus & Study</li>
+                  <li class="mx-4 my-1 listItem">Rainy Day Jazz 🌧️</li>
+                  <li class="mx-4 my-1 listItem">Night Drive</li>
+                  <li class="mx-4 my-1 listItem">Feel Good Hits 😎</li>
+                  <li class="mx-4 my-1 listItem">Deep Relaxation</li>
+                  <li class="mx-4 my-1 listItem">Weekend Party 🎉</li>
+                  <li class="mx-4 my-1 listItem">Retro Vibes</li>
+                  <li class="mx-4 my-1 listItem">Ocean Waves 🌊</li>
+                  <li class="mx-4 my-1 listItem">Golden Hour</li>
+                  <li class="mx-4 my-1 listItem">Workout Energy 💪</li>
+                  <li class="mx-4 my-1 listItem">Acoustic Sessions</li>
+                  <li class="mx-4 my-1 listItem">Midnight Chill 🌌</li>
+                  <li class="mx-4 my-1 listItem">City Lights</li>
+                  <li class="mx-4 my-1 listItem">Indie Essentials 🎸</li>
+                  <li class="mx-4 my-1 listItem">Peaceful Mornings</li>
+                  <li class="mx-4 my-1 listItem">Sunset Lounge 🌅</li>
+                  <li class="mx-4 my-1 listItem">Happy Mood</li>
+                  <li class="mx-4 my-1 listItem">Latin Heat 🔥</li>
+                  <li class="mx-4 my-1 listItem">Vintage Soul</li>
+                  <li class="mx-4 my-1 listItem">Dancefloor Hits 💃</li>
+                  <li class="mx-4 my-1 listItem">Evening Acoustic</li>
+                  <li class="mx-4 my-1 listItem">Dreamy Nights ✨</li>
+                  <li class="mx-4 my-1 listItem">Classic Rock</li>
+                  <li class="mx-4 my-1 listItem">Quiet Moments 🕊️</li>
+                  <li class="mx-4 my-1 listItem">Happy Roadtrip</li>
+                  <li class="mx-4 my-1 listItem">Sleep & Relax 😴</li>
+                  <li class="mx-4 my-1 listItem">Tropical House</li>
+                  <li class="mx-4 my-1 listItem">Cozy Fireplace 🪵</li>
+                  <li class="mx-4 my-1 listItem">Epic Soundtracks</li>
                 </ul>
               </div>
             </div>
           </div>
           <!-- colonna centrale -->
-          <div class="col-12 col-lg-8">
-            <div>
-              <div
-                class="d-flex justify-content-end justify-content-lg-between bg-dark"
-              >
-                <div class="ms-2 d-none d-lg-block pt-1">
-                  <button
-                    class="btn btn-link text-white-50 fs-4 p-1 hovericos"
-                    id="back-icon"
-                  >
-                    <i class="bi bi-arrow-left-circle"></i>
-                  </button>
-                  <button class="btn btn-link text-white-50 fs-4 p-1 hovericos">
-                    <i class="bi bi-arrow-right-circle"></i>
-                  </button>
-                </div>
-                <div class="me-md-3 mt-md-2 me-3 mt-2 text-end p-sm-1 p-md-0">
-                  <button
-                    class="btn btn-outline-light rounded-pill ps-0 py-0 bg-transparent mt-1"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#menuAccount"
-                    aria-expanded="false"
-                    aria-controls="menuAccount"
-                  >
-                    <img
-                      src="assets/imgs/search/image-5.jpg"
-                      alt="Your profile picture"
-                      class="rounded-circle me-1"
-                      width="30px"
-                    />
-                    <span>Antimo</span>
-                  </button>
-                  <div id="menuAccount" class="collapse mt-2 me-1 my-md-3">
-                    <a href="#" class="text-white text-decoration-none"
-                      >Account</a
-                    >
-                    <a href="#" class="text-white text-decoration-none mx-2"
-                      >Settings</a
-                    >
-                    <a href="#" class="text-white text-decoration-none"
-                      >Logout</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div
-                class="bg-image"
-                style="
-                  background-image: url(https://cdn-images.dzcdn.net/images/artist/26f55d825cb4e4d97c2e67dbc389d34d/1000x1000-000000-80-0-0.jpg);
-                  height: 370px;
-                  background-repeat: no-repeat;
-                  background-size: cover;
-                "
-              >
+          <div class="col-12 col-xl-8" id="mainSection">
+            <div style="overflow-y: scroll; height: 90vh; overflow-x: hidden">
+              <div>
                 <div
-                  class="d-flex align-items-end text-white ms-3 mb-3"
-                  style="height: calc(100%)"
+                  class="d-flex justify-content-end justify-content-lg-between bg-dark"
                 >
-                  <div>
-                    <i class="bi bi-patch-check-fill text-info"></i>
-                    <span class="ms-3">Artista verificato</span>
-                    <h1 class="fs-1 fw-bold">Yellowcard</h1>
-                    <p>3.433.158 ascoltatori mensili</p>
+                  <div class="ms-2 d-none d-lg-block pt-1">
+                    <button
+                      class="btn btn-link text-white-50 fs-4 p-1 hovericos"
+                      id="back-icon"
+                    >
+                      <i class="bi bi-arrow-left-circle"></i>
+                    </button>
+                    <button
+                      class="btn btn-link text-white-50 fs-4 p-1 hovericos"
+                    >
+                      <i class="bi bi-arrow-right-circle"></i>
+                    </button>
+                  </div>
+                  <div class="me-3 mt-2 text-end">
+                    <button
+                      class="btn btn-outline-light rounded-pill ps-0 py-0 me-5"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#menuAccount"
+                      aria-expanded="false"
+                      aria-controls="menuAccount"
+                    >
+                      <img
+                        src="./immagini.playlist/Screenshot 2025-07-17 alle 14.53 senza sfondo.34.png"
+                        alt="Your profile picture"
+                        class="rounded-circle me-1"
+                        style="height: 30px; width: 30px"
+                      />
+                      <span>Antimo</span>
+                    </button>
+                    <div id="menuAccount" class="collapse mt-2 me-1 mb-3 mt-3">
+                      <a href="#" class="text-white text-decoration-none"
+                        >Account</a
+                      >
+                      <a href="#" class="text-white text-decoration-none mx-2"
+                        >Settings</a
+                      >
+                      <a href="#" class="text-white text-decoration-none"
+                        >Logout</a
+                      >
+                    </div>
+                  </div>
+                  <i
+                    class="bi bi-person-lines-fill d-none text-secondary fs-3"
+                    style="
+                      position: fixed;
+                      top: 3px;
+                      right: 15px;
+                      cursor: pointer;
+                    "
+                    id="openFriends"
+                  ></i>
+                </div>
+                <div
+                  class="bg-image"
+                  style="
+                    background-image: url(https://cdn-images.dzcdn.net/images/artist/26f55d825cb4e4d97c2e67dbc389d34d/1000x1000-000000-80-0-0.jpg);
+                    height: 370px;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                  "
+                >
+                  <div
+                    class="d-flex align-items-end text-white ms-3 mb-3"
+                    style="height: calc(100%)"
+                  >
+                    <div>
+                      <i class="bi bi-patch-check-fill text-info"></i>
+                      <span class="ms-3">Artista verificato</span>
+                      <h1 class="fs-1 fw-bold">Yellowcard</h1>
+                      <p>3.433.158 ascoltatori mensili</p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <!-- seconda riga centrale -->
-            <div class="bg-dark mh-100">
-              <div class="row">
-                <div class="col-12 col-md-7 pt-3 ps-md-3 order-2">
-                  <div class="d-flex justify-content-start">
-                    <i
-                      class="bi bi-play-circle-fill ps-3 fs-3 align-content-center"
-                      style="color: #00ffea"
-                    ></i>
-                    <span
-                      class="text-uppercase border rounded-1 text-light mx-4 px-2 align-content-center"
-                      style="font-size: 10px"
-                      >following</span
-                    >
-                    <i
-                      class="bi bi-three-dots ps-3 text-secondary align-content-center"
-                    ></i>
-                  </div>
-                  <h6 class="text-uppercase fw-bold text-white ps-3 mt-4">
-                    popolari
-                  </h6>
-                  <!-- tracklist -->
-                  <div class="col-12 col-md-12 order-2 order-md-1">
-                    <div class="bg-dark bg-opacity-25 rounded">
-                      <!-- <div
-                        class="row align-items-center p-3 border-bottom border-secondary border-opacity-10 track-item"
+              <!-- seconda riga centrale -->
+              <div class="bg-dark mh-100">
+                <div class="row">
+                  <div class="col-12 col-md-7 pt-3 ps-md-3 order-2">
+                    <div class="d-flex justify-content-start">
+                      <i
+                        class="bi bi-play-circle-fill ps-3 fs-3 align-content-center"
+                        style="color: #00ffea"
+                      ></i>
+                      <span
+                        class="text-uppercase border rounded-1 text-light mx-4 px-2 align-content-center"
+                        style="font-size: 10px"
+                        >following</span
                       >
-                        <div class="col-1 text-center text-white-50">1</div>
-                        <div class="col-1">
-                          <img
-                            class="me-md-3 mb-md-2"
-                            src="assets/imgs/search/image-40.jpg"
-                            style="width: 2rem"
-                          />
-                        </div>
-                        <div class="col-5 ps-3">
-                          <div class="fw-normal text-light">Ocean Avenue</div>
-                        </div>
-                        <div class="col-3 text-end text-white-50">
-                          276.694.578
-                        </div>
-                        <div class="col-2 text-end text-white-50">3:28</div>
-                      </div> -->
-                      <div
-                        class="row align-items-center p-3 border-bottom border-secondary border-opacity-10 track-item"
-                      >
-                        <div class="col-1 text-center text-white-50">1</div>
-
-                        <div class="col-1">
-                          <img
-                            class="me-md-3 mb-md-2"
-                            src="assets/imgs/search/image-40.jpg"
-                            style="width: 2rem"
-                          />
-                        </div>
-
-                        <div class="col-5 ps-md-3 ps-4 order-1 order-md-3">
-                          <div class="fw-normal text-light">Ocean Avenue</div>
-                          <!-- Numero  visibile solo su mobile sotto  -->
+                      <i
+                        class="bi bi-three-dots ps-3 text-secondary align-content-center"
+                      ></i>
+                    </div>
+                    <h6 class="text-uppercase fw-bold text-white ps-3 mt-4">
+                      popolari
+                    </h6>
+                    <!-- tracklist -->
+                    <div class="col-12 col-md-12 order-2 order-md-1">
+                      <div class="bg-dark bg-opacity-25 rounded">
+                        <!-- <div
+                          class="row align-items-center p-3 border-bottom border-secondary border-opacity-10 track-item"
+                        >
+                          <div class="col-1 text-center text-white-50">1</div>
+                          <div class="col-1">
+                            <img
+                              class="me-md-3 mb-md-2"
+                              src="assets/imgs/search/image-40.jpg"
+                              style="width: 2rem"
+                            />
+                          </div>
+                          <div class="col-5 ps-3">
+                            <div class="fw-normal text-light">Ocean Avenue</div>
+                          </div>
+                          <div class="col-3 text-end text-white-50">
+                            276.694.578
+                          </div>
+                          <div class="col-2 text-end text-white-50">3:28</div>
+                        </div> -->
+                        <div
+                          class="row align-items-center p-3 border-bottom border-secondary border-opacity-10 track-item"
+                        >
+                          <div class="col-1 text-center text-white-50">1</div>
+                          <div class="col-1">
+                            <img
+                              class="me-md-3 mb-md-2"
+                              src="assets/imgs/search/image-40.jpg"
+                              style="width: 2rem"
+                            />
+                          </div>
+                          <div class="col-5 ps-md-3 ps-4 order-1 order-md-3">
+                            <div class="fw-normal text-light">Ocean Avenue</div>
+                            <!-- Numero  visibile solo su mobile sotto  -->
+                            <div
+                              class="text-white-50 d-md-none"
+                              style="font-size: 0.5em"
+                            >
+                              276.694.578
+                            </div>
+                          </div>
+                          <!-- Numero grande visibile solo su md+ -->
                           <div
-                            class="text-white-50 d-md-none"
-                            style="font-size: 0.5em"
+                            class="col-3 text-end text-white-50 d-none d-md-block order-md-4"
                           >
                             276.694.578
                           </div>
-                        </div>
-
-                        <!-- Numero grande visibile solo su md+ -->
-                        <div
-                          class="col-3 text-end text-white-50 d-none d-md-block order-md-4"
-                        >
-                          276.694.578
-                        </div>
-
-                        <!-- Orario 4:17 visibile solo su md+ -->
-                        <div
-                          class="col-2 text-end text-white-50 d-none d-md-flex justify-content-end order-md-5"
-                        >
-                          3:28
-                        </div>
-
-                        <!-- Tre puntini verticali visibili solo su mobile -->
-                        <div
-                          class="col-2 text-end text-white-50 d-flex d-md-none justify-content-end order-4 flex-grow-1 pe-4"
-                          style="font-size: 1.5rem; line-height: 1"
-                        >
-                          &#8942;
-                        </div>
-                      </div>
-                      <div
-                        class="row align-items-center p-3 border-bottom border-secondary border-opacity-10 track-item"
-                      >
-                        <div class="col-1 text-center text-white-50">2</div>
-
-                        <div class="col-1">
-                          <img
-                            class="me-md-3 mb-md-2"
-                            src="assets/imgs/search/image-40.jpg"
-                            style="width: 2rem"
-                          />
-                        </div>
-
-                        <div class="col-5 ps-md-3 ps-4 order-1 order-md-3">
-                          <div class="fw-normal text-light">Only one</div>
-                          <!-- Numero visibile solo su mobile sotto  -->
+                          <!-- Orario 4:17 visibile solo su md+ -->
                           <div
-                            class="text-white-50 d-md-none"
-                            style="font-size: 0.5em"
+                            class="col-2 text-end text-white-50 d-none d-md-flex justify-content-end order-md-5"
+                          >
+                            3:28
+                          </div>
+                          <!-- Tre puntini verticali visibili solo su mobile -->
+                          <div
+                            class="col-2 text-end text-white-50 d-flex d-md-none justify-content-end order-4 flex-grow-1 pe-4"
+                            style="font-size: 1.5rem; line-height: 1"
+                          >
+                            &#8942;
+                          </div>
+                        </div>
+                        <div
+                          class="row align-items-center p-3 border-bottom border-secondary border-opacity-10 track-item"
+                        >
+                          <div class="col-1 text-center text-white-50">2</div>
+                          <div class="col-1">
+                            <img
+                              class="me-md-3 mb-md-2"
+                              src="assets/imgs/search/image-40.jpg"
+                              style="width: 2rem"
+                            />
+                          </div>
+                          <div class="col-5 ps-md-3 ps-4 order-1 order-md-3">
+                            <div class="fw-normal text-light">Only one</div>
+                            <!-- Numero visibile solo su mobile sotto  -->
+                            <div
+                              class="text-white-50 d-md-none"
+                              style="font-size: 0.5em"
+                            >
+                              96.694.578
+                            </div>
+                          </div>
+                          <!-- Numero grande visibile solo su md+ -->
+                          <div
+                            class="col-3 text-end text-white-50 d-none d-md-block order-md-4"
                           >
                             96.694.578
                           </div>
-                        </div>
-
-                        <!-- Numero grande visibile solo su md+ -->
-                        <div
-                          class="col-3 text-end text-white-50 d-none d-md-block order-md-4"
-                        >
-                          96.694.578
-                        </div>
-
-                        <!-- Orario 4:17 visibile solo su md+ -->
-                        <div
-                          class="col-2 text-end text-white-50 d-none d-md-flex justify-content-end order-md-5"
-                        >
-                          4:17
-                        </div>
-
-                        <!-- Tre puntini verticali visibili solo su mobile -->
-                        <div
-                          class="col-2 text-end text-white-50 d-flex d-md-none justify-content-end order-4 flex-grow-1 pe-4"
-                          style="font-size: 1.5rem; line-height: 1"
-                        >
-                          &#8942;
-                        </div>
-                      </div>
-                      <div
-                        class="row align-items-center p-3 border-bottom border-secondary border-opacity-10 track-item"
-                      >
-                        <div class="col-1 text-center text-white-50">3</div>
-
-                        <div class="col-1">
-                          <img
-                            class="me-md-3 mb-md-2"
-                            src="assets/imgs/search/image-40.jpg"
-                            style="width: 2rem"
-                          />
-                        </div>
-
-                        <div class="col-5 ps-md-3 ps-4 order-1 order-md-3">
-                          <div class="fw-normal text-light">Breathing</div>
-                          <!-- Numero 96.694.578 visibile solo su mobile sotto "Only one" -->
+                          <!-- Orario 4:17 visibile solo su md+ -->
                           <div
-                            class="text-white-50 d-md-none"
-                            style="font-size: 0.5em"
+                            class="col-2 text-end text-white-50 d-none d-md-flex justify-content-end order-md-5"
+                          >
+                            4:17
+                          </div>
+                          <!-- Tre puntini verticali visibili solo su mobile -->
+                          <div
+                            class="col-2 text-end text-white-50 d-flex d-md-none justify-content-end order-4 flex-grow-1 pe-4"
+                            style="font-size: 1.5rem; line-height: 1"
+                          >
+                            &#8942;
+                          </div>
+                        </div>
+                        <div
+                          class="row align-items-center p-3 border-bottom border-secondary border-opacity-10 track-item"
+                        >
+                          <div class="col-1 text-center text-white-50">3</div>
+                          <div class="col-1">
+                            <img
+                              class="me-md-3 mb-md-2"
+                              src="assets/imgs/search/image-40.jpg"
+                              style="width: 2rem"
+                            />
+                          </div>
+                          <div class="col-5 ps-md-3 ps-4 order-1 order-md-3">
+                            <div class="fw-normal text-light">Breathing</div>
+                            <!-- Numero 96.694.578 visibile solo su mobile sotto "Only one" -->
+                            <div
+                              class="text-white-50 d-md-none"
+                              style="font-size: 0.5em"
+                            >
+                              52.694.578
+                            </div>
+                          </div>
+                          <!-- Numero grande visibile solo su md+ -->
+                          <div
+                            class="col-3 text-end text-white-50 d-none d-md-block order-md-4"
                           >
                             52.694.578
                           </div>
-                        </div>
-
-                        <!-- Numero grande visibile solo su md+ -->
-                        <div
-                          class="col-3 text-end text-white-50 d-none d-md-block order-md-4"
-                        >
-                          52.694.578
-                        </div>
-
-                        <!-- Orario 4:17 visibile solo su md+ -->
-                        <div
-                          class="col-2 text-end text-white-50 d-none d-md-flex justify-content-end order-md-5"
-                        >
-                          3:38
-                        </div>
-
-                        <!-- Tre puntini verticali visibili solo su mobile -->
-                        <div
-                          class="col-2 text-end text-white-50 d-flex d-md-none justify-content-end order-4 flex-grow-1 pe-4"
-                          style="font-size: 1.5rem; line-height: 1"
-                        >
-                          &#8942;
-                        </div>
-                      </div>
-                      <div
-                        class="row align-items-center p-3 border-bottom border-secondary border-opacity-10 track-item"
-                      >
-                        <div class="col-1 text-center text-white-50">4</div>
-
-                        <div class="col-1">
-                          <img
-                            class="me-md-3 mb-md-2"
-                            src="assets/imgs/search/image-50.jpg"
-                            style="width: 2rem"
-                          />
-                        </div>
-
-                        <div class="col-5 ps-md-3 ps-4 order-1 order-md-3">
-                          <div class="fw-normal text-light">
-                            Lights And Sound
-                          </div>
-                          <!-- Numero visibile solo su mobile sotto -->
+                          <!-- Orario 4:17 visibile solo su md+ -->
                           <div
-                            class="text-white-50 d-md-none"
-                            style="font-size: 0.5em"
+                            class="col-2 text-end text-white-50 d-none d-md-flex justify-content-end order-md-5"
+                          >
+                            3:38
+                          </div>
+                          <!-- Tre puntini verticali visibili solo su mobile -->
+                          <div
+                            class="col-2 text-end text-white-50 d-flex d-md-none justify-content-end order-4 flex-grow-1 pe-4"
+                            style="font-size: 1.5rem; line-height: 1"
+                          >
+                            &#8942;
+                          </div>
+                        </div>
+                        <div
+                          class="row align-items-center p-3 border-bottom border-secondary border-opacity-10 track-item"
+                        >
+                          <div class="col-1 text-center text-white-50">4</div>
+                          <div class="col-1">
+                            <img
+                              class="me-md-3 mb-md-2"
+                              src="assets/imgs/search/image-50.jpg"
+                              style="width: 2rem"
+                            />
+                          </div>
+                          <div class="col-5 ps-md-3 ps-4 order-1 order-md-3">
+                            <div class="fw-normal text-light">
+                              Lights And Sound
+                            </div>
+                            <!-- Numero visibile solo su mobile sotto -->
+                            <div
+                              class="text-white-50 d-md-none"
+                              style="font-size: 0.5em"
+                            >
+                              48.694.578
+                            </div>
+                          </div>
+                          <!-- Numero grande visibile solo su md+ -->
+                          <div
+                            class="col-3 text-end text-white-50 d-none d-md-block order-md-4"
                           >
                             48.694.578
                           </div>
-                        </div>
-
-                        <!-- Numero grande visibile solo su md+ -->
-                        <div
-                          class="col-3 text-end text-white-50 d-none d-md-block order-md-4"
-                        >
-                          48.694.578
-                        </div>
-
-                        <!-- Orario 4:17 visibile solo su md+ -->
-                        <div
-                          class="col-2 text-end text-white-50 d-none d-md-flex justify-content-end order-md-5"
-                        >
-                          3:27
-                        </div>
-
-                        <!-- Tre puntini verticali visibili solo su mobile -->
-                        <div
-                          class="col-2 text-end text-white-50 d-flex d-md-none justify-content-end order-4 flex-grow-1 pe-4"
-                          style="font-size: 1.5rem; line-height: 1"
-                        >
-                          &#8942;
-                        </div>
-                      </div>
-                      <div
-                        class="row align-items-center p-3 border-bottom border-secondary border-opacity-10 track-item"
-                      >
-                        <div class="col-1 text-center text-white-50">5</div>
-
-                        <div class="col-1">
-                          <img
-                            class="me-md-3 mb-md-2"
-                            src="assets/imgs/search/image-40.jpg"
-                            style="width: 2rem"
-                          />
-                        </div>
-
-                        <div class="col-5 ps-md-3 ps-4 order-1 order-md-3">
-                          <div class="fw-normal text-light">Way Away</div>
-                          <!-- Numero 96.694.578 visibile solo su mobile sotto "Only one" -->
+                          <!-- Orario 4:17 visibile solo su md+ -->
                           <div
-                            class="text-white-50 d-md-none"
-                            style="font-size: 0.5em"
+                            class="col-2 text-end text-white-50 d-none d-md-flex justify-content-end order-md-5"
+                          >
+                            3:27
+                          </div>
+                          <!-- Tre puntini verticali visibili solo su mobile -->
+                          <div
+                            class="col-2 text-end text-white-50 d-flex d-md-none justify-content-end order-4 flex-grow-1 pe-4"
+                            style="font-size: 1.5rem; line-height: 1"
+                          >
+                            &#8942;
+                          </div>
+                        </div>
+                        <div
+                          class="row align-items-center p-3 border-bottom border-secondary border-opacity-10 track-item"
+                        >
+                          <div class="col-1 text-center text-white-50">5</div>
+                          <div class="col-1">
+                            <img
+                              class="me-md-3 mb-md-2"
+                              src="assets/imgs/search/image-40.jpg"
+                              style="width: 2rem"
+                            />
+                          </div>
+                          <div class="col-5 ps-md-3 ps-4 order-1 order-md-3">
+                            <div class="fw-normal text-light">Way Away</div>
+                            <!-- Numero 96.694.578 visibile solo su mobile sotto "Only one" -->
+                            <div
+                              class="text-white-50 d-md-none"
+                              style="font-size: 0.5em"
+                            >
+                              43.694.578
+                            </div>
+                          </div>
+                          <!-- Numero grande visibile solo su md+ -->
+                          <div
+                            class="col-3 text-end text-white-50 d-none d-md-block order-md-4"
                           >
                             43.694.578
                           </div>
-                        </div>
-
-                        <!-- Numero grande visibile solo su md+ -->
-                        <div
-                          class="col-3 text-end text-white-50 d-none d-md-block order-md-4"
-                        >
-                          43.694.578
-                        </div>
-
-                        <!-- Orario 4:17 visibile solo su md+ -->
-                        <div
-                          class="col-2 text-end text-white-50 d-none d-md-flex justify-content-end order-md-5"
-                        >
-                          3:17
-                        </div>
-
-                        <!-- Tre puntini verticali visibili solo su mobile -->
-                        <div
-                          class="col-2 text-end text-white-50 d-flex d-md-none justify-content-end order-4 flex-grow-1 pe-4"
-                          style="font-size: 1.5rem; line-height: 1"
-                        >
-                          &#8942;
+                          <!-- Orario 4:17 visibile solo su md+ -->
+                          <div
+                            class="col-2 text-end text-white-50 d-none d-md-flex justify-content-end order-md-5"
+                          >
+                            3:17
+                          </div>
+                          <!-- Tre puntini verticali visibili solo su mobile -->
+                          <div
+                            class="col-2 text-end text-white-50 d-flex d-md-none justify-content-end order-4 flex-grow-1 pe-4"
+                            style="font-size: 1.5rem; line-height: 1"
+                          >
+                            &#8942;
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <!-- colonna destra seconda riga centrale -->
-                <div
-                  class="col-12 col-md-5 text-light pt-md-5 pe-md-5 py-3 ps-4 order-1 order-md-2"
-                >
-                  <h6>Brani che ti piacciono</h6>
-                  <div class="d-flex justify-content-start align-items-start">
-                    <div class="position-relative">
-                      <img
-                        src="./assets/imgs/main/image-16.jpg"
-                        style="height: 45px; width: auto"
-                        alt="Profile picture"
-                        class="rounded-circle"
-                      />
-                      <i
-                        class="bi bi-suit-heart-fill position-absolute"
-                        style="bottom: -8px; right: 0px; color: #d50075"
-                      ></i>
-                    </div>
-                    <div class="ms-2">
-                      <strong>Hai messo mi piace a 11 brani</strong><br />
-                      <span class="text-secondary">di Yellowcard</span><br />
+                  <!-- colonna destra seconda riga centrale -->
+                  <div
+                    class="col-12 col-md-5 text-light pt-md-5 pe-md-5 py-3 ps-4 order-1 order-md-2"
+                  >
+                    <h6>Brani che ti piacciono</h6>
+                    <div class="d-flex justify-content-start align-items-start">
+                      <div class="position-relative">
+                        <img
+                          src="./assets/imgs/main/image-16.jpg"
+                          style="height: 45px; width: auto"
+                          alt="Profile picture"
+                          class="rounded-circle"
+                        />
+                        <i
+                          class="bi bi-suit-heart-fill position-absolute"
+                          style="bottom: -8px; right: 0px; color: #d50075"
+                        ></i>
+                      </div>
+                      <div class="ms-2">
+                        <strong>Hai messo mi piace a 11 brani</strong><br />
+                        <span class="text-secondary">di Yellowcard</span><br />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -585,13 +575,17 @@
             </div>
           </div>
 
-          <div class="col-2 d-none d-md-block" id="col-destra">
+          <div class="col-2 d-none d-xl-block" id="rightSection">
             <div class="bg-black h-100 p-3">
               <div class="d-flex justify-content-between">
                 <h5 class="text-light">Attività Amici</h5>
                 <div>
                   <i class="bi bi-person-plus text-secondary me-2"></i
-                  ><i class="bi bi-x-lg text-secondary"></i>
+                  ><i
+                    class="bi bi-x-lg text-secondary"
+                    id="closeFriends"
+                    style="cursor: pointer"
+                  ></i>
                 </div>
               </div>
               <div>
@@ -650,10 +644,10 @@
     </main>
     <footer>
       <div
-        class="player d-none d-md-flex justify-content-between align-items-center p-2"
+        class="player d-flex justify-content-between align-items-center p-2"
         style="
           background: #181818;
-          position: sticky;
+          position: fixed;
           bottom: 0;
           left: 0;
           width: 100%;
@@ -661,26 +655,26 @@
           height: 10vh;
         "
       >
-        <div class="d-flex align-items-center" style="min-width: 250px">
+        <div class="d-flex align-items-center" style="min-width: min-content">
           <img
             src="./assets/imgs/main/image-1.jpg"
             class="album-covers me-2"
             alt="Copertina brano"
             style="height: 60px"
           />
-          <div>
+          <div class="d-none d-md-block">
             <div class="text-secondary" style="font-size: 0.95rem">
               Fat Funny Friend
             </div>
             <small class="text-secondary">Maddie Zahm</small>
           </div>
-          <button class="btn btn-link text-secondary ms-2">
+          <button class="btn btn-link text-secondary ms-2 d-none d-xl-block">
             <i class="bi bi-heart"></i>
           </button>
         </div>
         <div
           class="d-flex flex-column align-items-center"
-          style="min-width: 400px; max-width: 600px; flex: 1"
+          style="min-width: 200px; max-width: 600px; flex: 1"
         >
           <div class="d-flex align-items-center mb-1">
             <button class="btn btn-link text-secondary px-2">
@@ -728,15 +722,17 @@
         </div>
         <div
           class="d-flex align-items-center justify-content-end"
-          style="min-width: 250px"
+          style="min-width: min-content"
         >
-          <button class="btn btn-link text-secondary">
+          <button class="btn btn-link text-secondary d-none d-xl-block">
             <i class="bi bi-mic"></i>
           </button>
-          <button class="btn btn-link text-secondary">
+          <button class="btn btn-link text-secondary d-none d-xl-block">
             <i class="bi bi-list"></i>
           </button>
-          <button class="btn btn-link text-secondary cyan-items">
+          <button
+            class="btn btn-link text-white-50 cyan-items d-none d-xl-block"
+          >
             <i class="bi bi-speaker"></i>
           </button>
           <button class="btn btn-link text-secondary">
@@ -744,11 +740,11 @@
           </button>
           <input
             type="range"
-            class="form-range ms-2"
+            class="form-range ms-2 d-none d-xl-block"
             min="0"
             max="100"
             value="50"
-            style="width: 100px"
+            style="min-width: 70px; max-width: 100px"
           />
         </div>
       </div>
@@ -758,10 +754,10 @@
       integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
       crossorigin="anonymous"
     ></script>
-    <script src="./assets/scripts/album.js"></script>
     <script src="./assets/scripts/mediabar.js"></script>
     <script src="./assets/scripts/hoverlight.js"></script>
     <script src="./assets/scripts/hovercyan.js"></script>
     <script src="./assets/scripts/side-menu.js"></script>
+    <script src="./assets/scripts/friends-tab.js"></script>
   </body>
 </html>
