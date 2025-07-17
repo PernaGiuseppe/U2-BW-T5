@@ -1,10 +1,3 @@
-// Bottone per tornare indietro alla home
-
-document.getElementById('back-icon').addEventListener('click', function (e) {
-  e.preventDefault()
-  window.location.href = 'home.html'
-})
-
 const endpointAlbum = 'https://striveschool-api.herokuapp.com/api/deezer/album/'
 
 const id = new URLSearchParams(location.search).get('id')
