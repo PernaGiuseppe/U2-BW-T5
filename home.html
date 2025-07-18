@@ -56,7 +56,15 @@
         padding: 8px 0;
         text-decoration: none;
       }
+      .overflowMain {
+        overflow-y: scroll;
+        height: 85vh;
+        padding-right: 10px;
+      }
       @media (max-width: 1200px) {
+        .overflowMain {
+          height: 78vh;
+        }
         .player {
           margin-bottom: 60px;
         }
@@ -258,9 +266,7 @@
                     id="openFriends"
                   ></i>
                 </div>
-                <div
-                  style="overflow-y: scroll; height: 85vh; padding-right: 10px"
-                >
+                <div class="overflowMain">
                   <div id="showButton" class="text-end d-none mt-4">
                     <button
                       type="button"
@@ -446,7 +452,10 @@
                     </button>
                   </div>
                   <div class="container-flex px-0">
-                    <div class="row row-cols-5 g-2" id="albums1"></div>
+                    <div
+                      class="row row-cols-2 row-cols-md-3 row-cols-xl-5 g-2"
+                      id="albums1"
+                    ></div>
                   </div>
                   <div
                     class="my-3 d-flex justify-content-between align-items-center"
@@ -457,7 +466,10 @@
                     </button>
                   </div>
                   <div class="container-flex px-0 mb-3">
-                    <div class="row row-cols-5 g-2" id="albums2"></div>
+                    <div
+                      class="row row-cols-2 row-cols-md-3 row-cols-xl-5 g-2"
+                      id="albums2"
+                    ></div>
                   </div>
                 </div>
               </div>
