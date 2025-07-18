@@ -39,7 +39,6 @@ const playlists = [
         artist: 'Eagles',
         duration: '6:30',
         album: 'Hotel California',
-
         albumID: 51350192,
         artistID: 210,
       },
@@ -122,7 +121,6 @@ const playlists = [
         artist: 'Marconi Union',
         duration: '8:00',
         album: 'Weightless',
-
         albumID: 6018893,
         artistID: 1242386,
       },
@@ -141,7 +139,6 @@ const playlists = [
         artist: 'Michael Kiwanuka',
         duration: '9:58',
         album: 'Love & Hate',
-
         albumID: 15443992,
         artistID: 459578,
       },
@@ -647,9 +644,11 @@ if (selectedPlaylist) {
     }" class="fw-normal text-white-50 text-decoration-none">${
       track.artist
     }</a></div>
-        <div class="col-2 text-end text-white-50"><a href="album.html?id=
-          ${track.albumID}
-        " class="text-decoration-none">${track.album}</a></div>
+        <div class="col-2 text-center text-white-50"><a href="album.html?id=${
+          track.albumID
+        }" class="fw-normal text-white-50 text-decoration-none">${
+      track.album
+    }</a></div>
         <div class="col-2 text-end text-white-50">${track.duration}</div>
        `
     container.appendChild(row)

@@ -25,7 +25,7 @@
       }
       @media (max-width: 1200px) {
         /*Nasconde le colonne laterali su mobile*/
-        .col-2 {
+        .sidebar-dnone {
           display: none !important;
         }
         /*Rendi la colonna centrale a tutta larghezza*/
@@ -90,7 +90,7 @@
       <!--Sidebar sinistra-->
       <div class="container-fluid p-0">
         <div class="row g-0 p-0">
-          <div class="col-2">
+          <div class="col-2 sidebar-dnone">
             <div class="bg-black w-100 h-100">
               <h6 class="text-white mb-4 ms-3 pt-3">Your Library</h6>
               <div class="mb-2">
@@ -270,7 +270,7 @@
                     >
                       <a
                         href="./home.html"
-                        class="text-decoration-none text-white"
+                        class="text-decoration-none text-white-50"
                         ><i class="bi bi-arrow-left-circle"></i
                       ></a>
                     </button>
@@ -382,7 +382,8 @@
                             <div class="col-1 text-center">#</div>
                             <div class="col-4">TITOLO</div>
                             <div class="col-3 col-sm-2">ARTISTA</div>
-                            <div class="col-2 col-sm-3 text-end ps-sm-4">
+                            <div class="col-2 col-sm-3 text-center ps-sm-4">
+                              <!-- ALBUM DA CAMBIARE -->
                               ALBUM
                             </div>
                             <div class="col-2 text-end">
@@ -400,7 +401,7 @@
           </div>
 
           <!--Sidebar destra-->
-          <div class="col-2">
+          <div class="col-2 sidebar-dnone">
             <div style="overflow-y: scroll; height: 100vh">
               <div class="bg-black p-3 text-white">
                 <div class="mb-3">
