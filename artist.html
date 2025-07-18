@@ -23,14 +23,11 @@
           rgba(18, 18, 18, 1) 100%
         );
       }
-      @media (max-width: 1200px) {
+      @media (max-width: 1199px) {
         /*Nasconde le colonne laterali su mobile*/
         .col-2 {
           display: none !important;
         }
-        /* footer {
-          display: none !important;
-        } */
       }
       .listItem:hover {
         color: white;
@@ -66,9 +63,17 @@
         padding: 8px 0;
         text-decoration: none;
       }
-      @media (max-width: 1200px) {
+      .artistMainScroll {
+        overflow-y: scroll;
+        height: 90vh;
+        overflow-x: hidden;
+      }
+      @media (max-width: 1199px) {
         .player {
           margin-bottom: 60px;
+        }
+        .artistMainScroll {
+          height: 84vh;
         }
       }
       .responsiveBg {
@@ -223,7 +228,7 @@
           </div>
           <!-- colonna centrale -->
           <div class="col-12 col-xl-8" id="mainSection">
-            <div style="overflow-y: scroll; height: 90vh; overflow-x: hidden">
+            <div class="artistMainScroll">
               <div>
                 <div class="d-flex justify-content-between bg-dark">
                   <div class="ms-2 py-1">

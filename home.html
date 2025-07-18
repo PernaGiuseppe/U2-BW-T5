@@ -61,7 +61,12 @@
         height: 85vh;
         padding-right: 10px;
       }
-      @media (max-width: 1200px) {
+      @media (min-width: 1199px) and (max-width: 1485px) {
+        .cardHeight {
+          height: 265px;
+        }
+      }
+      @media (max-width: 1199px) {
         .overflowMain {
           height: 78vh;
         }
@@ -447,7 +452,11 @@
                     class="my-3 d-flex justify-content-between align-items-center"
                   >
                     <h4 class="text-light">Altro di ciò che ti piace</h4>
-                    <button id="toggleAlbums1" class="btn btn-outline-light">
+                    <button
+                      id="toggleAlbums1"
+                      class="btn btn-outline-light"
+                      style="font-size: 0.8rem"
+                    >
                       NASCONDI SEZIONE
                     </button>
                   </div>
@@ -461,7 +470,11 @@
                     class="my-3 d-flex justify-content-between align-items-center"
                   >
                     <h4 class="text-light">Scopri le novità</h4>
-                    <button id="toggleAlbums2" class="btn btn-outline-light">
+                    <button
+                      id="toggleAlbums2"
+                      class="btn btn-outline-light"
+                      style="font-size: 0.8rem"
+                    >
                       NASCONDI SEZIONE
                     </button>
                   </div>

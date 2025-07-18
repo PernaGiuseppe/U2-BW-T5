@@ -53,7 +53,7 @@ const generateAlbumsRow1 = function (albums) {
         <div class="col">
             <div class="card ${
               colors[i % colors.length]
-            } text-light border border-epi-blue shadow ${hiddenClass}">
+            } text-light border border-epi-blue cardHeight shadow ${hiddenClass}">
               <img src="${
                 singleAlbum.cover_medium
               }" class="card-img-top" alt="Album" />
@@ -99,7 +99,7 @@ const generateAlbumsRow2 = function (albums) {
         <div class="col">
             <div class="card ${
               colors[i % colors.length]
-            } text-light border border-epi-blue shadow ${hiddenClass}">
+            } text-light border border-epi-blue cardHeight shadow ${hiddenClass}">
               <img src="${
                 singleAlbum.cover_medium
               }" class="card-img-top" alt="Album" />
@@ -152,8 +152,8 @@ openFriends.addEventListener("click", function () {
   mainSection.classList.add("col-xl-8");
   rightSection.classList.remove("d-xl-none");
   openFriends.classList.add("d-none");
-  albumsArea1.classList.replace("row-cols-xl-5", "row-cols-xl-6");
-  albumsArea2.classList.replace("row-cols-xl-5", "row-cols-xl-6");
+  albumsArea1.classList.replace("row-cols-xl-6", "row-cols-xl-5");
+  albumsArea2.classList.replace("row-cols-xl-6", "row-cols-xl-5");
   lastCard1.classList.add("d-xl-none");
   lastCard2.classList.add("d-xl-none");
 });

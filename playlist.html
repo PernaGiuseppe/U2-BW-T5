@@ -28,7 +28,7 @@
         height: 85vh;
         padding-right: 10px"
       }
-      @media (max-width: 1200px) {
+      @media (max-width: 1199px) {
         .overflowPlaylist{
         height: 78vh;
       }
@@ -69,10 +69,22 @@
         }
       }
 
-      @media (max-width: 1200px) {
+      @media (max-width: 1199px) {
         .player {
           margin-bottom: 60px;
         }
+      }
+            .listItem:hover {
+        color: white;
+        cursor: pointer;
+      }
+      .listA {
+        color: #6c757d;
+        text-decoration: none;
+      }
+      .listA:hover {
+        color: #ffffff;
+        cursor: pointer;
       }
     </style>
   </head>
@@ -98,170 +110,123 @@
       <!--Sidebar sinistra-->
       <div class="container-fluid p-0">
         <div class="row g-0 p-0">
-          <div class="col-2 sidebar-dnone">
+          <div class="col-2 d-none d-xl-block">
             <div class="bg-black w-100 h-100">
-              <h6 class="text-white mb-4 ms-3 pt-3">Your Library</h6>
-              <div class="mb-2">
-                <button class="btn btn-sm btn-dark text-light mb-5 ms-3">
-                  <a href="./home.html" class="text-decoration-none text-white"
-                    >Home</a
-                  >
-                </button>
-                <button class="btn btn-sm btn-dark text-light mb-5">
-                  <a
-                    href="./album.html?id=185484062"
-                    class="text-decoration-none text-white"
-                    >Albums</a
-                  >
-                </button>
-                <button class="btn btn-sm btn-dark text-light mb-5">
-                  Playlist
-                </button>
-              </div>
+              <i
+                class="bi bi-three-dots text-white fs-4 mx-2"
+                data-bs-toggle="collapse"
+                data-bs-target="#menuLaterale"
+                aria-expanded="false"
+                aria-controls="menuLaterale"
+              >
+              </i>
+              <!-- Clicca per mostrare/nascondere il menu laterale -->
+              <!-- Menu laterale collassabile -->
               <div
                 id="menuLaterale"
-                class="collapse border-bottom border-1 border-secondary"
-              ></div>
-              <div style="overflow-y: scroll; height: 75vh">
-                <div class="list-group">
-                  <div
-                    class="list-group-item bg-transparent text-white border-0 d-flex align-items-center gap-3"
-                  >
-                    <img
-                      src="./assets/imgs/favorite.webp"
-                      style="height: 22%; width: 22%; object-fit: cover"
-                      alt=""
-                    />
-                    <div>
-                      <h6 class="mb-0">Liked Songs</h6>
-                      <span class="text-white-50 small"
-                        >Playlist • 95 songs</span
-                      >
-                    </div>
-                  </div>
-                  <div
-                    class="list-group-item bg-transparent text-white border-0 d-flex align-items-center gap-3"
-                  >
-                    <img
-                      src="./assets/imgs/search/image-18.jpg"
-                      style="height: 22%; width: 22%; object-fit: cover"
-                      alt=""
-                    />
-                    <div>
-                      <h6 class="mb-0">Sleep Time</h6>
-                      <span class="text-white-50 small"
-                        >Playlist • 178 songs</span
-                      >
-                    </div>
-                  </div>
-                  <div
-                    class="list-group-item bg-transparent text-white border-0 d-flex align-items-center gap-3"
-                  >
-                    <img
-                      src="./assets/imgs/search/image-8.jpg"
-                      style="height: 22%; width: 22%; object-fit: cover"
-                      alt=""
-                    />
-                    <div>
-                      <h6 class="mb-0">Beast Mode</h6>
-                      <span class="text-white-50 small"
-                        >Playlist • 62 songs</span
-                      >
-                    </div>
-                  </div>
-                  <div
-                    class="list-group-item bg-transparent text-white border-0 d-flex align-items-center gap-3"
-                  >
-                    <img
-                      src="./assets/imgs/search/image-17.jpg"
-                      style="height: 22%; width: 22%; object-fit: cover"
-                      alt=""
-                    />
-                    <div>
-                      <h6 class="mb-0">Stress Relief</h6>
-                      <span class="text-white-50 small"
-                        >Playlist • 99 songs</span
-                      >
-                    </div>
-                  </div>
-                  <div
-                    class="list-group-item bg-transparent text-white border-0 d-flex align-items-center gap-3"
-                  >
-                    <img
-                      src="./assets/imgs/search/image-13.jpeg"
-                      style="height: 22%; width: 22%; object-fit: cover"
-                      alt=""
-                    />
-                    <div>
-                      <h6 class="mb-0">Your Summer Rewind</h6>
-                      <span class="text-white-50 small"
-                        >Playlist • 74 songs</span
-                      >
-                    </div>
-                  </div>
-                  <div
-                    class="list-group-item bg-transparent text-white border-0 d-flex align-items-center gap-3"
-                  >
-                    <img
-                      src="./assets/imgs/search/image-14.jpg"
-                      style="height: 22%; width: 22%; object-fit: cover"
-                      alt=""
-                    />
-                    <div>
-                      <h6 class="mb-0">Top Songs Global</h6>
-                      <span class="text-white-50 small"
-                        >Playlist • 50 songs</span
-                      >
-                    </div>
-                  </div>
-                  <div
-                    class="list-group-item bg-transparent text-white border-0 d-flex align-items-center gap-3"
-                  >
-                    <img
-                      src="./assets/imgs/search/image-30.jpg"
-                      style="height: 22%; width: 22%; object-fit: cover"
-                      alt=""
-                    />
-                    <div>
-                      <h6 class="mb-0">League og Legends</h6>
-                      <span class="text-white-50 small"
-                        >Playlist • 210 songs</span
-                      >
-                    </div>
-                  </div>
-
-                  <div
-                    class="list-group-item bg-transparent text-white border-0 d-flex align-items-center gap-3"
-                  >
-                    <img
-                      src="./assets/imgs/search/image-42.png"
-                      style="height: 22%; width: 22%; object-fit: cover"
-                      alt=""
-                    />
-                    <div>
-                      <h6 class="mb-0">Pop Mix</h6>
-                      <span class="text-white-50 small"
-                        >Playlist • 83 songs</span
-                      >
-                    </div>
-                  </div>
-
-                  <div
-                    class="list-group-item bg-transparent text-white border-0 d-flex align-items-center gap-3"
-                  >
-                    <img
-                      src="./assets/imgs/search/image-48.jpeg"
-                      style="height: 22%; width: 22%; object-fit: cover"
-                      alt=""
-                    />
-                    <div>
-                      <h6 class="mb-0">Top Christian</h6>
-                      <span class="text-white-50 small"
-                        >Playlist • 666 songs</span
-                      >
-                    </div>
-                  </div>
-                </div>
+                class="collapse show border-bottom border-1 border-secondary"
+              >
+                <ul class="list-unstyled ms-3">
+                  <li>
+                    <a
+                      href="./home.html"
+                      class="text-decoration-none text-secondary"
+                      ><i class="bi bi-house-door-fill mx-2"></i> Home</a
+                    >
+                  </li>
+                  <li class="my-1">
+                    <a href="#" class="text-decoration-none text-secondary"
+                      ><i class="bi bi-search mx-2"></i> Search</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="album.html?id=185484062"
+                      class="text-decoration-none text-secondary"
+                      ><i class="bi bi-collection mx-2"></i> Albums</a
+                    >
+                  </li>
+                  <br />
+                  <li class="text-secondary" style="cursor: pointer">
+                    <i class="bi bi-plus-square-fill mx-2"></i> Crea Playlist
+                  </li>
+                  <li class="text-secondary my-1" style="cursor: pointer">
+                    <i class="bi bi-heart mx-2"></i>Brani che ti piacciono
+                  </li>
+                  <li class="text-secondary" style="cursor: pointer">
+                    <i class="bi bi-bookmark mx-2"></i>I tuoi episodi
+                  </li>
+                </ul>
+              </div>
+              <!-- Questo div contiene il menu laterale che viene mostrato/nascosto cliccando sui tre puntini -->
+              <div style="overflow-y: scroll; height: 65vh">
+                <ul class="list-unstyled text-secondary py-2">
+                  <li class="mx-4 my-1">
+                    <a href="./playlist.html?id=1" class="listA"
+                      >Playlist Rock</a
+                    >
+                  </li>
+                  <li class="mx-4 my-1">
+                    <a href="./playlist.html?id=2" class="listA">
+                      Playlist Chill</a
+                    >
+                  </li>
+                  <li class="mx-4 my-1">
+                    <a href="./playlist.html?id=3" class="listA">
+                      Playlist Pop</a
+                    >
+                  </li>
+                  <li class="mx-4 my-1">
+                    <a href="./playlist.html?id=4" class="listA">
+                      Playlist Classic</a
+                    >
+                  </li>
+                  <li class="mx-4 my-1">
+                    <a href="./playlist.html?id=5" class="listA">
+                      Playlist Tecno</a
+                    >
+                  </li>
+                  <li class="mx-4 my-1">
+                    <a href="./playlist.html?id=6" class="listA"
+                      >Playlist reggeton</a
+                    >
+                  </li>
+                  <li class="mx-4 my-1 listItem">Chill Vibes</li>
+                  <li class="mx-4 my-1 listItem">Morning Coffee ☕</li>
+                  <li class="mx-4 my-1 listItem">Lo-Fi Beats</li>
+                  <li class="mx-4 my-1 listItem">Soft Piano 🌙</li>
+                  <li class="mx-4 my-1 listItem">Summer Breeze</li>
+                  <li class="mx-4 my-1 listItem">Roadtrip Classics 🚗</li>
+                  <li class="mx-4 my-1 listItem">Focus & Study</li>
+                  <li class="mx-4 my-1 listItem">Rainy Day Jazz 🌧️</li>
+                  <li class="mx-4 my-1 listItem">Night Drive</li>
+                  <li class="mx-4 my-1 listItem">Feel Good Hits 😎</li>
+                  <li class="mx-4 my-1 listItem">Deep Relaxation</li>
+                  <li class="mx-4 my-1 listItem">Weekend Party 🎉</li>
+                  <li class="mx-4 my-1 listItem">Retro Vibes</li>
+                  <li class="mx-4 my-1 listItem">Ocean Waves 🌊</li>
+                  <li class="mx-4 my-1 listItem">Golden Hour</li>
+                  <li class="mx-4 my-1 listItem">Workout Energy 💪</li>
+                  <li class="mx-4 my-1 listItem">Acoustic Sessions</li>
+                  <li class="mx-4 my-1 listItem">Midnight Chill 🌌</li>
+                  <li class="mx-4 my-1 listItem">City Lights</li>
+                  <li class="mx-4 my-1 listItem">Indie Essentials 🎸</li>
+                  <li class="mx-4 my-1 listItem">Peaceful Mornings</li>
+                  <li class="mx-4 my-1 listItem">Sunset Lounge 🌅</li>
+                  <li class="mx-4 my-1 listItem">Happy Mood</li>
+                  <li class="mx-4 my-1 listItem">Latin Heat 🔥</li>
+                  <li class="mx-4 my-1 listItem">Vintage Soul</li>
+                  <li class="mx-4 my-1 listItem">Dancefloor Hits 💃</li>
+                  <li class="mx-4 my-1 listItem">Evening Acoustic</li>
+                  <li class="mx-4 my-1 listItem">Dreamy Nights ✨</li>
+                  <li class="mx-4 my-1 listItem">Classic Rock</li>
+                  <li class="mx-4 my-1 listItem">Quiet Moments 🕊️</li>
+                  <li class="mx-4 my-1 listItem">Happy Roadtrip</li>
+                  <li class="mx-4 my-1 listItem">Sleep & Relax 😴</li>
+                  <li class="mx-4 my-1 listItem">Tropical House</li>
+                  <li class="mx-4 my-1 listItem">Cozy Fireplace 🪵</li>
+                  <li class="mx-4 my-1 listItem">Epic Soundtracks</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -610,5 +575,6 @@
     <script src="./assets/scripts/cyanheart.js"></script>
     <script src="./assets/scripts/mediabar.js"></script>
     <script src="./assets/scripts/search.js"></script>
+    <script src="./assets/scripts/side-menu.js"></script>
   </body>
 </html>
