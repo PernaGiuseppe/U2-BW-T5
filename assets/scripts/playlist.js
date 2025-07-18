@@ -12,6 +12,8 @@ const playlists = [
         artist: 'Queen',
         duration: '5:55',
         album: 'A Night at the Opera',
+        albumID: 915785,
+        artistID: 412,
       },
       {
         id: 92720046,
@@ -19,6 +21,8 @@ const playlists = [
         artist: 'AC/DC',
         duration: '4:15',
         album: 'Back in Black',
+        albumID: 9410100,
+        artistID: 115,
       },
       {
         id: 518458172,
@@ -26,6 +30,8 @@ const playlists = [
         artist: "Guns N' Roses",
         duration: '5:56',
         album: 'Appetite for Destruction',
+        albumID: 66644272,
+        artistID: 663,
       },
       {
         id: 426703682,
@@ -33,6 +39,9 @@ const playlists = [
         artist: 'Eagles',
         duration: '6:30',
         album: 'Hotel California',
+
+        albumID: 51350192,
+        artistID: 210,
       },
       {
         id: 60840057,
@@ -40,6 +49,8 @@ const playlists = [
         artist: 'Deep Purple',
         duration: '5:40',
         album: 'Machine Head',
+        albumID: 5953987,
+        artistID: 864,
       },
       {
         id: 92719900,
@@ -47,6 +58,8 @@ const playlists = [
         artist: 'AC/DC',
         duration: '3:28',
         album: 'Highway to Hell',
+        albumID: 9410086,
+        artistID: 115,
       },
       {
         id: 540202122,
@@ -54,6 +67,8 @@ const playlists = [
         artist: 'Steppenwolf',
         duration: '3:30',
         album: 'Steppenwolf',
+        albumID: 70494342,
+        artistID: 1172,
       },
       {
         id: 1483825212,
@@ -61,6 +76,8 @@ const playlists = [
         artist: 'Metallica',
         duration: '5:32',
         album: 'Metallica (Black Album)',
+        albumID: 256250622,
+        artistID: 119,
       },
       {
         id: 518458142,
@@ -68,6 +85,8 @@ const playlists = [
         artist: "Guns N' Roses",
         duration: '6:45',
         album: 'Appetite for Destruction',
+        albumID: 66644272,
+        artistID: 663,
       },
       {
         id: 78671026,
@@ -75,6 +94,9 @@ const playlists = [
         artist: 'Led Zeppelin',
         duration: '5:34',
         album: 'Led Zeppelin II',
+
+        albumID: 7824595,
+        artistID: 848,
       },
     ],
   },
@@ -91,6 +113,8 @@ const playlists = [
         artist: 'Petit Biscuit',
         duration: '3:58',
         album: 'Presence',
+        albumID: 13039372,
+        artistID: 7912872,
       },
       {
         id: 61419261,
@@ -98,6 +122,9 @@ const playlists = [
         artist: 'Marconi Union',
         duration: '8:00',
         album: 'Weightless',
+
+        albumID: 6018893,
+        artistID: 1242386,
       },
       {
         id: 3026736461,
@@ -105,6 +132,8 @@ const playlists = [
         artist: 'Galimatias',
         duration: '3:55',
         album: 'Blowsom EP',
+        albumID: 650999361,
+        artistID: 1622571,
       },
       {
         id: 142747710,
@@ -112,6 +141,9 @@ const playlists = [
         artist: 'Michael Kiwanuka',
         duration: '9:58',
         album: 'Love & Hate',
+
+        albumID: 15443992,
+        artistID: 459578,
       },
       {
         id: 719670662,
@@ -119,6 +151,8 @@ const playlists = [
         artist: 'Shawn Mendes',
         duration: '3:21',
         album: 'Shawn Mendes',
+        albumID: 105107222,
+        artistID: 5962948,
       },
       {
         id: 486928932,
@@ -126,6 +160,8 @@ const playlists = [
         artist: 'Billie Eilish & Khalid',
         duration: '3:20',
         album: 'dont smile at me',
+        albumID: 61392882,
+        artistID: 9635624,
       },
       {
         id: 136337268,
@@ -133,6 +169,8 @@ const playlists = [
         artist: 'Billie Eilish',
         duration: '3:20',
         album: 'dont smile at me',
+        albumID: 14581616,
+        artistID: 9635624,
       },
       {
         id: 143172408,
@@ -140,6 +178,8 @@ const playlists = [
         artist: 'Khalid',
         duration: '3:39',
         album: 'American Teen',
+        albumID: 15498596,
+        artistID: 362326,
       },
       {
         id: 657365552,
@@ -147,6 +187,9 @@ const playlists = [
         artist: 'Khalid',
         duration: '3:17',
         album: 'Free Spirit',
+
+        albumID: 92014022,
+        artistID: 362326,
       },
       {
         id: 553193312,
@@ -154,6 +197,8 @@ const playlists = [
         artist: 'Khalid',
         duration: '3:49',
         album: 'Suncity',
+        albumID: 72890222,
+        artistID: 362326,
       },
     ],
   },
@@ -170,6 +215,9 @@ const playlists = [
         artist: 'The Weeknd',
         duration: '3:20',
         album: 'After Hours (2020)',
+
+        albumID: 137217782,
+        artistID: 4050205,
       },
       {
         id: 1703487577,
@@ -177,6 +225,8 @@ const playlists = [
         artist: 'Harry Styles',
         duration: '2:47',
         album: 'Harry s House (2022)',
+        albumID: 307085627,
+        artistID: 5313805,
       },
       {
         id: 1976903157,
@@ -184,6 +234,8 @@ const playlists = [
         artist: 'Taylor Swift',
         duration: '3:20',
         album: 'Midnights (2022)',
+        albumID: 368474187,
+        artistID: 12246,
       },
       {
         id: 1124841682,
@@ -191,6 +243,8 @@ const playlists = [
         artist: 'Dua Lipa',
         duration: '3:23',
         album: 'Future Nostalgia (2020)',
+        albumID: 182811182,
+        artistID: 8706544,
       },
       {
         id: 2105158337,
@@ -198,6 +252,8 @@ const playlists = [
         artist: 'Miley Cyrus',
         duration: '3:20',
         album: 'Endless Summer Vacation (2023)',
+        albumID: 395674277,
+        artistID: 12436,
       },
       {
         id: 793163542,
@@ -205,6 +261,8 @@ const playlists = [
         artist: 'Dua Lipa',
         duration: '3:03',
         album: 'Future Nostalgia (2020)',
+        albumID: 117053822,
+        artistID: 8706544,
       },
       {
         id: 1280165222,
@@ -212,6 +270,8 @@ const playlists = [
         artist: 'Justin Bieber feat. Daniel Caesar & Giveon',
         duration: '3:18',
         album: 'Justice (2021)',
+        albumID: 215962322,
+        artistID: 288166,
       },
       {
         id: 1484264492,
@@ -219,6 +279,8 @@ const playlists = [
         artist: 'Ed Sheeran',
         duration: '3:27',
         album: '(Equals) (2021)',
+        albumID: 256337182,
+        artistID: 384236,
       },
       {
         id: 1378342622,
@@ -226,6 +288,8 @@ const playlists = [
         artist: ' Olivia Rodrigo',
         duration: '2:58',
         album: 'SOUR (2021)',
+        albumID: 231552772,
+        artistID: 11152580,
       },
       {
         id: 1425844092,
@@ -233,6 +297,9 @@ const playlists = [
         artist: 'The Kid LAROI & Justin Bieber',
         duration: '2:21',
         album: 'F*CK LOVE 3: OVER YOU (2021)',
+
+        albumID: 242430582,
+        artistID: 51204222,
       },
     ],
   },
@@ -249,6 +316,8 @@ const playlists = [
         artist: 'Claude Debussy',
         duration: '5:10',
         album: 'Suite Bergamasque (1905)',
+        albumID: 614437,
+        artistID: 5176,
       },
       {
         id: 79034866,
@@ -256,6 +325,8 @@ const playlists = [
         artist: 'Frédéric Chopin',
         duration: '4:30',
         album: 'Nocturnes, Op. 9 (1832)',
+        albumID: 7857432,
+        artistID: 8473,
       },
       {
         id: 25478821,
@@ -263,6 +334,8 @@ const playlists = [
         artist: 'Ludwig van Beethoven',
         duration: '5:32',
         album: 'Piano Sonata No. 14 (1801)',
+        albumID: 2422651,
+        artistID: 6144,
       },
       {
         id: 17065960,
@@ -270,6 +343,9 @@ const playlists = [
         artist: 'Antonio Vivaldi',
         duration: '3:25',
         album: 'The Four Seasons (1725)',
+
+        albumID: 1595402,
+        artistID: 4081,
       },
       {
         id: 1439886,
@@ -277,6 +353,8 @@ const playlists = [
         artist: 'Johann Pachelbel',
         duration: '6:00',
         album: 'Canon and Gigue in D major (1680s)',
+        albumID: 146497,
+        artistID: 103040,
       },
       {
         id: 122579842,
@@ -284,6 +362,8 @@ const playlists = [
         artist: 'Erik Satie',
         duration: '3:20',
         album: 'Gymnopédies (1888)',
+        albumID: 12828942,
+        artistID: 67570,
       },
       {
         id: 67350403,
@@ -291,6 +371,8 @@ const playlists = [
         artist: 'Pyotr Ilyich Tchaikovsky',
         duration: '3:45',
         album: 'Swan Lake, Op. 20 (1876)',
+        albumID: 6585541,
+        artistID: 432540,
       },
       {
         id: 6058117,
@@ -298,6 +380,8 @@ const playlists = [
         artist: 'Johannes Brahms',
         duration: '2:20',
         album: 'Hungarian Dances (1869)',
+        albumID: 553175,
+        artistID: 7128,
       },
       {
         id: 68301402,
@@ -305,6 +389,8 @@ const playlists = [
         artist: 'Wolfgang Amadeus Mozart',
         duration: '5:50',
         album: 'Serenade No. 13, K. 525 (1787)',
+        albumID: 6688854,
+        artistID: 298705,
       },
       {
         id: 849345402,
@@ -312,6 +398,8 @@ const playlists = [
         artist: 'Samuel Barber',
         duration: '8:40',
         album: 'Adagio for Strings (1938)',
+        albumID: 126018662,
+        artistID: 4192810,
       },
     ],
   },
@@ -329,6 +417,9 @@ const playlists = [
         artist: 'Charlotte de Witte',
         duration: '6:15',
         album: 'Apollo EP (2023)',
+
+        albumID: 45324441,
+        artistID: 150457,
       },
       {
         id: 3845871,
@@ -336,6 +427,8 @@ const playlists = [
         artist: 'Laurent Garnier',
         duration: '13:00',
         album: 'Acid Eiffel (1993)',
+        albumID: 358883,
+        artistID: 5469,
       },
       {
         id: 2393352885,
@@ -343,6 +436,8 @@ const playlists = [
         artist: 'Adam Beyer & Bart Skils',
         duration: '8:04',
         album: 'Your Mind (2018)',
+        albumID: 471576415,
+        artistID: 262460,
       },
       {
         id: 1902369237,
@@ -350,6 +445,8 @@ const playlists = [
         artist: 'The Age of Love',
         duration: '8:14',
         album: 'The Age of Love (2021 Remix)',
+        albumID: 354033907,
+        artistID: 991108,
       },
       {
         id: 14440894,
@@ -357,6 +454,8 @@ const playlists = [
         artist: 'Damon Wild and Tim Taylor',
         duration: '6:08',
         album: 'Live at Kosmos (2020)',
+        albumID: 1324330,
+        artistID: 1463533,
       },
       {
         id: 978183732,
@@ -364,6 +463,8 @@ const playlists = [
         artist: 'Ben Klock',
         duration: '6:46',
         album: 'Subzero EP (2011)',
+        albumID: 152238912,
+        artistID: 178264,
       },
       {
         id: 819066552,
@@ -371,6 +472,8 @@ const playlists = [
         artist: 'Amelie Lens',
         duration: '6:30',
         album: 'Planet X EP (2019)',
+        albumID: 120503972,
+        artistID: 1649557,
       },
       {
         id: 2291815645,
@@ -378,6 +481,8 @@ const playlists = [
         artist: 'SHDDR',
         duration: '5:45',
         album: 'Lost (2021)',
+        albumID: 443768075,
+        artistID: 7856702,
       },
       {
         id: 623893232,
@@ -385,6 +490,8 @@ const playlists = [
         artist: 'Jeff Mills',
         duration: '4:47',
         album: 'Waveform Transmission Vol. 1 (1997)',
+        albumID: 85641932,
+        artistID: 8290,
       },
       {
         id: 145429556,
@@ -392,6 +499,8 @@ const playlists = [
         artist: '50 Cent',
         duration: '4:06',
         album: 'Best Of 50 Cent',
+        albumID: 15801900,
+        artistID: 66,
       },
     ],
   },
@@ -408,6 +517,8 @@ const playlists = [
         artist: 'Daddy Yankee',
         duration: '3:13',
         album: 'Barrio Fino (2004)',
+        albumID: 691271171,
+        artistID: 3839,
       },
       {
         id: 143783500,
@@ -415,6 +526,8 @@ const playlists = [
         artist: 'Luis Fonsi feat. Daddy Yankee',
         duration: '3:47',
         album: 'Vida (2019)',
+        albumID: 15579230,
+        artistID: 6707,
       },
       {
         id: 493108632,
@@ -422,6 +535,8 @@ const playlists = [
         artist: 'Maluma',
         duration: '3:49',
         album: 'F.A.M.E. (2018)',
+        albumID: 62438782,
+        artistID: 1424602,
       },
       {
         id: 1147324382,
@@ -429,6 +544,8 @@ const playlists = [
         artist: 'Bad Bunny & Jhay Cortez',
         duration: '3:25',
         album: 'El Último Tour del Mundo (2020)',
+        albumID: 187470982,
+        artistID: 5845951,
       },
       {
         id: 1741494317,
@@ -436,6 +553,8 @@ const playlists = [
         artist: 'Bad Bunny',
         duration: '4:04',
         album: 'Un Verano Sin Ti (2022)',
+        albumID: 316164367,
+        artistID: 10583405,
       },
       {
         id: 820200292,
@@ -443,6 +562,8 @@ const playlists = [
         artist: 'Ozuna',
         duration: '3:37',
         album: 'Nibiru (2019)',
+        albumID: 120696132,
+        artistID: 4937383,
       },
       {
         id: 401393742,
@@ -450,6 +571,8 @@ const playlists = [
         artist: 'Natti Natasha & Ozuna',
         duration: '3:53',
         album: 'IlumiNATTI (2019)',
+        albumID: 47292752,
+        artistID: 2829671,
       },
       {
         id: 1741494307,
@@ -457,6 +580,8 @@ const playlists = [
         artist: 'Bad Bunny & Chencho Corleone',
         duration: '2:58',
         album: 'Un Verano Sin Ti (2022)',
+        albumID: 316164367,
+        artistID: 10583405,
       },
       {
         id: 64848611,
@@ -464,6 +589,9 @@ const playlists = [
         artist: 'Aventura & Don Omar',
         duration: '4:29',
         album: 'God s Project (2005)',
+
+        albumID: 6353736,
+        artistID: 700,
       },
       {
         id: 889550982,
@@ -471,6 +599,8 @@ const playlists = [
         artist: 'Bad Bunny',
         duration: '4:55',
         album: 'YHLQMDLG (2020)',
+        albumID: 133878352,
+        artistID: 10583405,
       },
     ],
   },
