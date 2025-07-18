@@ -71,6 +71,15 @@
           margin-bottom: 60px;
         }
       }
+      .responsiveBg {
+        position: relative;
+        background-position: center -120px;
+      }
+      @media (max-width: 600px) {
+        .responsiveBg {
+          background-position: center 0;
+        }
+      }
     </style>
   </head>
   <body>
@@ -272,7 +281,8 @@
                   ></i>
                 </div>
                 <div
-                  class="bg-image"
+                  id="imgBanner"
+                  class="bg-image responsiveBg"
                   style="
                     background-image: url(https://cdn-images.dzcdn.net/images/artist/26f55d825cb4e4d97c2e67dbc389d34d/1000x1000-000000-80-0-0.jpg);
                     height: 370px;
@@ -286,9 +296,14 @@
                   >
                     <div>
                       <i class="bi bi-patch-check-fill text-info"></i>
-                      <span class="ms-3">Artista verificato</span>
-                      <h1 class="fs-1 fw-bold">Yellowcard</h1>
-                      <p>3.433.158 ascoltatori mensili</p>
+                      <span class="ms-3 text-epi-violet"
+                        >Artista verificato</span
+                      >
+                      <h1
+                        class="fs-1 fw-bold text-epi-violet"
+                        id="bigName"
+                      ></h1>
+                      <p id="fans" class="text-epi-violet"></p>
                     </div>
                   </div>
                 </div>
@@ -300,7 +315,7 @@
                     <div class="d-flex justify-content-start">
                       <i
                         class="bi bi-play-circle-fill ps-3 fs-3 align-content-center"
-                        style="color: #00ffea"
+                        style="color: #00ffea; cursor: pointer"
                       ></i>
                       <span
                         class="text-uppercase border rounded-1 text-light mx-4 px-2 align-content-center"
@@ -314,236 +329,11 @@
                     <h6 class="text-uppercase fw-bold text-white ps-3 mt-4">
                       popolari
                     </h6>
-                    <!-- tracklist -->
                     <div class="col-12 col-md-12 order-2 order-md-1">
-                      <div class="bg-dark bg-opacity-25 rounded">
-                        <!-- <div
-                          class="row align-items-center p-3 border-bottom border-secondary border-opacity-10 track-item"
-                        >
-                          <div class="col-1 text-center text-white-50">1</div>
-                          <div class="col-1">
-                            <img
-                              class="me-md-3 mb-md-2"
-                              src="assets/imgs/search/image-40.jpg"
-                              style="width: 2rem"
-                            />
-                          </div>
-                          <div class="col-5 ps-3">
-                            <div class="fw-normal text-light">Ocean Avenue</div>
-                          </div>
-                          <div class="col-3 text-end text-white-50">
-                            276.694.578
-                          </div>
-                          <div class="col-2 text-end text-white-50">3:28</div>
-                        </div> -->
-                        <div
-                          class="row align-items-center p-3 border-bottom border-secondary border-opacity-10 track-item"
-                        >
-                          <div class="col-1 text-center text-white-50">1</div>
-                          <div class="col-1">
-                            <img
-                              class="me-md-3 mb-md-2"
-                              src="assets/imgs/search/image-40.jpg"
-                              style="width: 2rem"
-                            />
-                          </div>
-                          <div class="col-5 ps-md-3 ps-4 order-1 order-md-3">
-                            <div class="fw-normal text-light">Ocean Avenue</div>
-                            <!-- Numero  visibile solo su mobile sotto  -->
-                            <div
-                              class="text-white-50 d-md-none"
-                              style="font-size: 0.5em"
-                            >
-                              276.694.578
-                            </div>
-                          </div>
-                          <!-- Numero grande visibile solo su md+ -->
-                          <div
-                            class="col-3 text-end text-white-50 d-none d-md-block order-md-4"
-                          >
-                            276.694.578
-                          </div>
-                          <!-- Orario 4:17 visibile solo su md+ -->
-                          <div
-                            class="col-2 text-end text-white-50 d-none d-md-flex justify-content-end order-md-5"
-                          >
-                            3:28
-                          </div>
-                          <!-- Tre puntini verticali visibili solo su mobile -->
-                          <div
-                            class="col-2 text-end text-white-50 d-flex d-md-none justify-content-end order-4 flex-grow-1 pe-4"
-                            style="font-size: 1.5rem; line-height: 1"
-                          >
-                            &#8942;
-                          </div>
-                        </div>
-                        <div
-                          class="row align-items-center p-3 border-bottom border-secondary border-opacity-10 track-item"
-                        >
-                          <div class="col-1 text-center text-white-50">2</div>
-                          <div class="col-1">
-                            <img
-                              class="me-md-3 mb-md-2"
-                              src="assets/imgs/search/image-40.jpg"
-                              style="width: 2rem"
-                            />
-                          </div>
-                          <div class="col-5 ps-md-3 ps-4 order-1 order-md-3">
-                            <div class="fw-normal text-light">Only one</div>
-                            <!-- Numero visibile solo su mobile sotto  -->
-                            <div
-                              class="text-white-50 d-md-none"
-                              style="font-size: 0.5em"
-                            >
-                              96.694.578
-                            </div>
-                          </div>
-                          <!-- Numero grande visibile solo su md+ -->
-                          <div
-                            class="col-3 text-end text-white-50 d-none d-md-block order-md-4"
-                          >
-                            96.694.578
-                          </div>
-                          <!-- Orario 4:17 visibile solo su md+ -->
-                          <div
-                            class="col-2 text-end text-white-50 d-none d-md-flex justify-content-end order-md-5"
-                          >
-                            4:17
-                          </div>
-                          <!-- Tre puntini verticali visibili solo su mobile -->
-                          <div
-                            class="col-2 text-end text-white-50 d-flex d-md-none justify-content-end order-4 flex-grow-1 pe-4"
-                            style="font-size: 1.5rem; line-height: 1"
-                          >
-                            &#8942;
-                          </div>
-                        </div>
-                        <div
-                          class="row align-items-center p-3 border-bottom border-secondary border-opacity-10 track-item"
-                        >
-                          <div class="col-1 text-center text-white-50">3</div>
-                          <div class="col-1">
-                            <img
-                              class="me-md-3 mb-md-2"
-                              src="assets/imgs/search/image-40.jpg"
-                              style="width: 2rem"
-                            />
-                          </div>
-                          <div class="col-5 ps-md-3 ps-4 order-1 order-md-3">
-                            <div class="fw-normal text-light">Breathing</div>
-                            <!-- Numero 96.694.578 visibile solo su mobile sotto "Only one" -->
-                            <div
-                              class="text-white-50 d-md-none"
-                              style="font-size: 0.5em"
-                            >
-                              52.694.578
-                            </div>
-                          </div>
-                          <!-- Numero grande visibile solo su md+ -->
-                          <div
-                            class="col-3 text-end text-white-50 d-none d-md-block order-md-4"
-                          >
-                            52.694.578
-                          </div>
-                          <!-- Orario 4:17 visibile solo su md+ -->
-                          <div
-                            class="col-2 text-end text-white-50 d-none d-md-flex justify-content-end order-md-5"
-                          >
-                            3:38
-                          </div>
-                          <!-- Tre puntini verticali visibili solo su mobile -->
-                          <div
-                            class="col-2 text-end text-white-50 d-flex d-md-none justify-content-end order-4 flex-grow-1 pe-4"
-                            style="font-size: 1.5rem; line-height: 1"
-                          >
-                            &#8942;
-                          </div>
-                        </div>
-                        <div
-                          class="row align-items-center p-3 border-bottom border-secondary border-opacity-10 track-item"
-                        >
-                          <div class="col-1 text-center text-white-50">4</div>
-                          <div class="col-1">
-                            <img
-                              class="me-md-3 mb-md-2"
-                              src="assets/imgs/search/image-50.jpg"
-                              style="width: 2rem"
-                            />
-                          </div>
-                          <div class="col-5 ps-md-3 ps-4 order-1 order-md-3">
-                            <div class="fw-normal text-light">
-                              Lights And Sound
-                            </div>
-                            <!-- Numero visibile solo su mobile sotto -->
-                            <div
-                              class="text-white-50 d-md-none"
-                              style="font-size: 0.5em"
-                            >
-                              48.694.578
-                            </div>
-                          </div>
-                          <!-- Numero grande visibile solo su md+ -->
-                          <div
-                            class="col-3 text-end text-white-50 d-none d-md-block order-md-4"
-                          >
-                            48.694.578
-                          </div>
-                          <!-- Orario 4:17 visibile solo su md+ -->
-                          <div
-                            class="col-2 text-end text-white-50 d-none d-md-flex justify-content-end order-md-5"
-                          >
-                            3:27
-                          </div>
-                          <!-- Tre puntini verticali visibili solo su mobile -->
-                          <div
-                            class="col-2 text-end text-white-50 d-flex d-md-none justify-content-end order-4 flex-grow-1 pe-4"
-                            style="font-size: 1.5rem; line-height: 1"
-                          >
-                            &#8942;
-                          </div>
-                        </div>
-                        <div
-                          class="row align-items-center p-3 border-bottom border-secondary border-opacity-10 track-item"
-                        >
-                          <div class="col-1 text-center text-white-50">5</div>
-                          <div class="col-1">
-                            <img
-                              class="me-md-3 mb-md-2"
-                              src="assets/imgs/search/image-40.jpg"
-                              style="width: 2rem"
-                            />
-                          </div>
-                          <div class="col-5 ps-md-3 ps-4 order-1 order-md-3">
-                            <div class="fw-normal text-light">Way Away</div>
-                            <!-- Numero 96.694.578 visibile solo su mobile sotto "Only one" -->
-                            <div
-                              class="text-white-50 d-md-none"
-                              style="font-size: 0.5em"
-                            >
-                              43.694.578
-                            </div>
-                          </div>
-                          <!-- Numero grande visibile solo su md+ -->
-                          <div
-                            class="col-3 text-end text-white-50 d-none d-md-block order-md-4"
-                          >
-                            43.694.578
-                          </div>
-                          <!-- Orario 4:17 visibile solo su md+ -->
-                          <div
-                            class="col-2 text-end text-white-50 d-none d-md-flex justify-content-end order-md-5"
-                          >
-                            3:17
-                          </div>
-                          <!-- Tre puntini verticali visibili solo su mobile -->
-                          <div
-                            class="col-2 text-end text-white-50 d-flex d-md-none justify-content-end order-4 flex-grow-1 pe-4"
-                            style="font-size: 1.5rem; line-height: 1"
-                          >
-                            &#8942;
-                          </div>
-                        </div>
-                      </div>
+                      <div
+                        class="bg-dark bg-opacity-25 rounded"
+                        id="topSongs"
+                      ></div>
                     </div>
                   </div>
                   <!-- colonna destra seconda riga centrale -->
@@ -554,6 +344,7 @@
                     <div class="d-flex justify-content-start align-items-start">
                       <div class="position-relative">
                         <img
+                          id="imgLikes"
                           src="./assets/imgs/main/image-16.jpg"
                           style="height: 45px; width: auto"
                           alt="Profile picture"
@@ -565,8 +356,12 @@
                         ></i>
                       </div>
                       <div class="ms-2">
-                        <strong>Hai messo mi piace a 11 brani</strong><br />
-                        <span class="text-secondary">di Yellowcard</span><br />
+                        <strong id="numberLikes"
+                          >Hai messo mi piace a 11 brani</strong
+                        ><br />
+                        <span class="text-secondary" id="likesName"
+                          >di Yellowcard</span
+                        ><br />
                       </div>
                     </div>
                   </div>
@@ -759,5 +554,6 @@
     <script src="./assets/scripts/hovercyan.js"></script>
     <script src="./assets/scripts/side-menu.js"></script>
     <script src="./assets/scripts/friends-tab.js"></script>
+    <script src="./assets/scripts/artist.js"></script>
   </body>
 </html>

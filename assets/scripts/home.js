@@ -7,14 +7,23 @@ const colors = [
   'bg-epi-blue',
   'bg-epi-violet',
   'bg-epi-violpink',
-  'bg-epi-pink-light',
   'bg-epi-pink',
+  'bg-epi-pink-light',
 ]
 const endpointAlbum = 'https://striveschool-api.herokuapp.com/api/deezer/album/'
+const showButton = document.getElementById('showAds')
+const showBtnArea = document.getElementById('showButton')
 const hideHero = document.getElementById('hideAds')
+const heroSection = document.getElementById('hero')
+
 hideHero.addEventListener('click', () => {
-  const heroSection = document.getElementById('hero')
   heroSection.classList.add('d-md-none')
+  showBtnArea.classList.remove('d-none')
+})
+
+showButton.addEventListener('click', () => {
+  heroSection.classList.remove('d-md-none')
+  showBtnArea.classList.add('d-none')
 })
 
 const generateAlbumsRow1 = function (albums) {
@@ -155,3 +164,23 @@ if (heroPlayBtn) {
     window.location.href = 'album.html?id=331818647'
   })
 }
+
+const toggleAlbumsBtn1 = document.getElementById('toggleAlbums1')
+const albumsRow1 = document.getElementById('albums1')
+const toggleAlbumsBtn2 = document.getElementById('toggleAlbums2')
+const albumsRow2 = document.getElementById('albums2')
+
+const hideSectionToggle = function (button, row) {
+  button.addEventListener('click', () => {
+    row.classList.toggle('d-none')
+
+    if (row.classList.contains('d-none')) {
+      button.textContent = 'MOSTRA SEZIONE'
+    } else {
+      button.textContent = 'NASCONDI SEZIONE'
+    }
+  })
+}
+
+hideSectionToggle(toggleAlbumsBtn1, albumsRow1)
+hideSectionToggle(toggleAlbumsBtn2, albumsRow2)

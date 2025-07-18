@@ -417,7 +417,6 @@ const playlists = [
         artist: 'Charlotte de Witte',
         duration: '6:15',
         album: 'Apollo EP (2023)',
-
         albumID: 45324441,
         artistID: 150457,
       },
@@ -641,8 +640,16 @@ if (selectedPlaylist) {
           </button>
           <div class="fw-normal text-white">${track.title}</div>
          </div>
-         <div class="col-3 text-white-50">${track.artist}</div>
-        <div class="col-2 text-end text-white-50">${track.album}</div>
+         <div class="col-3 text-white-50"><a href="artist.html?artist=${
+           track.artist
+         }&id=${
+      track.artistID
+    }" class="fw-normal text-white-50 text-decoration-none">${
+      track.artist
+    }</a></div>
+        <div class="col-2 text-end text-white-50"><a href="album.html?id=
+          ${track.albumID}
+        " class="text-decoration-none">${track.album}</a></div>
         <div class="col-2 text-end text-white-50">${track.duration}</div>
        `
     container.appendChild(row)

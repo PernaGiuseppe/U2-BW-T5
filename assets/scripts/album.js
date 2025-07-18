@@ -23,7 +23,7 @@ const generateAlbum = function () {
       window.currentAlbumIndex = 0
       const titleArea = document.getElementById('titleArea')
       const albumDuration = formatTime(album.duration)
-
+      const artistName1 = album.artist.name.replace(/\s+/g, '')
       titleArea.innerHTML = `
       <div
                           class="album-cover rounded d-flex align-items-center justify-content-center me-4 shadow"
@@ -46,14 +46,14 @@ const generateAlbum = function () {
                               src="${album.artist.picture_small}"
                             />
                             <strong class="text-white"
-                              >${album.artist.name}</strong
+                              ><a href="artist.html?artist=${artistName1}&id=${album.artist.id}" class="fw-normal text-white-50 text-decoration-none">${album.artist.name}</a></strong
                             >
                             • ${album.release_date} • ${album.tracks.data.length} brani, durata: ${albumDuration}.
                           </div></div>`
       const songsArea = document.getElementById('albumSongs')
       for (let i = 0; i < album.tracks.data.length; i++) {
         let duration = formatTime(album.tracks.data[i].duration)
-        // Genero la riga della traccia con il pulsante play accanto al titolo, come in playlist.js
+        let artistName = album.tracks.data[i].artist.name.replace(/\s+/g, '')
         songsArea.insertAdjacentHTML(
           'beforeend',
           `
@@ -69,7 +69,11 @@ const generateAlbum = function () {
         </button>
         <div class="fw-normal text-white">${album.tracks.data[i].title}</div>
       </div>
-      <div class="col-3 text-white-50">${album.tracks.data[i].artist.name}</div>
+      <div class="col-3 text-white-50"><a href="artist.html?artist=${artistName}&id=${
+            album.tracks.data[i].artist.id
+          }" class="fw-normal text-white-50 text-decoration-none">${
+            album.tracks.data[i].artist.name
+          }</a></div>
       <div class="col-2 text-end text-white-50">${
         album.tracks.data[i].rank
       }</div>
