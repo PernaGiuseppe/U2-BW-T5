@@ -71,6 +71,15 @@
           margin-bottom: 60px;
         }
       }
+      .responsiveBg {
+        position: relative;
+        background-position: center -120px;
+      }
+      @media (max-width: 600px) {
+        .responsiveBg {
+          background-position: center 0;
+        }
+      }
     </style>
   </head>
   <body>
@@ -273,7 +282,7 @@
                 </div>
                 <div
                   id="imgBanner"
-                  class="bg-image"
+                  class="bg-image responsiveBg"
                   style="
                     background-image: url(https://cdn-images.dzcdn.net/images/artist/26f55d825cb4e4d97c2e67dbc389d34d/1000x1000-000000-80-0-0.jpg);
                     height: 370px;
@@ -287,9 +296,14 @@
                   >
                     <div>
                       <i class="bi bi-patch-check-fill text-info"></i>
-                      <span class="ms-3">Artista verificato</span>
-                      <h1 class="fs-1 fw-bold" id="bigName"></h1>
-                      <p id="fans"></p>
+                      <span class="ms-3 text-epi-violet"
+                        >Artista verificato</span
+                      >
+                      <h1
+                        class="fs-1 fw-bold text-epi-violet"
+                        id="bigName"
+                      ></h1>
+                      <p id="fans" class="text-epi-violet"></p>
                     </div>
                   </div>
                 </div>
