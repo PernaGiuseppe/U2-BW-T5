@@ -23,7 +23,15 @@
           rgba(20, 20, 20, 1) 100%
         );
       }
+      .overflowPlaylist{
+        overflow-y: scroll;
+        height: 85vh;
+        padding-right: 10px"
+      }
       @media (max-width: 1200px) {
+        .overflowPlaylist{
+        height: 78vh;
+      }
         /*Nasconde le colonne laterali su mobile*/
         .sidebar-dnone {
           display: none !important;
@@ -309,10 +317,7 @@
                     </div>
                   </div>
                 </div>
-                <div
-                  class="playlist"
-                  style="overflow-y: scroll; height: 85vh; padding-right: 10px"
-                >
+                <div class="playlist overflowPlaylist">
                   <div class="container-fluid text-white p-4">
                     <div class="row mb-4">
                       <div class="col-12 d-flex align-items-end">
@@ -380,10 +385,11 @@
                             class="row align-items-center p-3 border-bottom border-secondary border-opacity-25 text-white-50"
                           >
                             <div class="col-1 text-center">#</div>
-                            <div class="col-4">TITOLO</div>
-                            <div class="col-3 col-sm-2">ARTISTA</div>
-                            <div class="col-2 col-sm-3 text-center ps-sm-4">
-                              <!-- ALBUM DA CAMBIARE -->
+                            <div class="col-5 col-sm-4">TITOLO</div>
+                            <div class="col-4 col-sm-3">ARTISTA</div>
+                            <div
+                              class="d-none d-sm-block col-2 text-center ps-sm-4"
+                            >
                               ALBUM
                             </div>
                             <div class="col-2 text-end">
